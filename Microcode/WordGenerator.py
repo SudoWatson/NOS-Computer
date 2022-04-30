@@ -1,5 +1,21 @@
-import pyperclip
+#import pyperclip
 
+
+#  Takes Microcode Word and creates the code chunk needed
+
+
+#  HLT DSC EX AM PL E
+""" ^^^ Results in vvv
+wordLength = 6
+
+
+HLT  = 0b100000
+DSC  = 0b010000
+EX   = 0b001000
+AM   = 0b000100
+PL   = 0b000010
+E    = 0b000001
+"""
 
 lengthOfControlName = 5
 
@@ -21,5 +37,6 @@ for n in range(wordLength):
     
     controlLineCode += '\n' + lineCode
 
-pyperclip.copy(controlLineCode)
+#pyperclip.copy(controlLineCode)
+print(controlLineCode)
 print("Code coppied to clipboard")

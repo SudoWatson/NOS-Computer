@@ -3,7 +3,7 @@ import sys
 print("\n\n\n\n")
 
 # MicroCode Generator for Nos Computer
-filePath = "C:/Users/aulen/Desktop/Things/Tools/Logisim/UpdCPU/Microcode/"  # Leave empty for current path
+filePath = ""  # Leave empty for current path
 
 baseFileName = "NosMicroCode"
 fileName = filePath + baseFileName
@@ -29,7 +29,7 @@ BRO  = 0b00000000001000000000000000000000000000000000
 IID  = 0b00000000000100000000000000000000000000000000
 
 DID  = 0b00000000000010000000000000000000000000000000
-IDI  = 0b00000000000001000000000000000000000000000000
+IDI  = 0b00000000000001000000000000000000000000000000  # Address Register ID In - ID as in how many registers to use (how many bytes)
 OUT8 = 0b00000000000000100000000000000000000000000000
 IN8  = 0b00000000000000010000000000000000000000000000
 FLOD = 0b00000000000000001000000000000000000000000000
@@ -84,7 +84,7 @@ def newInst(low, high, value):
             instructionCount += 1
 
 #             PCO out to MAR.   RAM to IR. Inc PC
-FetchCycle = [PCO|MAR|FLOD,     RMO|IRI|PC|IR]
+FetchCycle = [PCO|MAR|FLOD,     RMO|IRI|PC|IR]  # Can possibly shorten a few instructions by adding MAR into here. Like 2, but it doesn't slow down, so good :)
 instructions = [0 for x in range(256)]  # 256 different instructions all beginning with the Fetch Cycle
 
 # Define Instructions                               14 steps  (14 steps + 2 fetch steps = 16 steps)
@@ -100,7 +100,7 @@ CFG = [IRO|FSI,             CF,             SCR,            0,              0,  
 SFG = [IRO|FSI,             SF,             SCR,            0,              0,                  0,              0,      0, 0, 0, 0, 0, 0, 0]  # Set Flags
 JMP = [MAR|IR,              RMO|GR|IDI,     DSC,            GRO|PC|FLOD,    SCR,                0,              0,      0, 0, 0, 0, 0, 0, 0]  # Jump
 HALT= [HLT,                 0,              0,              0,              0,                  0,              0,      0, 0, 0, 0, 0, 0, 0]  # Halt
-LDR = [PC|MAR|IR|IRO|RCI,   RMO|GR|IDI,     DSC,            GRO|MAR|FLOD,   BRO|MAR|ADR|IN8,    RMO|RI|GR|IID,  SCR,    0, 0, 0, 0, 0, 0, 0]  # Load Address Indexed with Register
+#LDR = [PC|MAR|IR|IRO|RCI,   RMO|GR|IDI,     DSC,            GRO|MAR|FLOD,   BRO|MAR|ADR|IN8,    RMO|RI|GR|IID,  SCR,    0, 0, 0, 0, 0, 0, 0]  # Load Address Indexed with Register
 
 
 
@@ -110,11 +110,10 @@ newInst(0x00, 0x03, LDI)
 newInst(0x04, 0x07, LOD)
 newInst(0x08, 0x0B, STR)
 newInst(0x0C, 0x0F, MOV)
-newInst(0x10, 0x1F, CMR)
-newInst(0x20, 0x3F, REG)
-newInst(0x40, 0x4F, ALU)
-newInst(0x80, 0x8F, JMP)
-newInst(0xA0, 0xAF, LDR)
+newInst(0x20, 0x2F, CMR)
+newInst(0x30, 0x4F, REG)
+newInst(0x50, 0x5F, ALU)
+newInst(0xB0, 0xBF, JMP)
 newInst(0xFF, 0xFF, HALT)
 
 
