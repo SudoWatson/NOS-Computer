@@ -8,6 +8,11 @@
 int main() {
     CPU cpu = CPU();
     std::cout << cpu.toString();
+    cpu.RC.AReg.setValue(30);
+    cpu.RC.BReg.setValue(12);
+    cpu.RC.RCIn(0b00000110);
+    cpu.execute(0b0000);
+    std::cout << cpu.toString();
     return 0;
 }
 

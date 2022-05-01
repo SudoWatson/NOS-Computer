@@ -3,7 +3,6 @@
 #include "core.h"
 
 #include "Reg.h"
-//#include "CPU.h"
 class CPU;
 
 class RegisterController {
@@ -16,6 +15,7 @@ public:
     Reg BReg;
     Reg CReg;
     Reg DReg;
+    RegisterController() {}
     RegisterController(CPU *cpu);
 
     Reg *getRegister(const Byte selection);

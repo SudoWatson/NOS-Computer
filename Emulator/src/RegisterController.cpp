@@ -1,4 +1,5 @@
 #include "RegisterController.h"
+#include "CPU.h"
 
 RegisterController::RegisterController(CPU *cpu) {
     pCPU = cpu;
@@ -25,6 +26,7 @@ Reg *RegisterController::getRegister(const Byte selection) {
         return &DReg;
         break;
     default:
+        std::cout << "Could not get register: " << i;
         return nullptr;
     }
 }
@@ -32,9 +34,9 @@ Reg *RegisterController::getRegister(const Byte selection) {
 void RegisterController::RCIn(Byte selection) {
     RegSelection = selection;
 
-    // pCPU->alu.OPR = getRegister(RegSelection >> 0);
-    // pCPU->alu.RHR = getRegister(RegSelection >> 2);
-    // pCPU->alu.LHR = getRegister(RegSelection >> 4);
+    pCPU->alu.OPR = getRegister(RegSelection >> 0);
+    pCPU->alu.RHR = getRegister(RegSelection >> 2);
+    pCPU->alu.LHR = getRegister(RegSelection >> 4);
 }
 
 std::string RegisterController::toString() {

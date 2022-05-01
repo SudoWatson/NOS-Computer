@@ -12,12 +12,12 @@ public:
     AdrReg PC;
     AdrReg MAR;
     Reg Inst;
-    RegisterController *RC = nullptr;
+    RegisterController RC;
     ALU alu;
 
     CPU();
 
-    ~CPU() { delete RC; }
-
     std::string toString();
+
+    void execute(Byte instruction);
 };

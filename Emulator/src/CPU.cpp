@@ -5,16 +5,21 @@ CPU::CPU() {
     PC   = AdrReg(AddresBusSize);       // Program Counter
     MAR  = AdrReg(AddresBusSize);       // Memory Address Register
     Inst = Reg();                       // Instruction Register
-    alu  = ALU(this);                    // Arithmetic & Logic Unit
-    RC   = new RegisterController(this);    // Register Controller
+    alu  = ALU(this);                   // Arithmetic & Logic Unit
+    RC   = RegisterController(this);    // Register Controller
 }
 
 std::string CPU::toString() {
     std::string string = "";
-    string += "CPU STATUS\n";
-    string += RC->toString();
-    string += "\n\n--ADDRESS REGISTERS--\n";
-    // string += "PC:  " + PC.toString();
-    // string += "MAR: " + MAR.toString();
+    string += "\n\n\nCPU STATUS\n\n";
+    string += RC.toString();
+    string += "\n--ADDRESS REGISTERS--\n";
+    string += "PC:  " + PC.toString() + "\n";
+    string += "MAR: " + MAR.toString() + "\n";
     return string;
+}
+
+void CPU::execute(Byte instruction) {
+    alu.loadInstruction(instruction);
+    alu.execute();
 }
