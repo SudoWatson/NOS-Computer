@@ -23,13 +23,13 @@
      inkscape:deskcolor="#505050"
      inkscape:zoom="2.4147059"
      inkscape:cx="129.82948"
-     inkscape:cy="170"
+     inkscape:cy="203.95859"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
-     inkscape:window-x="1912"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg13">
+     inkscape:current-layer="g3">
     <inkscape:grid
        type="xygrid"
        empspacing="4"
@@ -51,6 +51,23 @@
      width="119.81616"
      height="209.87706"
      id="rect1" />
+  <g
+     id="g2-7"
+     transform="rotate(-89.233752,100.94658,99.142044)">
+    <circle
+       fill="#0000b2"
+       id="pin:LHOEi"
+       cx="0"
+       cy="20"
+       r="3" />
+    <text
+       fill="#808080"
+       font-size="18px"
+       x="3.4032886"
+       y="26.922216"
+       id="text2-3"
+       transform="rotate(-1.7137541)">LHOEi</text>
+  </g>
   <text
      id="label"
      fill="#000000"
@@ -73,38 +90,6 @@
        x="4"
        y="6"
        id="text1">OE</text>
-  </g>
-  <g
-     id="g2"
-     transform="rotate(-90,99.918377,99.797596)">
-    <circle
-       fill="#0000b2"
-       id="pin:LHOE"
-       cx="0"
-       cy="20"
-       r="3" />
-    <text
-       fill="#808080"
-       font-size="18px"
-       x="4"
-       y="26"
-       id="text2">LHOE</text>
-  </g>
-  <g
-     id="g3"
-     transform="rotate(-90,100.33816,99.919395)">
-    <circle
-       fill="#0000b2"
-       id="pin:RHOE"
-       cx="0"
-       cy="40"
-       r="3" />
-    <text
-       fill="#808080"
-       font-size="18px"
-       x="4"
-       y="46"
-       id="text3">RHOE</text>
   </g>
   <g
      id="g4"
@@ -268,5 +253,22 @@
        x="96"
        y="46"
        id="text13">RHO</text>
+  </g>
+  <g
+     id="g3"
+     transform="rotate(-89.295079,101.00994,99.512837)">
+    <circle
+       fill="#0000b2"
+       id="pin:RHOEi"
+       cx="0"
+       cy="40"
+       r="3" />
+    <text
+       fill="#808080"
+       font-size="18px"
+       x="3.2796957"
+       y="46.579647"
+       id="text3"
+       transform="rotate(-1.0372949)">RHOEi</text>
   </g>
 </svg>

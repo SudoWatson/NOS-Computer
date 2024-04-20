@@ -1,7 +1,1162 @@
 <?xml version="1.0" encoding="utf-8"?>
 <circuit>
   <version>2</version>
-  <attributes/>
+  <attributes>
+    <entry>
+      <string>shapeType</string>
+      <shapeType>CUSTOM</shapeType>
+    </entry>
+    <entry>
+      <string>romContent</string>
+      <romList>
+        <roms/>
+      </romList>
+    </entry>
+    <entry>
+      <string>customShape</string>
+      <shape>
+        <pins>
+          <entry>
+            <string>R8i</string>
+            <pin>
+              <pos x="100" y="240"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>CLK</string>
+            <pin>
+              <pos x="0" y="20"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>R4i</string>
+            <pin>
+              <pos x="100" y="160"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>RHO13i</string>
+            <pin>
+              <pos x="100" y="980"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>R0i</string>
+            <pin>
+              <pos x="100" y="80"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>RHO3i</string>
+            <pin>
+              <pos x="100" y="780"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>RHO7i</string>
+            <pin>
+              <pos x="100" y="860"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>R11i</string>
+            <pin>
+              <pos x="100" y="300"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>LHO8i</string>
+            <pin>
+              <pos x="100" y="560"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>R15i</string>
+            <pin>
+              <pos x="100" y="380"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>RCIi</string>
+            <pin>
+              <pos x="0" y="80"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>Crement</string>
+            <pin>
+              <pos x="0" y="60"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>LHO4i</string>
+            <pin>
+              <pos x="100" y="480"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>Reset</string>
+            <pin>
+              <pos x="0" y="40"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>LHO0i</string>
+            <pin>
+              <pos x="100" y="400"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>LHO13i</string>
+            <pin>
+              <pos x="100" y="660"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>R9i</string>
+            <pin>
+              <pos x="100" y="260"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>Decrement</string>
+            <pin>
+              <pos x="100" y="1040"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>RHO14i</string>
+            <pin>
+              <pos x="100" y="1000"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>R5i</string>
+            <pin>
+              <pos x="100" y="180"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>RHO6i</string>
+            <pin>
+              <pos x="100" y="840"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>R1i</string>
+            <pin>
+              <pos x="100" y="100"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>R14i</string>
+            <pin>
+              <pos x="100" y="360"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>LHO9i</string>
+            <pin>
+              <pos x="100" y="580"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>RHO2i</string>
+            <pin>
+              <pos x="100" y="760"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>LHO5i</string>
+            <pin>
+              <pos x="100" y="500"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>LHO14i</string>
+            <pin>
+              <pos x="100" y="680"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>RHO10i</string>
+            <pin>
+              <pos x="100" y="920"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>LHO1i</string>
+            <pin>
+              <pos x="100" y="420"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>LHO10i</string>
+            <pin>
+              <pos x="100" y="600"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>R10i</string>
+            <pin>
+              <pos x="100" y="280"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>R6i</string>
+            <pin>
+              <pos x="100" y="200"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>RHO15i</string>
+            <pin>
+              <pos x="100" y="1020"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>R2i</string>
+            <pin>
+              <pos x="100" y="120"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>RHO5i</string>
+            <pin>
+              <pos x="100" y="820"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>RHO9i</string>
+            <pin>
+              <pos x="100" y="900"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>R13i</string>
+            <pin>
+              <pos x="100" y="340"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>RHO1i</string>
+            <pin>
+              <pos x="100" y="740"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>LHO6i</string>
+            <pin>
+              <pos x="100" y="520"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>Increment</string>
+            <pin>
+              <pos x="100" y="1060"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>RHO11i</string>
+            <pin>
+              <pos x="100" y="940"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>LHO15i</string>
+            <pin>
+              <pos x="100" y="700"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>LHO2i</string>
+            <pin>
+              <pos x="100" y="440"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>LHO11i</string>
+            <pin>
+              <pos x="100" y="620"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>Bus</string>
+            <pin>
+              <pos x="0" y="0"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>R7i</string>
+            <pin>
+              <pos x="100" y="220"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>RHO12i</string>
+            <pin>
+              <pos x="100" y="960"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>R3i</string>
+            <pin>
+              <pos x="100" y="140"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>RHO4i</string>
+            <pin>
+              <pos x="100" y="800"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>RHO8i</string>
+            <pin>
+              <pos x="100" y="880"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>R12i</string>
+            <pin>
+              <pos x="100" y="320"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>LHO7i</string>
+            <pin>
+              <pos x="100" y="540"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>RHO0i</string>
+            <pin>
+              <pos x="100" y="720"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>LHO3i</string>
+            <pin>
+              <pos x="100" y="460"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>LHO12i</string>
+            <pin>
+              <pos x="100" y="640"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+        </pins>
+        <drawables>
+          <poly>
+            <poly path="M 0.03907776,-11.316238 L 99.22454,-11.316238 L 99.22454,1069.8435 L 0.03907776,1069.8435 Z" evenOdd="false"/>
+            <thickness>4</thickness>
+            <filled>true</filled>
+            <color>
+              <red>255</red>
+              <green>255</green>
+              <blue>180</blue>
+              <alpha>200</alpha>
+            </color>
+          </poly>
+          <poly>
+            <poly path="M 0.03907776,-11.316238 L 99.22454,-11.316238 L 99.22454,1069.8435 L 0.03907776,1069.8435 Z" evenOdd="false"/>
+            <thickness>4</thickness>
+            <filled>false</filled>
+            <color>
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+              <alpha>255</alpha>
+            </color>
+          </poly>
+          <text>
+            <p1 x="4" y="66"/>
+            <p2 x="5" y="66"/>
+            <text>Crement</text>
+            <orientation>LEFTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="4" y="87"/>
+            <p2 x="5" y="87"/>
+            <text>RCIi</text>
+            <orientation>LEFTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="4" y="6"/>
+            <p2 x="5" y="6"/>
+            <text>Bus</text>
+            <orientation>LEFTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="4" y="25"/>
+            <p2 x="5" y="25"/>
+            <text>CLK</text>
+            <orientation>LEFTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="6" y="46"/>
+            <p2 x="7" y="46"/>
+            <text>Reset</text>
+            <orientation>LEFTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="95" y="107"/>
+            <p2 x="96" y="107"/>
+            <text>R1i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="95" y="127"/>
+            <p2 x="96" y="127"/>
+            <text>R2i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="95" y="147"/>
+            <p2 x="96" y="147"/>
+            <text>R3i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="95" y="167"/>
+            <p2 x="96" y="167"/>
+            <text>R4i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="95" y="187"/>
+            <p2 x="96" y="187"/>
+            <text>R5i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="207"/>
+            <p2 x="97" y="207"/>
+            <text>R6i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="227"/>
+            <p2 x="97" y="227"/>
+            <text>R7i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="247"/>
+            <p2 x="97" y="247"/>
+            <text>R8i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="267"/>
+            <p2 x="97" y="267"/>
+            <text>R9i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="287"/>
+            <p2 x="97" y="287"/>
+            <text>R10i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="307"/>
+            <p2 x="97" y="307"/>
+            <text>R11i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="327"/>
+            <p2 x="97" y="327"/>
+            <text>R12i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="347"/>
+            <p2 x="97" y="347"/>
+            <text>R13i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="367"/>
+            <p2 x="97" y="367"/>
+            <text>R14i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="387"/>
+            <p2 x="97" y="387"/>
+            <text>R15i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="95" y="86"/>
+            <p2 x="96" y="86"/>
+            <text>R0i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="427"/>
+            <p2 x="97" y="427"/>
+            <text>LHO1i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="447"/>
+            <p2 x="97" y="447"/>
+            <text>LHO2i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="467"/>
+            <p2 x="97" y="467"/>
+            <text>LHO3i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="487"/>
+            <p2 x="97" y="487"/>
+            <text>LHO4i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="507"/>
+            <p2 x="97" y="507"/>
+            <text>LHO5i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="527"/>
+            <p2 x="97" y="527"/>
+            <text>LHO6i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="547"/>
+            <p2 x="97" y="547"/>
+            <text>LHO7i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="567"/>
+            <p2 x="97" y="567"/>
+            <text>LHO8i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="587"/>
+            <p2 x="97" y="587"/>
+            <text>LHO9i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="607"/>
+            <p2 x="97" y="607"/>
+            <text>LHO10i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="627"/>
+            <p2 x="97" y="627"/>
+            <text>LHO11i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="647"/>
+            <p2 x="97" y="647"/>
+            <text>LHO12i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="667"/>
+            <p2 x="97" y="667"/>
+            <text>LHO13i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="687"/>
+            <p2 x="97" y="687"/>
+            <text>LHO14i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="707"/>
+            <p2 x="97" y="707"/>
+            <text>LHO15i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="95" y="407"/>
+            <p2 x="96" y="407"/>
+            <text>LHO0i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="747"/>
+            <p2 x="97" y="747"/>
+            <text>RHO1i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="767"/>
+            <p2 x="97" y="767"/>
+            <text>RHO2i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="787"/>
+            <p2 x="97" y="787"/>
+            <text>RHO3i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="807"/>
+            <p2 x="97" y="807"/>
+            <text>RHO4i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="827"/>
+            <p2 x="97" y="827"/>
+            <text>RHO5i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="847"/>
+            <p2 x="97" y="847"/>
+            <text>RHO6i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="867"/>
+            <p2 x="97" y="867"/>
+            <text>RHO7i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="887"/>
+            <p2 x="97" y="887"/>
+            <text>RHO8i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="907"/>
+            <p2 x="97" y="907"/>
+            <text>RHO9i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="927"/>
+            <p2 x="97" y="927"/>
+            <text>RHO10i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="947"/>
+            <p2 x="97" y="947"/>
+            <text>RHO11i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="967"/>
+            <p2 x="97" y="967"/>
+            <text>RHO12i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="987"/>
+            <p2 x="97" y="987"/>
+            <text>RHO13i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="1007"/>
+            <p2 x="97" y="1007"/>
+            <text>RHO14i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="1027"/>
+            <p2 x="97" y="1027"/>
+            <text>RHO15i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="727"/>
+            <p2 x="97" y="727"/>
+            <text>RHO0i</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="1047"/>
+            <p2 x="97" y="1047"/>
+            <text>Decrement</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="96" y="1067"/>
+            <p2 x="97" y="1067"/>
+            <text>Increment</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+        </drawables>
+        <label>
+          <p1 x="47" y="-17"/>
+          <p2 x="48" y="-17"/>
+          <text></text>
+          <orientation>CENTERBOTTOM</orientation>
+          <size>24</size>
+          <color>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </color>
+        </label>
+      </shape>
+    </entry>
+  </attributes>
   <visualElements>
     <visualElement>
       <elementName>74138.dig</elementName>

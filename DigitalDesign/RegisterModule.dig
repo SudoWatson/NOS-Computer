@@ -53,9 +53,9 @@
             </pin>
           </entry>
           <entry>
-            <string>RHOE</string>
+            <string>LHOEi</string>
             <pin>
-              <pos x="60" y="200"/>
+              <pos x="40" y="200"/>
               <showLabel>false</showLabel>
             </pin>
           </entry>
@@ -70,13 +70,6 @@
             <string>OUT</string>
             <pin>
               <pos x="120" y="140"/>
-              <showLabel>false</showLabel>
-            </pin>
-          </entry>
-          <entry>
-            <string>LHOE</string>
-            <pin>
-              <pos x="40" y="200"/>
               <showLabel>false</showLabel>
             </pin>
           </entry>
@@ -98,6 +91,13 @@
             <string>RHO</string>
             <pin>
               <pos x="120" y="180"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>RHOEi</string>
+            <pin>
+              <pos x="60" y="200"/>
               <showLabel>false</showLabel>
             </pin>
           </entry>
@@ -140,35 +140,22 @@
             </color>
           </poly>
           <text>
+            <p1 x="47" y="195"/>
+            <p2 x="47" y="194"/>
+            <text>LHOEi</text>
+            <orientation>LEFTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
             <p1 x="4" y="46"/>
             <p2 x="5" y="46"/>
             <text>OE</text>
-            <orientation>LEFTBOTTOM</orientation>
-            <size>18</size>
-            <color>
-              <red>128</red>
-              <green>128</green>
-              <blue>128</blue>
-              <alpha>255</alpha>
-            </color>
-          </text>
-          <text>
-            <p1 x="46" y="196"/>
-            <p2 x="46" y="195"/>
-            <text>LHOE</text>
-            <orientation>LEFTBOTTOM</orientation>
-            <size>18</size>
-            <color>
-              <red>128</red>
-              <green>128</green>
-              <blue>128</blue>
-              <alpha>255</alpha>
-            </color>
-          </text>
-          <text>
-            <p1 x="66" y="196"/>
-            <p2 x="66" y="195"/>
-            <text>RHOE</text>
             <orientation>LEFTBOTTOM</orientation>
             <size>18</size>
             <color>
@@ -308,6 +295,19 @@
               <alpha>255</alpha>
             </color>
           </text>
+          <text>
+            <p1 x="67" y="196"/>
+            <p2 x="67" y="195"/>
+            <text>RHOEi</text>
+            <orientation>LEFTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
         </drawables>
         <label>
           <p1 x="55" y="-18"/>
@@ -384,15 +384,15 @@ the register will output its contents to the main bus</string>
       <elementAttributes>
         <entry>
           <string>Description</string>
-          <string>Left Hand Output Enable - If high, regardless of if this register is Enabled or not,
-this register will output it&apos;s contents to the Left Hand of the ALU</string>
+          <string>Left Hand Output Enable inverted - If high, regardless of if this register is
+Enabled or not, this register will output it&apos;s contents to the Left Hand of the ALU</string>
         </entry>
         <entry>
           <string>Label</string>
-          <string>LHOE</string>
+          <string>LHOEi</string>
         </entry>
       </elementAttributes>
-      <pos x="1840" y="760"/>
+      <pos x="1880" y="760"/>
     </visualElement>
     <visualElement>
       <elementName>Out</elementName>
@@ -414,22 +414,22 @@ this register will output it&apos;s contents to the Left Hand of the ALU</string
           <intFormat>hex</intFormat>
         </entry>
       </elementAttributes>
-      <pos x="1920" y="900"/>
+      <pos x="2060" y="900"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
           <string>Description</string>
-          <string>Right Hand Output Enable - If high, regardless of if this register is Enabled or not,
-this register will output it&apos;s contents to the right Hand of the ALU</string>
+          <string>Right Hand Output Enable inverted - If high, regardless of if this register is
+Enabled or not, this register will output it&apos;s contents to the right Hand of the ALU</string>
         </entry>
         <entry>
           <string>Label</string>
-          <string>RHOE</string>
+          <string>RHOEi</string>
         </entry>
       </elementAttributes>
-      <pos x="1840" y="820"/>
+      <pos x="1880" y="820"/>
     </visualElement>
     <visualElement>
       <elementName>Out</elementName>
@@ -451,7 +451,7 @@ this register will output it&apos;s contents to the right Hand of the ALU</strin
           <intFormat>hex</intFormat>
         </entry>
       </elementAttributes>
-      <pos x="1920" y="780"/>
+      <pos x="2060" y="780"/>
     </visualElement>
     <visualElement>
       <elementName>Out</elementName>
@@ -473,7 +473,7 @@ this register will output it&apos;s contents to the right Hand of the ALU</strin
           <intFormat>hex</intFormat>
         </entry>
       </elementAttributes>
-      <pos x="1920" y="840"/>
+      <pos x="2060" y="840"/>
     </visualElement>
     <visualElement>
       <elementName>Driver</elementName>
@@ -483,7 +483,7 @@ this register will output it&apos;s contents to the right Hand of the ALU</strin
           <int>16</int>
         </entry>
       </elementAttributes>
-      <pos x="1860" y="780"/>
+      <pos x="2000" y="780"/>
     </visualElement>
     <visualElement>
       <elementName>Driver</elementName>
@@ -493,7 +493,7 @@ this register will output it&apos;s contents to the right Hand of the ALU</strin
           <int>16</int>
         </entry>
       </elementAttributes>
-      <pos x="1860" y="840"/>
+      <pos x="2000" y="840"/>
     </visualElement>
     <visualElement>
       <elementName>Driver</elementName>
@@ -507,7 +507,7 @@ this register will output it&apos;s contents to the right Hand of the ALU</strin
           <boolean>true</boolean>
         </entry>
       </elementAttributes>
-      <pos x="1860" y="900"/>
+      <pos x="2000" y="900"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
@@ -739,6 +739,16 @@ This is inverted because the output of the register controller is inverted</stri
       <elementAttributes/>
       <pos x="1620" y="80"/>
     </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes/>
+      <pos x="1920" y="760"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes/>
+      <pos x="1920" y="820"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
@@ -799,11 +809,11 @@ This is inverted because the output of the register controller is inverted</stri
     </wire>
     <wire>
       <p1 x="1720" y="900"/>
-      <p2 x="1840" y="900"/>
+      <p2 x="1980" y="900"/>
     </wire>
     <wire>
-      <p1 x="1880" y="900"/>
-      <p2 x="1920" y="900"/>
+      <p1 x="2020" y="900"/>
+      <p2 x="2060" y="900"/>
     </wire>
     <wire>
       <p1 x="1420" y="520"/>
@@ -827,11 +837,11 @@ This is inverted because the output of the register controller is inverted</stri
     </wire>
     <wire>
       <p1 x="1720" y="840"/>
-      <p2 x="1840" y="840"/>
+      <p2 x="1980" y="840"/>
     </wire>
     <wire>
-      <p1 x="1880" y="840"/>
-      <p2 x="1920" y="840"/>
+      <p1 x="2020" y="840"/>
+      <p2 x="2060" y="840"/>
     </wire>
     <wire>
       <p1 x="880" y="-140"/>
@@ -839,11 +849,11 @@ This is inverted because the output of the register controller is inverted</stri
     </wire>
     <wire>
       <p1 x="1720" y="780"/>
-      <p2 x="1840" y="780"/>
+      <p2 x="1980" y="780"/>
     </wire>
     <wire>
-      <p1 x="1880" y="780"/>
-      <p2 x="1920" y="780"/>
+      <p1 x="2020" y="780"/>
+      <p2 x="2060" y="780"/>
     </wire>
     <wire>
       <p1 x="420" y="780"/>
@@ -951,7 +961,7 @@ This is inverted because the output of the register controller is inverted</stri
     </wire>
     <wire>
       <p1 x="-40" y="920"/>
-      <p2 x="1860" y="920"/>
+      <p2 x="2000" y="920"/>
     </wire>
     <wire>
       <p1 x="760" y="220"/>
@@ -1110,10 +1120,6 @@ This is inverted because the output of the register controller is inverted</stri
       <p2 x="100" y="240"/>
     </wire>
     <wire>
-      <p1 x="1840" y="820"/>
-      <p2 x="1860" y="820"/>
-    </wire>
-    <wire>
       <p1 x="400" y="180"/>
       <p2 x="440" y="180"/>
     </wire>
@@ -1154,6 +1160,14 @@ This is inverted because the output of the register controller is inverted</stri
       <p2 x="200" y="500"/>
     </wire>
     <wire>
+      <p1 x="1880" y="820"/>
+      <p2 x="1920" y="820"/>
+    </wire>
+    <wire>
+      <p1 x="1960" y="820"/>
+      <p2 x="2000" y="820"/>
+    </wire>
+    <wire>
       <p1 x="860" y="-120"/>
       <p2 x="1440" y="-120"/>
     </wire>
@@ -1166,12 +1180,16 @@ This is inverted because the output of the register controller is inverted</stri
       <p2 x="100" y="440"/>
     </wire>
     <wire>
-      <p1 x="1840" y="760"/>
-      <p2 x="1860" y="760"/>
-    </wire>
-    <wire>
       <p1 x="400" y="760"/>
       <p2 x="1700" y="760"/>
+    </wire>
+    <wire>
+      <p1 x="1880" y="760"/>
+      <p2 x="1920" y="760"/>
+    </wire>
+    <wire>
+      <p1 x="1960" y="760"/>
+      <p2 x="2000" y="760"/>
     </wire>
     <wire>
       <p1 x="600" y="120"/>
