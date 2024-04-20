@@ -27,7 +27,7 @@
           <boolean>true</boolean>
         </entry>
       </elementAttributes>
-      <pos x="-80" y="-2000"/>
+      <pos x="-80" y="-2340"/>
     </visualElement>
     <visualElement>
       <elementName>RegisterController.dig</elementName>
@@ -237,7 +237,7 @@
           <string>1*16</string>
         </entry>
       </elementAttributes>
-      <pos x="-120" y="-2000"/>
+      <pos x="-120" y="-2340"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
@@ -315,7 +315,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="-120" y="-2020"/>
+      <pos x="-120" y="-2360"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -329,7 +329,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="-140" y="-2020"/>
+      <pos x="-140" y="-2360"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -343,7 +343,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="-160" y="-2020"/>
+      <pos x="-160" y="-2360"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -357,7 +357,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="-180" y="-2020"/>
+      <pos x="-180" y="-2360"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -371,7 +371,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="-200" y="-2020"/>
+      <pos x="-200" y="-2360"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -385,7 +385,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="-220" y="-2020"/>
+      <pos x="-220" y="-2360"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -399,7 +399,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="-240" y="-2020"/>
+      <pos x="-240" y="-2360"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -413,7 +413,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="-260" y="-2020"/>
+      <pos x="-260" y="-2360"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -427,7 +427,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="-280" y="-2020"/>
+      <pos x="-280" y="-2360"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -441,7 +441,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="-300" y="-2020"/>
+      <pos x="-300" y="-2360"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -455,7 +455,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="-320" y="-2020"/>
+      <pos x="-320" y="-2360"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -469,7 +469,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="-340" y="-2020"/>
+      <pos x="-340" y="-2360"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -483,7 +483,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="-360" y="-2020"/>
+      <pos x="-360" y="-2360"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -497,7 +497,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="-380" y="-2020"/>
+      <pos x="-380" y="-2360"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -511,7 +511,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="-400" y="-2020"/>
+      <pos x="-400" y="-2360"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -525,7 +525,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="-420" y="-2020"/>
+      <pos x="-420" y="-2360"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -547,7 +547,7 @@
           <string>1*16</string>
         </entry>
       </elementAttributes>
-      <pos x="1120" y="-2260"/>
+      <pos x="520" y="-2140"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -561,7 +561,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="1120" y="-2280"/>
+      <pos x="520" y="-2160"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -575,7 +575,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="1100" y="-2280"/>
+      <pos x="500" y="-2160"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -589,7 +589,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="1080" y="-2280"/>
+      <pos x="480" y="-2160"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -603,7 +603,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="1060" y="-2280"/>
+      <pos x="460" y="-2160"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -617,7 +617,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="1040" y="-2280"/>
+      <pos x="440" y="-2160"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -631,7 +631,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="1020" y="-2280"/>
+      <pos x="420" y="-2160"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -645,7 +645,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="1000" y="-2280"/>
+      <pos x="400" y="-2160"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -659,7 +659,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="980" y="-2280"/>
+      <pos x="380" y="-2160"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -673,7 +673,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="960" y="-2280"/>
+      <pos x="360" y="-2160"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -687,7 +687,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="940" y="-2280"/>
+      <pos x="340" y="-2160"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -701,7 +701,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="920" y="-2280"/>
+      <pos x="320" y="-2160"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -715,7 +715,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="900" y="-2280"/>
+      <pos x="300" y="-2160"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -729,7 +729,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="880" y="-2280"/>
+      <pos x="280" y="-2160"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -743,7 +743,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="860" y="-2280"/>
+      <pos x="260" y="-2160"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -757,7 +757,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="840" y="-2280"/>
+      <pos x="240" y="-2160"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -771,7 +771,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="820" y="-2280"/>
+      <pos x="220" y="-2160"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -793,7 +793,7 @@
           <string>1*16</string>
         </entry>
       </elementAttributes>
-      <pos x="1120" y="-2140"/>
+      <pos x="520" y="-2060"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -807,7 +807,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="1120" y="-2160"/>
+      <pos x="520" y="-2080"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -821,7 +821,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="1100" y="-2160"/>
+      <pos x="500" y="-2080"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -835,7 +835,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="1080" y="-2160"/>
+      <pos x="480" y="-2080"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -849,7 +849,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="1060" y="-2160"/>
+      <pos x="460" y="-2080"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -863,7 +863,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="1040" y="-2160"/>
+      <pos x="440" y="-2080"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -877,7 +877,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="1020" y="-2160"/>
+      <pos x="420" y="-2080"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -891,7 +891,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="1000" y="-2160"/>
+      <pos x="400" y="-2080"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -905,7 +905,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="980" y="-2160"/>
+      <pos x="380" y="-2080"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -919,7 +919,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="960" y="-2160"/>
+      <pos x="360" y="-2080"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -933,7 +933,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="940" y="-2160"/>
+      <pos x="340" y="-2080"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -947,7 +947,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="920" y="-2160"/>
+      <pos x="320" y="-2080"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -961,7 +961,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="900" y="-2160"/>
+      <pos x="300" y="-2080"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -975,7 +975,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="880" y="-2160"/>
+      <pos x="280" y="-2080"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -989,7 +989,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="860" y="-2160"/>
+      <pos x="260" y="-2080"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -1003,7 +1003,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="840" y="-2160"/>
+      <pos x="240" y="-2080"/>
     </visualElement>
     <visualElement>
       <elementName>LED</elementName>
@@ -1017,253 +1017,7 @@
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="820" y="-2160"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Splitter</elementName>
-      <elementAttributes>
-        <entry>
-          <string>mirror</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="1"/>
-        </entry>
-        <entry>
-          <string>Input Splitting</string>
-          <string>16</string>
-        </entry>
-        <entry>
-          <string>Output Splitting</string>
-          <string>1*16</string>
-        </entry>
-      </elementAttributes>
-      <pos x="1120" y="-2060"/>
-    </visualElement>
-    <visualElement>
-      <elementName>LED</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Size</string>
-          <int>0</int>
-        </entry>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="1"/>
-        </entry>
-      </elementAttributes>
-      <pos x="1120" y="-2080"/>
-    </visualElement>
-    <visualElement>
-      <elementName>LED</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Size</string>
-          <int>0</int>
-        </entry>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="1"/>
-        </entry>
-      </elementAttributes>
-      <pos x="1100" y="-2080"/>
-    </visualElement>
-    <visualElement>
-      <elementName>LED</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Size</string>
-          <int>0</int>
-        </entry>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="1"/>
-        </entry>
-      </elementAttributes>
-      <pos x="1080" y="-2080"/>
-    </visualElement>
-    <visualElement>
-      <elementName>LED</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Size</string>
-          <int>0</int>
-        </entry>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="1"/>
-        </entry>
-      </elementAttributes>
-      <pos x="1060" y="-2080"/>
-    </visualElement>
-    <visualElement>
-      <elementName>LED</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Size</string>
-          <int>0</int>
-        </entry>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="1"/>
-        </entry>
-      </elementAttributes>
-      <pos x="1040" y="-2080"/>
-    </visualElement>
-    <visualElement>
-      <elementName>LED</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Size</string>
-          <int>0</int>
-        </entry>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="1"/>
-        </entry>
-      </elementAttributes>
-      <pos x="1020" y="-2080"/>
-    </visualElement>
-    <visualElement>
-      <elementName>LED</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Size</string>
-          <int>0</int>
-        </entry>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="1"/>
-        </entry>
-      </elementAttributes>
-      <pos x="1000" y="-2080"/>
-    </visualElement>
-    <visualElement>
-      <elementName>LED</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Size</string>
-          <int>0</int>
-        </entry>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="1"/>
-        </entry>
-      </elementAttributes>
-      <pos x="980" y="-2080"/>
-    </visualElement>
-    <visualElement>
-      <elementName>LED</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Size</string>
-          <int>0</int>
-        </entry>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="1"/>
-        </entry>
-      </elementAttributes>
-      <pos x="960" y="-2080"/>
-    </visualElement>
-    <visualElement>
-      <elementName>LED</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Size</string>
-          <int>0</int>
-        </entry>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="1"/>
-        </entry>
-      </elementAttributes>
-      <pos x="940" y="-2080"/>
-    </visualElement>
-    <visualElement>
-      <elementName>LED</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Size</string>
-          <int>0</int>
-        </entry>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="1"/>
-        </entry>
-      </elementAttributes>
-      <pos x="920" y="-2080"/>
-    </visualElement>
-    <visualElement>
-      <elementName>LED</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Size</string>
-          <int>0</int>
-        </entry>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="1"/>
-        </entry>
-      </elementAttributes>
-      <pos x="900" y="-2080"/>
-    </visualElement>
-    <visualElement>
-      <elementName>LED</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Size</string>
-          <int>0</int>
-        </entry>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="1"/>
-        </entry>
-      </elementAttributes>
-      <pos x="880" y="-2080"/>
-    </visualElement>
-    <visualElement>
-      <elementName>LED</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Size</string>
-          <int>0</int>
-        </entry>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="1"/>
-        </entry>
-      </elementAttributes>
-      <pos x="860" y="-2080"/>
-    </visualElement>
-    <visualElement>
-      <elementName>LED</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Size</string>
-          <int>0</int>
-        </entry>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="1"/>
-        </entry>
-      </elementAttributes>
-      <pos x="840" y="-2080"/>
-    </visualElement>
-    <visualElement>
-      <elementName>LED</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Size</string>
-          <int>0</int>
-        </entry>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="1"/>
-        </entry>
-      </elementAttributes>
-      <pos x="820" y="-2080"/>
+      <pos x="220" y="-2080"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -1281,7 +1035,7 @@
           <string>16*3</string>
         </entry>
       </elementAttributes>
-      <pos x="1300" y="-2040"/>
+      <pos x="700" y="-2040"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -1426,6 +1180,68 @@ from register to register</string>
       </elementAttributes>
       <pos x="420" y="-460"/>
     </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Manual</string>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Manually put data on bus</string>
+        </entry>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+      </elementAttributes>
+      <pos x="-20" y="-2340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Driver</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>16</int>
+        </entry>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+      </elementAttributes>
+      <pos x="-80" y="-2300"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Left Hand Bus</string>
+        </entry>
+      </elementAttributes>
+      <pos x="280" y="-2140"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Right Hand Bus</string>
+        </entry>
+      </elementAttributes>
+      <pos x="280" y="-2060"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Main Bus</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-400" y="-2460"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
@@ -1453,12 +1269,12 @@ from register to register</string>
       <p2 x="460" y="-1800"/>
     </wire>
     <wire>
-      <p1 x="1120" y="-2120"/>
-      <p2 x="1200" y="-2120"/>
+      <p1 x="520" y="-2120"/>
+      <p2 x="600" y="-2120"/>
     </wire>
     <wire>
-      <p1 x="1200" y="-2060"/>
-      <p2 x="1280" y="-2060"/>
+      <p1 x="600" y="-2060"/>
+      <p2 x="680" y="-2060"/>
     </wire>
     <wire>
       <p1 x="420" y="-460"/>
@@ -1493,15 +1309,15 @@ from register to register</string>
       <p2 x="600" y="-340"/>
     </wire>
     <wire>
+      <p1 x="-120" y="-2260"/>
+      <p2 x="-80" y="-2260"/>
+    </wire>
+    <wire>
       <p1 x="540" y="-920"/>
       <p2 x="1720" y="-920"/>
     </wire>
     <wire>
       <p1 x="420" y="-1560"/>
-      <p2 x="440" y="-1560"/>
-    </wire>
-    <wire>
-      <p1 x="440" y="-1560"/>
       <p2 x="460" y="-1560"/>
     </wire>
     <wire>
@@ -1542,6 +1358,10 @@ from register to register</string>
     </wire>
     <wire>
       <p1 x="420" y="-1320"/>
+      <p2 x="440" y="-1320"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="-1320"/>
       <p2 x="460" y="-1320"/>
     </wire>
     <wire>
@@ -1585,8 +1405,8 @@ from register to register</string>
       <p2 x="1420" y="-1400"/>
     </wire>
     <wire>
-      <p1 x="1120" y="-2040"/>
-      <p2 x="1280" y="-2040"/>
+      <p1 x="520" y="-2040"/>
+      <p2 x="680" y="-2040"/>
     </wire>
     <wire>
       <p1 x="420" y="-380"/>
@@ -1601,12 +1421,8 @@ from register to register</string>
       <p2 x="680" y="-700"/>
     </wire>
     <wire>
-      <p1 x="-120" y="-1980"/>
-      <p2 x="-80" y="-1980"/>
-    </wire>
-    <wire>
-      <p1 x="700" y="-1980"/>
-      <p2 x="1300" y="-1980"/>
+      <p1 x="-60" y="-2300"/>
+      <p2 x="-20" y="-2300"/>
     </wire>
     <wire>
       <p1 x="440" y="-960"/>
@@ -1621,12 +1437,8 @@ from register to register</string>
       <p2 x="800" y="-1600"/>
     </wire>
     <wire>
-      <p1 x="1120" y="-2240"/>
-      <p2 x="1280" y="-2240"/>
-    </wire>
-    <wire>
-      <p1 x="1280" y="-2240"/>
-      <p2 x="1280" y="-2080"/>
+      <p1 x="-80" y="-2240"/>
+      <p2 x="680" y="-2240"/>
     </wire>
     <wire>
       <p1 x="640" y="-1260"/>
@@ -1685,6 +1497,14 @@ from register to register</string>
       <p2 x="520" y="-1800"/>
     </wire>
     <wire>
+      <p1 x="520" y="-2140"/>
+      <p2 x="520" y="-2120"/>
+    </wire>
+    <wire>
+      <p1 x="520" y="-2060"/>
+      <p2 x="520" y="-2040"/>
+    </wire>
+    <wire>
       <p1 x="1740" y="-900"/>
       <p2 x="1740" y="-860"/>
     </wire>
@@ -1717,16 +1537,28 @@ from register to register</string>
       <p2 x="1420" y="-860"/>
     </wire>
     <wire>
-      <p1 x="-80" y="-2000"/>
-      <p2 x="-80" y="-1980"/>
+      <p1 x="-80" y="-2340"/>
+      <p2 x="-80" y="-2320"/>
     </wire>
     <wire>
-      <p1 x="-80" y="-1980"/>
+      <p1 x="-80" y="-2280"/>
+      <p2 x="-80" y="-2260"/>
+    </wire>
+    <wire>
+      <p1 x="-80" y="-2260"/>
+      <p2 x="-80" y="-2240"/>
+    </wire>
+    <wire>
+      <p1 x="-80" y="-2240"/>
       <p2 x="-80" y="-700"/>
     </wire>
     <wire>
       <p1 x="720" y="-760"/>
       <p2 x="720" y="-660"/>
+    </wire>
+    <wire>
+      <p1 x="-20" y="-2340"/>
+      <p2 x="-20" y="-2300"/>
     </wire>
     <wire>
       <p1 x="660" y="-1260"/>
@@ -1759,10 +1591,6 @@ from register to register</string>
     <wire>
       <p1 x="660" y="-2020"/>
       <p2 x="660" y="-2000"/>
-    </wire>
-    <wire>
-      <p1 x="1300" y="-2040"/>
-      <p2 x="1300" y="-1980"/>
     </wire>
     <wire>
       <p1 x="600" y="-1780"/>
@@ -1799,6 +1627,10 @@ from register to register</string>
     <wire>
       <p1 x="600" y="-940"/>
       <p2 x="600" y="-660"/>
+    </wire>
+    <wire>
+      <p1 x="600" y="-2120"/>
+      <p2 x="600" y="-2060"/>
     </wire>
     <wire>
       <p1 x="600" y="-660"/>
@@ -1873,18 +1705,6 @@ from register to register</string>
       <p2 x="1120" y="-860"/>
     </wire>
     <wire>
-      <p1 x="1120" y="-2260"/>
-      <p2 x="1120" y="-2240"/>
-    </wire>
-    <wire>
-      <p1 x="1120" y="-2140"/>
-      <p2 x="1120" y="-2120"/>
-    </wire>
-    <wire>
-      <p1 x="1120" y="-2060"/>
-      <p2 x="1120" y="-2040"/>
-    </wire>
-    <wire>
       <p1 x="1440" y="-1640"/>
       <p2 x="1440" y="-860"/>
     </wire>
@@ -1907,6 +1727,10 @@ from register to register</string>
     <wire>
       <p1 x="740" y="-760"/>
       <p2 x="740" y="-420"/>
+    </wire>
+    <wire>
+      <p1 x="680" y="-2240"/>
+      <p2 x="680" y="-2080"/>
     </wire>
     <wire>
       <p1 x="680" y="-760"/>
@@ -1949,10 +1773,6 @@ from register to register</string>
       <p2 x="560" y="-500"/>
     </wire>
     <wire>
-      <p1 x="1200" y="-2120"/>
-      <p2 x="1200" y="-2060"/>
-    </wire>
-    <wire>
       <p1 x="500" y="-1100"/>
       <p2 x="500" y="-1080"/>
     </wire>
@@ -1985,16 +1805,16 @@ from register to register</string>
       <p2 x="1460" y="-860"/>
     </wire>
     <wire>
-      <p1 x="-120" y="-2000"/>
-      <p2 x="-120" y="-1980"/>
+      <p1 x="-120" y="-2340"/>
+      <p2 x="-120" y="-2260"/>
     </wire>
     <wire>
       <p1 x="440" y="-1760"/>
-      <p2 x="440" y="-1520"/>
+      <p2 x="440" y="-1560"/>
     </wire>
     <wire>
-      <p1 x="440" y="-1320"/>
-      <p2 x="440" y="-1280"/>
+      <p1 x="440" y="-1560"/>
+      <p2 x="440" y="-1520"/>
     </wire>
     <wire>
       <p1 x="440" y="-1040"/>
@@ -2006,7 +1826,7 @@ from register to register</string>
     </wire>
     <wire>
       <p1 x="440" y="-1520"/>
-      <p2 x="440" y="-1320"/>
+      <p2 x="440" y="-1280"/>
     </wire>
     <wire>
       <p1 x="760" y="-1120"/>
@@ -2033,12 +1853,8 @@ from register to register</string>
       <p2 x="700" y="-680"/>
     </wire>
     <wire>
-      <p1 x="700" y="-2020"/>
-      <p2 x="700" y="-1980"/>
-    </wire>
-    <wire>
-      <p1 x="700" y="-1980"/>
-      <p2 x="700" y="-1780"/>
+      <p1 x="700" y="-2040"/>
+      <p2 x="700" y="-2020"/>
     </wire>
     <wire>
       <p1 x="700" y="-1540"/>
@@ -2047,6 +1863,10 @@ from register to register</string>
     <wire>
       <p1 x="700" y="-1780"/>
       <p2 x="700" y="-1540"/>
+    </wire>
+    <wire>
+      <p1 x="700" y="-2020"/>
+      <p2 x="700" y="-1780"/>
     </wire>
   </wires>
   <measurementOrdering/>
