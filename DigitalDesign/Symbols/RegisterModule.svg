@@ -3,7 +3,7 @@
    viewBox="-80 -80 260 340"
    version="1.1"
    id="svg13"
-   sodipodi:docname="registerModuleShape.svg"
+   sodipodi:docname="RegisterModule.svg"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -21,15 +21,15 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
-     inkscape:zoom="2.4147059"
-     inkscape:cx="129.82948"
-     inkscape:cy="203.95859"
+     inkscape:zoom="4.8294118"
+     inkscape:cx="130.65773"
+     inkscape:cy="214.20828"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g3">
+     inkscape:current-layer="svg13">
     <inkscape:grid
        type="xygrid"
        empspacing="4"
@@ -43,17 +43,17 @@
   </sodipodi:namedview>
   <rect
      stroke="#000000"
-     stroke-width="4.38086"
+     stroke-width="4.57741"
      fill="#ffffb4"
      fill-opacity="0.784314"
-     x="-20.054247"
-     y="-9.76192"
-     width="119.81616"
-     height="209.87706"
+     x="-19.955971"
+     y="-9.6636457"
+     width="119.61961"
+     height="229.50847"
      id="rect1" />
   <g
      id="g2-7"
-     transform="rotate(-89.233752,100.94658,99.142044)">
+     transform="rotate(-89.233752,111.33196,109.82875)">
     <circle
        fill="#0000b2"
        id="pin:LHOEi"
@@ -157,7 +157,7 @@
   </g>
   <g
      id="g8"
-     transform="translate(-19.878197,-19.878197)">
+     transform="translate(-19.878197)">
     <circle
        fill="#0000b2"
        id="pin:Reset"
@@ -189,7 +189,7 @@
   </g>
   <g
      id="g10"
-     transform="rotate(-90,10.067692,190.06569)">
+     transform="rotate(-90,19.799726,199.79772)">
     <circle
        fill="#0000b2"
        id="pin:Enablei"
@@ -205,7 +205,7 @@
   </g>
   <g
      id="g11"
-     transform="translate(-0.41412908,139.97564)">
+     transform="translate(-1.2423873,159.02558)">
     <circle
        fill="#b20000"
        id="pin:OUT"
@@ -222,7 +222,7 @@
   </g>
   <g
      id="g12"
-     transform="translate(0,139.97564)">
+     transform="translate(-0.82825822,159.02558)">
     <circle
        fill="#b20000"
        id="pin:LHO"
@@ -239,7 +239,7 @@
   </g>
   <g
      id="g13"
-     transform="translate(0,139.97564)">
+     transform="translate(-0.82825822,159.02558)">
     <circle
        fill="#b20000"
        id="pin:RHO"
@@ -256,7 +256,7 @@
   </g>
   <g
      id="g3"
-     transform="rotate(-89.295079,101.00994,99.512837)">
+     transform="rotate(-89.295079,110.86245,109.24487)">
     <circle
        fill="#0000b2"
        id="pin:RHOEi"
@@ -270,5 +270,43 @@
        y="46.579647"
        id="text3"
        transform="rotate(-1.0372949)">RHOEi</text>
+  </g>
+  <g
+     id="g11-2"
+     transform="translate(14.115716,-61.244393)">
+    <circle
+       fill="#0000b2"
+       id="pin:RHBusIn"
+       cx="85.621193"
+       cy="200.31059"
+       r="3" />
+    <text
+       fill="#808080"
+       font-size="18px"
+       x="24.913521"
+       y="206.6212"
+       id="text11-7"
+       inkscape:label="text11-7"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#808080"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         x="24.913521"
+         y="206.6212">RHBIn</tspan></text>
+  </g>
+  <g
+     id="g12-1"
+     transform="translate(-19.428744,-100.27606)">
+    <circle
+       fill="#0000b2"
+       id="pin:RHIN"
+       cx="0"
+       cy="220"
+       r="3" />
+    <text
+       fill="#808080"
+       font-size="18px"
+       x="4"
+       y="226"
+       id="text12-7">RHIN</text>
   </g>
 </svg>

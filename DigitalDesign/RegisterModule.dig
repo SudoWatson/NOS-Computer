@@ -55,28 +55,28 @@
           <entry>
             <string>LHOEi</string>
             <pin>
-              <pos x="40" y="200"/>
+              <pos x="40" y="220"/>
               <showLabel>false</showLabel>
             </pin>
           </entry>
           <entry>
             <string>Enablei</string>
             <pin>
-              <pos x="20" y="200"/>
+              <pos x="20" y="220"/>
               <showLabel>false</showLabel>
             </pin>
           </entry>
           <entry>
             <string>OUT</string>
             <pin>
-              <pos x="120" y="140"/>
+              <pos x="120" y="160"/>
               <showLabel>false</showLabel>
             </pin>
           </entry>
           <entry>
             <string>LHO</string>
             <pin>
-              <pos x="120" y="160"/>
+              <pos x="120" y="180"/>
               <showLabel>false</showLabel>
             </pin>
           </entry>
@@ -90,19 +90,33 @@
           <entry>
             <string>RHO</string>
             <pin>
-              <pos x="120" y="180"/>
+              <pos x="120" y="200"/>
               <showLabel>false</showLabel>
             </pin>
           </entry>
           <entry>
             <string>RHOEi</string>
             <pin>
-              <pos x="60" y="200"/>
+              <pos x="60" y="220"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>RHBusIn</string>
+            <pin>
+              <pos x="120" y="140"/>
               <showLabel>false</showLabel>
             </pin>
           </entry>
           <entry>
             <string>Reset</string>
+            <pin>
+              <pos x="0" y="140"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>RHIN</string>
             <pin>
               <pos x="0" y="120"/>
               <showLabel>false</showLabel>
@@ -118,7 +132,7 @@
         </pins>
         <drawables>
           <poly>
-            <poly path="M -0.054246902,-9.76192 L 119.76192,-9.76192 L 119.76192,200.11514 L -0.054246902,200.11514 Z" evenOdd="false"/>
+            <poly path="M 0.044029236,-9.663646 L 119.66364,-9.663646 L 119.66364,219.84482 L 0.044029236,219.84482 Z" evenOdd="false"/>
             <thickness>4</thickness>
             <filled>true</filled>
             <color>
@@ -129,7 +143,7 @@
             </color>
           </poly>
           <poly>
-            <poly path="M -0.054246902,-9.76192 L 119.76192,-9.76192 L 119.76192,200.11514 L -0.054246902,200.11514 Z" evenOdd="false"/>
+            <poly path="M 0.044029236,-9.663646 L 119.66364,-9.663646 L 119.66364,219.84482 L 0.044029236,219.84482 Z" evenOdd="false"/>
             <thickness>4</thickness>
             <filled>false</filled>
             <color>
@@ -140,8 +154,8 @@
             </color>
           </poly>
           <text>
-            <p1 x="47" y="195"/>
-            <p2 x="47" y="194"/>
+            <p1 x="47" y="216"/>
+            <p2 x="47" y="215"/>
             <text>LHOEi</text>
             <orientation>LEFTBOTTOM</orientation>
             <size>18</size>
@@ -218,8 +232,8 @@
             </color>
           </text>
           <text>
-            <p1 x="4" y="126"/>
-            <p2 x="5" y="126"/>
+            <p1 x="4" y="146"/>
+            <p2 x="5" y="146"/>
             <text>Reset</text>
             <orientation>LEFTBOTTOM</orientation>
             <size>18</size>
@@ -244,8 +258,8 @@
             </color>
           </text>
           <text>
-            <p1 x="26" y="196"/>
-            <p2 x="26" y="195"/>
+            <p1 x="26" y="216"/>
+            <p2 x="26" y="215"/>
             <text>Enablei</text>
             <orientation>LEFTBOTTOM</orientation>
             <size>18</size>
@@ -257,8 +271,8 @@
             </color>
           </text>
           <text>
-            <p1 x="116" y="146"/>
-            <p2 x="117" y="146"/>
+            <p1 x="115" y="165"/>
+            <p2 x="116" y="165"/>
             <text>OUT</text>
             <orientation>RIGHTBOTTOM</orientation>
             <size>18</size>
@@ -270,8 +284,8 @@
             </color>
           </text>
           <text>
-            <p1 x="116" y="166"/>
-            <p2 x="117" y="166"/>
+            <p1 x="115" y="185"/>
+            <p2 x="116" y="185"/>
             <text>LHO</text>
             <orientation>RIGHTBOTTOM</orientation>
             <size>18</size>
@@ -283,8 +297,8 @@
             </color>
           </text>
           <text>
-            <p1 x="116" y="186"/>
-            <p2 x="117" y="186"/>
+            <p1 x="115" y="205"/>
+            <p2 x="116" y="205"/>
             <text>RHO</text>
             <orientation>RIGHTBOTTOM</orientation>
             <size>18</size>
@@ -296,9 +310,35 @@
             </color>
           </text>
           <text>
-            <p1 x="67" y="196"/>
-            <p2 x="67" y="195"/>
+            <p1 x="67" y="215"/>
+            <p2 x="67" y="214"/>
             <text>RHOEi</text>
+            <orientation>LEFTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="59" y="145"/>
+            <p2 x="60" y="145"/>
+            <text>RHBIn</text>
+            <orientation>LEFTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="5" y="126"/>
+            <p2 x="6" y="126"/>
+            <text>RHIN</text>
             <orientation>LEFTBOTTOM</orientation>
             <size>18</size>
             <color>
@@ -399,7 +439,8 @@ Enabled or not, this register will output it&apos;s contents to the Left Hand of
       <elementAttributes>
         <entry>
           <string>Description</string>
-          <string>The output to main bus</string>
+          <string>The output to main bus
+Note that Main Bus In and Out should likely physically be the same</string>
         </entry>
         <entry>
           <string>Label</string>
@@ -458,7 +499,8 @@ Enabled or not, this register will output it&apos;s contents to the right Hand o
       <elementAttributes>
         <entry>
           <string>Description</string>
-          <string>The output the right hand of the ALU</string>
+          <string>Output to the Right Hand Bus.
+Note that Right Hand In and Out should likely physically be the same</string>
         </entry>
         <entry>
           <string>Label</string>
@@ -514,7 +556,8 @@ Enabled or not, this register will output it&apos;s contents to the right Hand o
       <elementAttributes>
         <entry>
           <string>Description</string>
-          <string>Input from the Main Bus</string>
+          <string>Input from the Main Bus.
+Note that Main Bus In and Out should physically be the same</string>
         </entry>
         <entry>
           <string>rotation</string>
@@ -533,7 +576,7 @@ Enabled or not, this register will output it&apos;s contents to the right Hand o
           <intFormat>hex</intFormat>
         </entry>
       </elementAttributes>
-      <pos x="600" y="-300"/>
+      <pos x="600" y="-360"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -749,6 +792,85 @@ This is inverted because the output of the register controller is inverted</stri
       <elementAttributes/>
       <pos x="1920" y="820"/>
     </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Input from the Right Hand Bus.
+This is used for move operations between 2 registers
+Note that Right Hand In and Out should likely physically be the same</string>
+        </entry>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>RHBusIn</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>16</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>hex</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="480" y="-360"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Tells load to load from the right hand bus
+instead of main bus for register moving</string>
+        </entry>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>RHIN</string>
+        </entry>
+      </elementAttributes>
+      <pos x="540" y="-360"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Driver</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>16</int>
+        </entry>
+      </elementAttributes>
+      <pos x="480" y="-320"/>
+    </visualElement>
+    <visualElement>
+      <elementName>DriverInvSel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>16</int>
+        </entry>
+        <entry>
+          <string>flipSelPos</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="600" y="-320"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
@@ -758,26 +880,6 @@ This is inverted because the output of the register controller is inverted</stri
     <wire>
       <p1 x="760" y="0"/>
       <p2 x="1300" y="0"/>
-    </wire>
-    <wire>
-      <p1 x="80" y="320"/>
-      <p2 x="100" y="320"/>
-    </wire>
-    <wire>
-      <p1 x="300" y="320"/>
-      <p2 x="620" y="320"/>
-    </wire>
-    <wire>
-      <p1 x="620" y="320"/>
-      <p2 x="960" y="320"/>
-    </wire>
-    <wire>
-      <p1 x="960" y="320"/>
-      <p2 x="1300" y="320"/>
-    </wire>
-    <wire>
-      <p1 x="1300" y="320"/>
-      <p2 x="1640" y="320"/>
     </wire>
     <wire>
       <p1 x="600" y="260"/>
@@ -800,14 +902,6 @@ This is inverted because the output of the register controller is inverted</stri
       <p2 x="0" y="260"/>
     </wire>
     <wire>
-      <p1 x="1060" y="580"/>
-      <p2 x="1700" y="580"/>
-    </wire>
-    <wire>
-      <p1 x="-160" y="580"/>
-      <p2 x="-120" y="580"/>
-    </wire>
-    <wire>
       <p1 x="1720" y="900"/>
       <p2 x="1980" y="900"/>
     </wire>
@@ -818,30 +912,6 @@ This is inverted because the output of the register controller is inverted</stri
     <wire>
       <p1 x="1420" y="520"/>
       <p2 x="1700" y="520"/>
-    </wire>
-    <wire>
-      <p1 x="340" y="200"/>
-      <p2 x="620" y="200"/>
-    </wire>
-    <wire>
-      <p1 x="960" y="200"/>
-      <p2 x="1300" y="200"/>
-    </wire>
-    <wire>
-      <p1 x="1300" y="200"/>
-      <p2 x="1640" y="200"/>
-    </wire>
-    <wire>
-      <p1 x="620" y="200"/>
-      <p2 x="960" y="200"/>
-    </wire>
-    <wire>
-      <p1 x="1720" y="840"/>
-      <p2 x="1980" y="840"/>
-    </wire>
-    <wire>
-      <p1 x="2020" y="840"/>
-      <p2 x="2060" y="840"/>
     </wire>
     <wire>
       <p1 x="880" y="-140"/>
@@ -880,34 +950,6 @@ This is inverted because the output of the register controller is inverted</stri
       <p2 x="780" y="140"/>
     </wire>
     <wire>
-      <p1 x="440" y="460"/>
-      <p2 x="780" y="460"/>
-    </wire>
-    <wire>
-      <p1 x="-160" y="460"/>
-      <p2 x="-120" y="460"/>
-    </wire>
-    <wire>
-      <p1 x="180" y="460"/>
-      <p2 x="200" y="460"/>
-    </wire>
-    <wire>
-      <p1 x="780" y="460"/>
-      <p2 x="1120" y="460"/>
-    </wire>
-    <wire>
-      <p1 x="1120" y="460"/>
-      <p2 x="1460" y="460"/>
-    </wire>
-    <wire>
-      <p1 x="360" y="720"/>
-      <p2 x="1700" y="720"/>
-    </wire>
-    <wire>
-      <p1 x="680" y="80"/>
-      <p2 x="960" y="80"/>
-    </wire>
-    <wire>
       <p1 x="-40" y="400"/>
       <p2 x="-20" y="400"/>
     </wire>
@@ -916,88 +958,16 @@ This is inverted because the output of the register controller is inverted</stri
       <p2 x="1100" y="-20"/>
     </wire>
     <wire>
-      <p1 x="380" y="340"/>
-      <p2 x="440" y="340"/>
-    </wire>
-    <wire>
-      <p1 x="720" y="340"/>
-      <p2 x="780" y="340"/>
-    </wire>
-    <wire>
-      <p1 x="1060" y="340"/>
-      <p2 x="1120" y="340"/>
-    </wire>
-    <wire>
-      <p1 x="1400" y="340"/>
-      <p2 x="1460" y="340"/>
-    </wire>
-    <wire>
-      <p1 x="600" y="340"/>
-      <p2 x="620" y="340"/>
-    </wire>
-    <wire>
-      <p1 x="1620" y="340"/>
-      <p2 x="1640" y="340"/>
-    </wire>
-    <wire>
-      <p1 x="1280" y="340"/>
-      <p2 x="1300" y="340"/>
-    </wire>
-    <wire>
-      <p1 x="940" y="340"/>
-      <p2 x="960" y="340"/>
-    </wire>
-    <wire>
-      <p1 x="-40" y="340"/>
-      <p2 x="0" y="340"/>
-    </wire>
-    <wire>
       <p1 x="720" y="660"/>
       <p2 x="1700" y="660"/>
     </wire>
     <wire>
-      <p1 x="1080" y="600"/>
-      <p2 x="1700" y="600"/>
+      <p1 x="480" y="-280"/>
+      <p2 x="600" y="-280"/>
     </wire>
     <wire>
       <p1 x="-40" y="920"/>
       <p2 x="2000" y="920"/>
-    </wire>
-    <wire>
-      <p1 x="760" y="220"/>
-      <p2 x="780" y="220"/>
-    </wire>
-    <wire>
-      <p1 x="1100" y="220"/>
-      <p2 x="1120" y="220"/>
-    </wire>
-    <wire>
-      <p1 x="1440" y="220"/>
-      <p2 x="1460" y="220"/>
-    </wire>
-    <wire>
-      <p1 x="420" y="220"/>
-      <p2 x="440" y="220"/>
-    </wire>
-    <wire>
-      <p1 x="600" y="220"/>
-      <p2 x="620" y="220"/>
-    </wire>
-    <wire>
-      <p1 x="1620" y="220"/>
-      <p2 x="1640" y="220"/>
-    </wire>
-    <wire>
-      <p1 x="1280" y="220"/>
-      <p2 x="1300" y="220"/>
-    </wire>
-    <wire>
-      <p1 x="940" y="220"/>
-      <p2 x="960" y="220"/>
-    </wire>
-    <wire>
-      <p1 x="-40" y="220"/>
-      <p2 x="0" y="220"/>
     </wire>
     <wire>
       <p1 x="1440" y="540"/>
@@ -1010,38 +980,6 @@ This is inverted because the output of the register controller is inverted</stri
     <wire>
       <p1 x="900" y="-160"/>
       <p2 x="1680" y="-160"/>
-    </wire>
-    <wire>
-      <p1 x="1380" y="480"/>
-      <p2 x="1700" y="480"/>
-    </wire>
-    <wire>
-      <p1 x="280" y="480"/>
-      <p2 x="300" y="480"/>
-    </wire>
-    <wire>
-      <p1 x="840" y="-100"/>
-      <p2 x="1640" y="-100"/>
-    </wire>
-    <wire>
-      <p1 x="420" y="100"/>
-      <p2 x="620" y="100"/>
-    </wire>
-    <wire>
-      <p1 x="680" y="100"/>
-      <p2 x="940" y="100"/>
-    </wire>
-    <wire>
-      <p1 x="940" y="100"/>
-      <p2 x="1280" y="100"/>
-    </wire>
-    <wire>
-      <p1 x="1280" y="100"/>
-      <p2 x="1620" y="100"/>
-    </wire>
-    <wire>
-      <p1 x="380" y="740"/>
-      <p2 x="1700" y="740"/>
     </wire>
     <wire>
       <p1 x="600" y="420"/>
@@ -1104,20 +1042,12 @@ This is inverted because the output of the register controller is inverted</stri
       <p2 x="0" y="300"/>
     </wire>
     <wire>
-      <p1 x="1100" y="620"/>
-      <p2 x="1700" y="620"/>
-    </wire>
-    <wire>
       <p1 x="1040" y="560"/>
       <p2 x="1700" y="560"/>
     </wire>
     <wire>
       <p1 x="-60" y="560"/>
       <p2 x="-40" y="560"/>
-    </wire>
-    <wire>
-      <p1 x="80" y="240"/>
-      <p2 x="100" y="240"/>
     </wire>
     <wire>
       <p1 x="400" y="180"/>
@@ -1152,14 +1082,6 @@ This is inverted because the output of the register controller is inverted</stri
       <p2 x="1300" y="180"/>
     </wire>
     <wire>
-      <p1 x="1400" y="500"/>
-      <p2 x="1700" y="500"/>
-    </wire>
-    <wire>
-      <p1 x="-160" y="500"/>
-      <p2 x="200" y="500"/>
-    </wire>
-    <wire>
       <p1 x="1880" y="820"/>
       <p2 x="1920" y="820"/>
     </wire>
@@ -1168,16 +1090,240 @@ This is inverted because the output of the register controller is inverted</stri
       <p2 x="2000" y="820"/>
     </wire>
     <wire>
-      <p1 x="860" y="-120"/>
-      <p2 x="1440" y="-120"/>
-    </wire>
-    <wire>
       <p1 x="-60" y="440"/>
       <p2 x="-40" y="440"/>
     </wire>
     <wire>
       <p1 x="-40" y="440"/>
       <p2 x="100" y="440"/>
+    </wire>
+    <wire>
+      <p1 x="820" y="-60"/>
+      <p2 x="1340" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="720" y="60"/>
+      <p2 x="980" y="60"/>
+    </wire>
+    <wire>
+      <p1 x="760" y="700"/>
+      <p2 x="1700" y="700"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="-320"/>
+      <p2 x="540" y="-320"/>
+    </wire>
+    <wire>
+      <p1 x="540" y="-320"/>
+      <p2 x="580" y="-320"/>
+    </wire>
+    <wire>
+      <p1 x="80" y="320"/>
+      <p2 x="100" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="300" y="320"/>
+      <p2 x="620" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="620" y="320"/>
+      <p2 x="960" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="960" y="320"/>
+      <p2 x="1300" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="1300" y="320"/>
+      <p2 x="1640" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="1060" y="580"/>
+      <p2 x="1700" y="580"/>
+    </wire>
+    <wire>
+      <p1 x="-160" y="580"/>
+      <p2 x="-120" y="580"/>
+    </wire>
+    <wire>
+      <p1 x="340" y="200"/>
+      <p2 x="620" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="960" y="200"/>
+      <p2 x="1300" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="1300" y="200"/>
+      <p2 x="1640" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="620" y="200"/>
+      <p2 x="960" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="1720" y="840"/>
+      <p2 x="1980" y="840"/>
+    </wire>
+    <wire>
+      <p1 x="2020" y="840"/>
+      <p2 x="2060" y="840"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="460"/>
+      <p2 x="780" y="460"/>
+    </wire>
+    <wire>
+      <p1 x="-160" y="460"/>
+      <p2 x="-120" y="460"/>
+    </wire>
+    <wire>
+      <p1 x="180" y="460"/>
+      <p2 x="200" y="460"/>
+    </wire>
+    <wire>
+      <p1 x="780" y="460"/>
+      <p2 x="1120" y="460"/>
+    </wire>
+    <wire>
+      <p1 x="1120" y="460"/>
+      <p2 x="1460" y="460"/>
+    </wire>
+    <wire>
+      <p1 x="360" y="720"/>
+      <p2 x="1700" y="720"/>
+    </wire>
+    <wire>
+      <p1 x="680" y="80"/>
+      <p2 x="960" y="80"/>
+    </wire>
+    <wire>
+      <p1 x="380" y="340"/>
+      <p2 x="440" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="720" y="340"/>
+      <p2 x="780" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="1060" y="340"/>
+      <p2 x="1120" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="1400" y="340"/>
+      <p2 x="1460" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="600" y="340"/>
+      <p2 x="620" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="1620" y="340"/>
+      <p2 x="1640" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="1280" y="340"/>
+      <p2 x="1300" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="940" y="340"/>
+      <p2 x="960" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="-40" y="340"/>
+      <p2 x="0" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="1080" y="600"/>
+      <p2 x="1700" y="600"/>
+    </wire>
+    <wire>
+      <p1 x="760" y="220"/>
+      <p2 x="780" y="220"/>
+    </wire>
+    <wire>
+      <p1 x="1100" y="220"/>
+      <p2 x="1120" y="220"/>
+    </wire>
+    <wire>
+      <p1 x="1440" y="220"/>
+      <p2 x="1460" y="220"/>
+    </wire>
+    <wire>
+      <p1 x="420" y="220"/>
+      <p2 x="440" y="220"/>
+    </wire>
+    <wire>
+      <p1 x="600" y="220"/>
+      <p2 x="620" y="220"/>
+    </wire>
+    <wire>
+      <p1 x="1620" y="220"/>
+      <p2 x="1640" y="220"/>
+    </wire>
+    <wire>
+      <p1 x="1280" y="220"/>
+      <p2 x="1300" y="220"/>
+    </wire>
+    <wire>
+      <p1 x="940" y="220"/>
+      <p2 x="960" y="220"/>
+    </wire>
+    <wire>
+      <p1 x="-40" y="220"/>
+      <p2 x="0" y="220"/>
+    </wire>
+    <wire>
+      <p1 x="1380" y="480"/>
+      <p2 x="1700" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="280" y="480"/>
+      <p2 x="300" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="840" y="-100"/>
+      <p2 x="1640" y="-100"/>
+    </wire>
+    <wire>
+      <p1 x="420" y="100"/>
+      <p2 x="620" y="100"/>
+    </wire>
+    <wire>
+      <p1 x="680" y="100"/>
+      <p2 x="940" y="100"/>
+    </wire>
+    <wire>
+      <p1 x="940" y="100"/>
+      <p2 x="1280" y="100"/>
+    </wire>
+    <wire>
+      <p1 x="1280" y="100"/>
+      <p2 x="1620" y="100"/>
+    </wire>
+    <wire>
+      <p1 x="380" y="740"/>
+      <p2 x="1700" y="740"/>
+    </wire>
+    <wire>
+      <p1 x="1100" y="620"/>
+      <p2 x="1700" y="620"/>
+    </wire>
+    <wire>
+      <p1 x="80" y="240"/>
+      <p2 x="100" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="1400" y="500"/>
+      <p2 x="1700" y="500"/>
+    </wire>
+    <wire>
+      <p1 x="-160" y="500"/>
+      <p2 x="200" y="500"/>
+    </wire>
+    <wire>
+      <p1 x="860" y="-120"/>
+      <p2 x="1440" y="-120"/>
     </wire>
     <wire>
       <p1 x="400" y="760"/>
@@ -1194,14 +1340,6 @@ This is inverted because the output of the register controller is inverted</stri
     <wire>
       <p1 x="600" y="120"/>
       <p2 x="620" y="120"/>
-    </wire>
-    <wire>
-      <p1 x="820" y="-60"/>
-      <p2 x="1340" y="-60"/>
-    </wire>
-    <wire>
-      <p1 x="720" y="60"/>
-      <p2 x="980" y="60"/>
     </wire>
     <wire>
       <p1 x="360" y="380"/>
@@ -1234,10 +1372,6 @@ This is inverted because the output of the register controller is inverted</stri
     <wire>
       <p1 x="1280" y="380"/>
       <p2 x="1320" y="380"/>
-    </wire>
-    <wire>
-      <p1 x="760" y="700"/>
-      <p2 x="1700" y="700"/>
     </wire>
     <wire>
       <p1 x="640" y="-260"/>
@@ -1294,6 +1428,10 @@ This is inverted because the output of the register controller is inverted</stri
     <wire>
       <p1 x="660" y="-260"/>
       <p2 x="660" y="420"/>
+    </wire>
+    <wire>
+      <p1 x="540" y="-360"/>
+      <p2 x="540" y="-320"/>
     </wire>
     <wire>
       <p1 x="1440" y="220"/>
@@ -1448,6 +1586,10 @@ This is inverted because the output of the register controller is inverted</stri
       <p2 x="600" y="120"/>
     </wire>
     <wire>
+      <p1 x="600" y="-360"/>
+      <p2 x="600" y="-340"/>
+    </wire>
+    <wire>
       <p1 x="600" y="-300"/>
       <p2 x="600" y="-280"/>
     </wire>
@@ -1458,6 +1600,14 @@ This is inverted because the output of the register controller is inverted</stri
     <wire>
       <p1 x="1120" y="420"/>
       <p2 x="1120" y="460"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="-360"/>
+      <p2 x="480" y="-340"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="-300"/>
+      <p2 x="480" y="-280"/>
     </wire>
     <wire>
       <p1 x="740" y="180"/>
