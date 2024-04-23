@@ -20,7 +20,7 @@ Ignored for logical shift operations</string>
           <int>16</int>
         </entry>
       </elementAttributes>
-      <pos x="-520" y="-160"/>
+      <pos x="-340" y="-60"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
@@ -39,7 +39,7 @@ Used for logical shift operations</string>
           <int>16</int>
         </entry>
       </elementAttributes>
-      <pos x="-520" y="220"/>
+      <pos x="-340" y="0"/>
     </visualElement>
     <visualElement>
       <elementName>74283.dig</elementName>
@@ -119,7 +119,7 @@ Used for logical shift operations</string>
           <int>16</int>
         </entry>
       </elementAttributes>
-      <pos x="2400" y="200"/>
+      <pos x="2220" y="160"/>
     </visualElement>
     <visualElement>
       <elementName>VDD</elementName>
@@ -197,7 +197,7 @@ Shift</string>
           <int>16</int>
         </entry>
       </elementAttributes>
-      <pos x="-300" y="540"/>
+      <pos x="-1440" y="1000"/>
     </visualElement>
     <visualElement>
       <elementName>Or</elementName>
@@ -207,7 +207,7 @@ Shift</string>
           <int>16</int>
         </entry>
       </elementAttributes>
-      <pos x="-300" y="660"/>
+      <pos x="-1440" y="1120"/>
     </visualElement>
     <visualElement>
       <elementName>XOr</elementName>
@@ -217,7 +217,7 @@ Shift</string>
           <int>16</int>
         </entry>
       </elementAttributes>
-      <pos x="-300" y="780"/>
+      <pos x="-1440" y="1240"/>
     </visualElement>
     <visualElement>
       <elementName>Driver</elementName>
@@ -227,7 +227,7 @@ Shift</string>
           <int>16</int>
         </entry>
       </elementAttributes>
-      <pos x="-200" y="560"/>
+      <pos x="-1340" y="1020"/>
     </visualElement>
     <visualElement>
       <elementName>Driver</elementName>
@@ -237,7 +237,7 @@ Shift</string>
           <int>16</int>
         </entry>
       </elementAttributes>
-      <pos x="-200" y="680"/>
+      <pos x="-1340" y="1140"/>
     </visualElement>
     <visualElement>
       <elementName>Driver</elementName>
@@ -247,15 +247,11 @@ Shift</string>
           <int>16</int>
         </entry>
       </elementAttributes>
-      <pos x="-200" y="800"/>
+      <pos x="-1340" y="1260"/>
     </visualElement>
     <visualElement>
       <elementName>Driver</elementName>
       <elementAttributes>
-        <entry>
-          <string>flipSelPos</string>
-          <boolean>true</boolean>
-        </entry>
         <entry>
           <string>Bits</string>
           <int>16</int>
@@ -305,50 +301,12 @@ Shift</string>
           <string>Signed</string>
         </entry>
       </elementAttributes>
-      <pos x="2440" y="600"/>
+      <pos x="2440" y="420"/>
     </visualElement>
     <visualElement>
       <elementName>XOr</elementName>
       <elementAttributes/>
-      <pos x="2420" y="640"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Splitter</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Input Splitting</string>
-          <string>16</string>
-        </entry>
-        <entry>
-          <string>Output Splitting</string>
-          <string>15-15</string>
-        </entry>
-      </elementAttributes>
-      <pos x="-280" y="340"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Splitter</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Input Splitting</string>
-          <string>16</string>
-        </entry>
-        <entry>
-          <string>Output Splitting</string>
-          <string>15-15</string>
-        </entry>
-      </elementAttributes>
-      <pos x="-280" y="360"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Text</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Description</string>
-          <string>Get sign bit of inputs</string>
-        </entry>
-      </elementAttributes>
-      <pos x="-320" y="380"/>
+      <pos x="2420" y="460"/>
     </visualElement>
     <visualElement>
       <elementName>Out</elementName>
@@ -358,17 +316,17 @@ Shift</string>
           <string>Overflow</string>
         </entry>
       </elementAttributes>
-      <pos x="2620" y="700"/>
+      <pos x="2700" y="540"/>
     </visualElement>
     <visualElement>
       <elementName>XOr</elementName>
       <elementAttributes/>
-      <pos x="2420" y="720"/>
+      <pos x="2420" y="540"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
       <elementAttributes/>
-      <pos x="2520" y="680"/>
+      <pos x="2520" y="500"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -386,7 +344,7 @@ Shift</string>
           <string>8,8</string>
         </entry>
       </elementAttributes>
-      <pos x="2280" y="380"/>
+      <pos x="2280" y="200"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -404,7 +362,7 @@ Shift</string>
           <string>1*8</string>
         </entry>
       </elementAttributes>
-      <pos x="2360" y="380"/>
+      <pos x="2360" y="200"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -418,7 +376,7 @@ Shift</string>
           <string>1*8</string>
         </entry>
       </elementAttributes>
-      <pos x="2360" y="420"/>
+      <pos x="2360" y="240"/>
     </visualElement>
     <visualElement>
       <elementName>Out</elementName>
@@ -432,7 +390,7 @@ Shift</string>
           <string>Zero</string>
         </entry>
       </elementAttributes>
-      <pos x="2540" y="400"/>
+      <pos x="2540" y="220"/>
     </visualElement>
     <visualElement>
       <elementName>NOr</elementName>
@@ -442,61 +400,17 @@ Shift</string>
           <int>16</int>
         </entry>
       </elementAttributes>
-      <pos x="2400" y="240"/>
+      <pos x="2400" y="60"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
       <elementAttributes>
         <entry>
           <string>NetName</string>
-          <string>Result</string>
+          <string>LogicalResult</string>
         </entry>
       </elementAttributes>
-      <pos x="60" y="1420"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Tunnel</elementName>
-      <elementAttributes>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="2"/>
-        </entry>
-        <entry>
-          <string>NetName</string>
-          <string>Result</string>
-        </entry>
-      </elementAttributes>
-      <pos x="2220" y="200"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Tunnel</elementName>
-      <elementAttributes>
-        <entry>
-          <string>NetName</string>
-          <string>Result</string>
-        </entry>
-      </elementAttributes>
-      <pos x="1860" y="200"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Tunnel</elementName>
-      <elementAttributes>
-        <entry>
-          <string>NetName</string>
-          <string>LHSign</string>
-        </entry>
-      </elementAttributes>
-      <pos x="-240" y="340"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Tunnel</elementName>
-      <elementAttributes>
-        <entry>
-          <string>NetName</string>
-          <string>RHSign</string>
-        </entry>
-      </elementAttributes>
-      <pos x="-240" y="360"/>
+      <pos x="-100" y="1080"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -510,7 +424,7 @@ Shift</string>
           <string>1*16</string>
         </entry>
       </elementAttributes>
-      <pos x="-320" y="1860"/>
+      <pos x="-480" y="1520"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -524,12 +438,12 @@ Shift</string>
           <string>16</string>
         </entry>
       </elementAttributes>
-      <pos x="-60" y="1880"/>
+      <pos x="-220" y="1540"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
       <elementAttributes/>
-      <pos x="-260" y="2180"/>
+      <pos x="-420" y="1840"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -549,7 +463,7 @@ Shift</string>
           <boolean>true</boolean>
         </entry>
       </elementAttributes>
-      <pos x="-160" y="2200"/>
+      <pos x="-320" y="1860"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -567,7 +481,7 @@ Shift</string>
           <string>1*16</string>
         </entry>
       </elementAttributes>
-      <pos x="-320" y="1400"/>
+      <pos x="-480" y="1060"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -585,12 +499,12 @@ Shift</string>
           <string>16</string>
         </entry>
       </elementAttributes>
-      <pos x="-60" y="1420"/>
+      <pos x="-220" y="1080"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
       <elementAttributes/>
-      <pos x="-260" y="1420"/>
+      <pos x="-420" y="1080"/>
     </visualElement>
     <visualElement>
       <elementName>Or</elementName>
@@ -600,21 +514,21 @@ Shift</string>
           <boolean>true</boolean>
         </entry>
       </elementAttributes>
-      <pos x="-180" y="1440"/>
+      <pos x="-340" y="1100"/>
     </visualElement>
     <visualElement>
       <elementName>Driver</elementName>
       <elementAttributes>
         <entry>
-          <string>flipSelPos</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>Bits</string>
           <int>16</int>
         </entry>
+        <entry>
+          <string>flipSelPos</string>
+          <boolean>true</boolean>
+        </entry>
       </elementAttributes>
-      <pos x="20" y="1420"/>
+      <pos x="-140" y="1080"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
@@ -624,27 +538,27 @@ Shift</string>
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="-280" y="1680"/>
+      <pos x="-440" y="1340"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
       <elementAttributes/>
-      <pos x="-200" y="1760"/>
+      <pos x="-360" y="1420"/>
     </visualElement>
     <visualElement>
       <elementName>Not</elementName>
       <elementAttributes/>
-      <pos x="-240" y="1760"/>
+      <pos x="-400" y="1420"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
       <elementAttributes>
         <entry>
           <string>NetName</string>
-          <string>Result</string>
+          <string>LogicalResult</string>
         </entry>
       </elementAttributes>
-      <pos x="60" y="1880"/>
+      <pos x="-100" y="1540"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -658,7 +572,7 @@ Shift</string>
           <string>LHSign</string>
         </entry>
       </elementAttributes>
-      <pos x="2420" y="640"/>
+      <pos x="2420" y="460"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -672,7 +586,7 @@ Shift</string>
           <string>RHSign</string>
         </entry>
       </elementAttributes>
-      <pos x="2420" y="760"/>
+      <pos x="2420" y="580"/>
     </visualElement>
     <visualElement>
       <elementName>Driver</elementName>
@@ -682,7 +596,7 @@ Shift</string>
           <int>16</int>
         </entry>
       </elementAttributes>
-      <pos x="20" y="1880"/>
+      <pos x="-140" y="1540"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -696,12 +610,12 @@ Shift</string>
           <string>CarryIn</string>
         </entry>
       </elementAttributes>
-      <pos x="-700" y="1740"/>
+      <pos x="-740" y="1400"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
       <elementAttributes/>
-      <pos x="-680" y="1700"/>
+      <pos x="-720" y="1360"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
@@ -716,22 +630,22 @@ Shift</string>
     <visualElement>
       <elementName>And</elementName>
       <elementAttributes/>
-      <pos x="-240" y="1520"/>
+      <pos x="-400" y="1180"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
       <elementAttributes/>
-      <pos x="-120" y="1820"/>
+      <pos x="-280" y="1480"/>
     </visualElement>
     <visualElement>
       <elementName>Or</elementName>
       <elementAttributes/>
-      <pos x="-20" y="1640"/>
+      <pos x="-180" y="1300"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
       <elementAttributes/>
-      <pos x="60" y="1660"/>
+      <pos x="-100" y="1320"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
@@ -742,6 +656,26 @@ Shift</string>
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>Description</string>
+          <string>Bit 5 will say arithmetic if off, logical if on
+If Bit 5 off (Arithmetic Mode) - 0XXSC
+	Bit 4 &amp; 3 ignored
+	Bit 2 Subtract mode if on
+	Bit 1 Uses carry
+If Bit 5 on (logic mode)
+	If Bit 4 off (bitwise mode) - 10NMM
+		Bit 3 Nots result
+		Bits 2 &amp; 1 determine function to use
+			00 - Unchanged
+			01 - And
+			10 - Or
+			11 - Xor
+	If Bit 4 on (shift mode) - 11RDC
+		Bit 3 does logical shift if off, rotate if on
+		Bit 2 does Direction (right off, left on)
+		Bit 1 does Use Carry (ignored for rot)</string>
+        </entry>
+        <entry>
           <string>Label</string>
           <string>Instruction</string>
         </entry>
@@ -749,46 +683,26 @@ Shift</string>
           <string>Bits</string>
           <int>5</int>
         </entry>
-        <entry>
-          <string>Description</string>
-          <string>Bit 5 will say arithmetic if off, logical if on
-If Bit 5 off (Arithmetic Mode)
-	Bit 4 &amp; 3 ignored
-	Bit 2 Subtract mode if on
-	Bit 1 Uses carry
-If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
-	If Bit 4 off (bitwise mode)
-		Bit 3 Nots result
-		Bits 2 &amp; 1 determine function to use
-			00 - Unchanged
-			01 - And
-			10 - Or
-			11 - Xor
-	If Bit 4 on (shift mode)
-		Bit 3 does logical shift if off, rotate if on
-		Bit 2 does Direction (right off, left on)
-		Bit 1 does Use Carry (ignored for rot)</string>
-        </entry>
       </elementAttributes>
-      <pos x="-1180" y="600"/>
+      <pos x="-1220" y="80"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
       <elementAttributes>
         <entry>
-          <string>Input Splitting</string>
-          <string>5</string>
+          <string>splitterSpreading</string>
+          <int>2</int>
         </entry>
         <entry>
-          <string>splitterSpreading</string>
-          <int>4</int>
+          <string>Input Splitting</string>
+          <string>5</string>
         </entry>
         <entry>
           <string>Output Splitting</string>
           <string>1*5</string>
         </entry>
       </elementAttributes>
-      <pos x="-1160" y="600"/>
+      <pos x="-1200" y="80"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -798,7 +712,7 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <string>Logical</string>
         </entry>
       </elementAttributes>
-      <pos x="-1060" y="920"/>
+      <pos x="-780" y="400"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -808,7 +722,7 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <string>UseCarry</string>
         </entry>
       </elementAttributes>
-      <pos x="-1060" y="600"/>
+      <pos x="-780" y="80"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -818,7 +732,7 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <string>Subtract</string>
         </entry>
       </elementAttributes>
-      <pos x="-1060" y="680"/>
+      <pos x="-780" y="160"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -828,7 +742,7 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <string>Bitwise</string>
         </entry>
       </elementAttributes>
-      <pos x="-1060" y="840"/>
+      <pos x="-780" y="320"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -838,7 +752,7 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <string>Rotate</string>
         </entry>
       </elementAttributes>
-      <pos x="-1060" y="760"/>
+      <pos x="-780" y="240"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -848,12 +762,7 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <string>Arithmetic</string>
         </entry>
       </elementAttributes>
-      <pos x="-1060" y="940"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Not</elementName>
-      <elementAttributes/>
-      <pos x="-1120" y="940"/>
+      <pos x="-780" y="500"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -863,7 +772,7 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <string>Not</string>
         </entry>
       </elementAttributes>
-      <pos x="-1060" y="800"/>
+      <pos x="-780" y="280"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -873,7 +782,7 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <string>Direction</string>
         </entry>
       </elementAttributes>
-      <pos x="-1060" y="700"/>
+      <pos x="-780" y="180"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -883,7 +792,7 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <string>BitwiseMode1</string>
         </entry>
       </elementAttributes>
-      <pos x="-1060" y="620"/>
+      <pos x="-780" y="100"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -893,7 +802,7 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <string>BitwiseMode2</string>
         </entry>
       </elementAttributes>
-      <pos x="-1060" y="720"/>
+      <pos x="-780" y="200"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -935,7 +844,7 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <string>Direction</string>
         </entry>
       </elementAttributes>
-      <pos x="-300" y="1760"/>
+      <pos x="-460" y="1420"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -945,12 +854,12 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <string>Shift</string>
         </entry>
       </elementAttributes>
-      <pos x="-1060" y="860"/>
+      <pos x="-780" y="340"/>
     </visualElement>
     <visualElement>
       <elementName>Not</elementName>
       <elementAttributes/>
-      <pos x="-1120" y="860"/>
+      <pos x="-840" y="340"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -964,7 +873,7 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <string>Shift</string>
         </entry>
       </elementAttributes>
-      <pos x="-300" y="1800"/>
+      <pos x="-460" y="1460"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -978,7 +887,7 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <string>Rotate</string>
         </entry>
       </elementAttributes>
-      <pos x="-280" y="2220"/>
+      <pos x="-440" y="1880"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -992,17 +901,21 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <string>Arithmetic</string>
         </entry>
       </elementAttributes>
-      <pos x="1200" y="1780"/>
+      <pos x="1260" y="1780"/>
     </visualElement>
     <visualElement>
       <elementName>XOr</elementName>
       <elementAttributes>
         <entry>
+          <string>Bits</string>
+          <int>16</int>
+        </entry>
+        <entry>
           <string>wideShape</string>
           <boolean>true</boolean>
         </entry>
       </elementAttributes>
-      <pos x="-40" y="680"/>
+      <pos x="-1260" y="1260"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -1016,7 +929,7 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <string>16</string>
         </entry>
       </elementAttributes>
-      <pos x="-80" y="720"/>
+      <pos x="-1300" y="1300"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -1030,7 +943,7 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <string>Not</string>
         </entry>
       </elementAttributes>
-      <pos x="-120" y="1020"/>
+      <pos x="-1340" y="1600"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -1040,12 +953,12 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <string>LogicalShift</string>
         </entry>
       </elementAttributes>
-      <pos x="-1060" y="780"/>
+      <pos x="-780" y="260"/>
     </visualElement>
     <visualElement>
       <elementName>Not</elementName>
       <elementAttributes/>
-      <pos x="-1120" y="780"/>
+      <pos x="-840" y="260"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -1059,7 +972,7 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <string>LogicalShift</string>
         </entry>
       </elementAttributes>
-      <pos x="40" y="1700"/>
+      <pos x="-120" y="1360"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -1073,7 +986,7 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <string>Rotate</string>
         </entry>
       </elementAttributes>
-      <pos x="-300" y="1460"/>
+      <pos x="-460" y="1120"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -1087,7 +1000,7 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <string>LogicalShift</string>
         </entry>
       </elementAttributes>
-      <pos x="-700" y="1700"/>
+      <pos x="-740" y="1360"/>
     </visualElement>
     <visualElement>
       <elementName>Driver</elementName>
@@ -1097,18 +1010,548 @@ If Bit 5 on (logic mode), bit 4 does bitwise if off, shift if on
           <int>16</int>
         </entry>
       </elementAttributes>
-      <pos x="-200" y="480"/>
+      <pos x="-1340" y="940"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Input Splitting</string>
+          <string>16</string>
+        </entry>
+        <entry>
+          <string>Output Splitting</string>
+          <string>15-15</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-320" y="-80"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>LHSign</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-280" y="-80"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Input Splitting</string>
+          <string>16</string>
+        </entry>
+        <entry>
+          <string>Output Splitting</string>
+          <string>15-15</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-320" y="-20"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>RHSign</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-280" y="-20"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>RHBus</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-280" y="0"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>LHBus</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-280" y="-60"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>RHBus</string>
+        </entry>
+      </elementAttributes>
+      <pos x="120" y="220"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>LHBus</string>
+        </entry>
+      </elementAttributes>
+      <pos x="220" y="-160"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>RHBus</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-1500" y="940"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>LHBus</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-1500" y="920"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>RHBus</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-500" y="1060"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>RHBus</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-500" y="1520"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>BitwiseMode2</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-940" y="980"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>BitwiseMode1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-940" y="900"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="-980" y="880"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="-980" y="960"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="-1120" y="920"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="-1120" y="1000"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="-1120" y="1120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="-1120" y="1240"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Driver</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>16</int>
+        </entry>
+        <entry>
+          <string>flipSelPos</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="-1140" y="1280"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>Bitwise</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-1160" y="1320"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>LogicalResult</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-1100" y="1280"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>Arithmetic</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1780" y="160"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Driver</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>16</int>
+        </entry>
+        <entry>
+          <string>flipSelPos</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="1920" y="240"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>Logical</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1900" y="280"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>LogicalResult</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1880" y="240"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>48</int>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Bitwise Logic</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-1400" y="760"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>48</int>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Shift</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-380" y="700"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>48</int>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Adder</string>
+        </entry>
+      </elementAttributes>
+      <pos x="780" y="-280"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>48</int>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Inputs</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-360" y="-180"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>48</int>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Results</string>
+        </entry>
+      </elementAttributes>
+      <pos x="2300" y="-20"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Driver</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>16</int>
+        </entry>
+      </elementAttributes>
+      <pos x="2180" y="160"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>EO</string>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>ALU Result Out</string>
+        </entry>
+      </elementAttributes>
+      <pos x="2160" y="120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes/>
+      <pos x="2620" y="520"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>Arithmetic</string>
+        </entry>
+      </elementAttributes>
+      <pos x="2600" y="560"/>
+    </visualElement>
+    <visualElement>
+      <elementName>74173.dig</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="-960" y="280"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes/>
+      <pos x="-1060" y="500"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes/>
+      <pos x="-1060" y="360"/>
+    </visualElement>
+    <visualElement>
+      <elementName>NOr</elementName>
+      <elementAttributes/>
+      <pos x="-980" y="480"/>
+    </visualElement>
+    <visualElement>
+      <elementName>NOr</elementName>
+      <elementAttributes/>
+      <pos x="-980" y="380"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes/>
+      <pos x="-1120" y="360"/>
     </visualElement>
     <visualElement>
       <elementName>Text</elementName>
       <elementAttributes>
         <entry>
           <string>Description</string>
-          <string>TODO: Setup the bitwise mode selection
-Ensure logic modes only output when they are supposed to</string>
+          <string>Bit 5 D Latch</string>
         </entry>
       </elementAttributes>
-      <pos x="-420" y="900"/>
+      <pos x="-1060" y="560"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Ground</elementName>
+      <elementAttributes/>
+      <pos x="-960" y="-20"/>
+    </visualElement>
+    <visualElement>
+      <elementName>VDD</elementName>
+      <elementAttributes/>
+      <pos x="-1100" y="260"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>CLKEdge</string>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Rising edge of clock</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-1440" y="440"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>ALU Instruction register in</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>EIN</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-1440" y="480"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes/>
+      <pos x="-1380" y="440"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>48</int>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Instructions</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-1140" y="-100"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -1117,12 +1560,36 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="780" y="0"/>
     </wire>
     <wire>
+      <p1 x="-1080" y="0"/>
+      <p2 x="-1000" y="0"/>
+    </wire>
+    <wire>
+      <p1 x="-340" y="0"/>
+      <p2 x="-320" y="0"/>
+    </wire>
+    <wire>
+      <p1 x="-1000" y="0"/>
+      <p2 x="-960" y="0"/>
+    </wire>
+    <wire>
+      <p1 x="-320" y="0"/>
+      <p2 x="-280" y="0"/>
+    </wire>
+    <wire>
       <p1 x="700" y="1280"/>
       <p2 x="900" y="1280"/>
     </wire>
     <wire>
-      <p1 x="-300" y="1280"/>
-      <p2 x="-60" y="1280"/>
+      <p1 x="-1480" y="1280"/>
+      <p2 x="-1440" y="1280"/>
+    </wire>
+    <wire>
+      <p1 x="-1180" y="1280"/>
+      <p2 x="-1160" y="1280"/>
+    </wire>
+    <wire>
+      <p1 x="-1120" y="1280"/>
+      <p2 x="-1100" y="1280"/>
     </wire>
     <wire>
       <p1 x="1140" y="260"/>
@@ -1145,6 +1612,14 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="2400" y="260"/>
     </wire>
     <wire>
+      <p1 x="-800" y="260"/>
+      <p2 x="-780" y="260"/>
+    </wire>
+    <wire>
+      <p1 x="-860" y="260"/>
+      <p2 x="-840" y="260"/>
+    </wire>
+    <wire>
       <p1 x="0" y="260"/>
       <p2 x="40" y="260"/>
     </wire>
@@ -1153,12 +1628,12 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="940" y="260"/>
     </wire>
     <wire>
-      <p1 x="80" y="260"/>
-      <p2 x="100" y="260"/>
-    </wire>
-    <wire>
       <p1 x="40" y="260"/>
       <p2 x="80" y="260"/>
+    </wire>
+    <wire>
+      <p1 x="80" y="260"/>
+      <p2 x="100" y="260"/>
     </wire>
     <wire>
       <p1 x="1140" y="1540"/>
@@ -1169,8 +1644,20 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1020" y="1540"/>
     </wire>
     <wire>
-      <p1 x="-180" y="1540"/>
-      <p2 x="-40" y="1540"/>
+      <p1 x="-1320" y="1540"/>
+      <p2 x="-1300" y="1540"/>
+    </wire>
+    <wire>
+      <p1 x="-460" y="1540"/>
+      <p2 x="-220" y="1540"/>
+    </wire>
+    <wire>
+      <p1 x="-200" y="1540"/>
+      <p2 x="-160" y="1540"/>
+    </wire>
+    <wire>
+      <p1 x="-120" y="1540"/>
+      <p2 x="-100" y="1540"/>
     </wire>
     <wire>
       <p1 x="260" y="520"/>
@@ -1181,40 +1668,32 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="100" y="520"/>
     </wire>
     <wire>
-      <p1 x="2380" y="520"/>
-      <p2 x="2400" y="520"/>
+      <p1 x="2580" y="520"/>
+      <p2 x="2620" y="520"/>
     </wire>
     <wire>
-      <p1 x="-300" y="1800"/>
-      <p2 x="-260" y="1800"/>
+      <p1 x="-1000" y="520"/>
+      <p2 x="-980" y="520"/>
     </wire>
     <wire>
-      <p1 x="220" y="1800"/>
+      <p1 x="60" y="1800"/>
       <p2 x="1400" y="1800"/>
     </wire>
     <wire>
-      <p1 x="-260" y="1800"/>
-      <p2 x="-200" y="1800"/>
+      <p1 x="-460" y="1800"/>
+      <p2 x="-220" y="1800"/>
     </wire>
     <wire>
-      <p1 x="-300" y="2060"/>
-      <p2 x="-60" y="2060"/>
+      <p1 x="-460" y="780"/>
+      <p2 x="-220" y="780"/>
     </wire>
     <wire>
-      <p1 x="-340" y="780"/>
-      <p2 x="-300" y="780"/>
+      <p1 x="-1480" y="1040"/>
+      <p2 x="-1440" y="1040"/>
     </wire>
     <wire>
-      <p1 x="-100" y="780"/>
-      <p2 x="-80" y="780"/>
-    </wire>
-    <wire>
-      <p1 x="-1080" y="780"/>
-      <p2 x="-1060" y="780"/>
-    </wire>
-    <wire>
-      <p1 x="-1140" y="780"/>
-      <p2 x="-1120" y="780"/>
+      <p1 x="-460" y="1040"/>
+      <p2 x="-220" y="1040"/>
     </wire>
     <wire>
       <p1 x="1020" y="-20"/>
@@ -1225,6 +1704,10 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="800" y="-20"/>
     </wire>
     <wire>
+      <p1 x="-300" y="-20"/>
+      <p2 x="-280" y="-20"/>
+    </wire>
+    <wire>
       <p1 x="980" y="1300"/>
       <p2 x="1140" y="1300"/>
     </wire>
@@ -1233,8 +1716,16 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="860" y="1300"/>
     </wire>
     <wire>
-      <p1 x="-300" y="1300"/>
-      <p2 x="-60" y="1300"/>
+      <p1 x="-1320" y="1300"/>
+      <p2 x="-1300" y="1300"/>
+    </wire>
+    <wire>
+      <p1 x="-1280" y="1300"/>
+      <p2 x="-1260" y="1300"/>
+    </wire>
+    <wire>
+      <p1 x="-200" y="1300"/>
+      <p2 x="-180" y="1300"/>
     </wire>
     <wire>
       <p1 x="260" y="20"/>
@@ -1253,12 +1744,32 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="100" y="280"/>
     </wire>
     <wire>
+      <p1 x="1900" y="280"/>
+      <p2 x="1920" y="280"/>
+    </wire>
+    <wire>
       <p1 x="2380" y="280"/>
       <p2 x="2400" y="280"/>
     </wire>
     <wire>
-      <p1 x="-260" y="1560"/>
-      <p2 x="-240" y="1560"/>
+      <p1 x="-860" y="280"/>
+      <p2 x="-780" y="280"/>
+    </wire>
+    <wire>
+      <p1 x="-1120" y="280"/>
+      <p2 x="-1100" y="280"/>
+    </wire>
+    <wire>
+      <p1 x="-1100" y="280"/>
+      <p2 x="-1080" y="280"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1560"/>
+      <p2 x="-1300" y="1560"/>
+    </wire>
+    <wire>
+      <p1 x="-460" y="1560"/>
+      <p2 x="-220" y="1560"/>
     </wire>
     <wire>
       <p1 x="1140" y="540"/>
@@ -1274,35 +1785,31 @@ Ensure logic modes only output when they are supposed to</string>
     </wire>
     <wire>
       <p1 x="2380" y="540"/>
-      <p2 x="2400" y="540"/>
+      <p2 x="2420" y="540"/>
     </wire>
     <wire>
-      <p1 x="-340" y="540"/>
-      <p2 x="-300" y="540"/>
+      <p1 x="2500" y="540"/>
+      <p2 x="2520" y="540"/>
     </wire>
     <wire>
-      <p1 x="-1140" y="800"/>
-      <p2 x="-1060" y="800"/>
+      <p1 x="2680" y="540"/>
+      <p2 x="2700" y="540"/>
+    </wire>
+    <wire>
+      <p1 x="-1140" y="540"/>
+      <p2 x="-1060" y="540"/>
+    </wire>
+    <wire>
+      <p1 x="-460" y="1820"/>
+      <p2 x="-220" y="1820"/>
     </wire>
     <wire>
       <p1 x="780" y="800"/>
       <p2 x="900" y="800"/>
     </wire>
     <wire>
-      <p1 x="-240" y="800"/>
+      <p1 x="-460" y="800"/>
       <p2 x="-220" y="800"/>
-    </wire>
-    <wire>
-      <p1 x="-180" y="800"/>
-      <p2 x="-160" y="800"/>
-    </wire>
-    <wire>
-      <p1 x="-100" y="800"/>
-      <p2 x="-80" y="800"/>
-    </wire>
-    <wire>
-      <p1 x="-300" y="2080"/>
-      <p2 x="-60" y="2080"/>
     </wire>
     <wire>
       <p1 x="1140" y="1060"/>
@@ -1313,6 +1820,14 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1020" y="1060"/>
     </wire>
     <wire>
+      <p1 x="-460" y="1060"/>
+      <p2 x="-220" y="1060"/>
+    </wire>
+    <wire>
+      <p1 x="-500" y="1060"/>
+      <p2 x="-480" y="1060"/>
+    </wire>
+    <wire>
       <p1 x="1000" y="-40"/>
       <p2 x="1260" y="-40"/>
     </wire>
@@ -1321,16 +1836,32 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="820" y="-40"/>
     </wire>
     <wire>
-      <p1 x="660" y="1320"/>
-      <p2 x="1160" y="1320"/>
-    </wire>
-    <wire>
-      <p1 x="-300" y="1320"/>
-      <p2 x="-60" y="1320"/>
+      <p1 x="-1400" y="-40"/>
+      <p2 x="-940" y="-40"/>
     </wire>
     <wire>
       <p1 x="260" y="40"/>
       <p2 x="740" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="-960" y="40"/>
+      <p2 x="-940" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="660" y="1320"/>
+      <p2 x="1160" y="1320"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1320"/>
+      <p2 x="-1300" y="1320"/>
+    </wire>
+    <wire>
+      <p1 x="-1160" y="1320"/>
+      <p2 x="-1140" y="1320"/>
+    </wire>
+    <wire>
+      <p1 x="-120" y="1320"/>
+      <p2 x="-100" y="1320"/>
     </wire>
     <wire>
       <p1 x="1140" y="1580"/>
@@ -1339,6 +1870,14 @@ Ensure logic modes only output when they are supposed to</string>
     <wire>
       <p1 x="1000" y="1580"/>
       <p2 x="1020" y="1580"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1580"/>
+      <p2 x="-1300" y="1580"/>
+    </wire>
+    <wire>
+      <p1 x="-460" y="1580"/>
+      <p2 x="-220" y="1580"/>
     </wire>
     <wire>
       <p1 x="260" y="300"/>
@@ -1365,20 +1904,20 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="100" y="560"/>
     </wire>
     <wire>
-      <p1 x="2380" y="560"/>
-      <p2 x="2400" y="560"/>
+      <p1 x="2480" y="560"/>
+      <p2 x="2500" y="560"/>
     </wire>
     <wire>
-      <p1 x="-240" y="560"/>
-      <p2 x="-220" y="560"/>
+      <p1 x="2600" y="560"/>
+      <p2 x="2620" y="560"/>
     </wire>
     <wire>
-      <p1 x="-180" y="560"/>
-      <p2 x="-160" y="560"/>
+      <p1 x="-440" y="1840"/>
+      <p2 x="-420" y="1840"/>
     </wire>
     <wire>
-      <p1 x="-60" y="1840"/>
-      <p2 x="-40" y="1840"/>
+      <p1 x="-240" y="1840"/>
+      <p2 x="-220" y="1840"/>
     </wire>
     <wire>
       <p1 x="980" y="820"/>
@@ -1389,16 +1928,32 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="880" y="820"/>
     </wire>
     <wire>
-      <p1 x="-400" y="820"/>
-      <p2 x="-300" y="820"/>
+      <p1 x="-460" y="820"/>
+      <p2 x="-220" y="820"/>
     </wire>
     <wire>
-      <p1 x="-100" y="820"/>
-      <p2 x="-80" y="820"/>
+      <p1 x="-1120" y="1080"/>
+      <p2 x="-1080" y="1080"/>
     </wire>
     <wire>
-      <p1 x="-300" y="2100"/>
-      <p2 x="-60" y="2100"/>
+      <p1 x="-440" y="1080"/>
+      <p2 x="-420" y="1080"/>
+    </wire>
+    <wire>
+      <p1 x="-240" y="1080"/>
+      <p2 x="-220" y="1080"/>
+    </wire>
+    <wire>
+      <p1 x="-200" y="1080"/>
+      <p2 x="-160" y="1080"/>
+    </wire>
+    <wire>
+      <p1 x="-120" y="1080"/>
+      <p2 x="-100" y="1080"/>
+    </wire>
+    <wire>
+      <p1 x="-340" y="-60"/>
+      <p2 x="-320" y="-60"/>
     </wire>
     <wire>
       <p1 x="940" y="-60"/>
@@ -1409,12 +1964,24 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="840" y="-60"/>
     </wire>
     <wire>
-      <p1 x="-300" y="1340"/>
-      <p2 x="-60" y="1340"/>
+      <p1 x="-320" y="-60"/>
+      <p2 x="-280" y="-60"/>
     </wire>
     <wire>
       <p1 x="640" y="1340"/>
       <p2 x="1180" y="1340"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1340"/>
+      <p2 x="-1300" y="1340"/>
+    </wire>
+    <wire>
+      <p1 x="-200" y="1340"/>
+      <p2 x="-180" y="1340"/>
+    </wire>
+    <wire>
+      <p1 x="-40" y="1340"/>
+      <p2 x="60" y="1340"/>
     </wire>
     <wire>
       <p1 x="1140" y="60"/>
@@ -1427,6 +1994,10 @@ Ensure logic modes only output when they are supposed to</string>
     <wire>
       <p1 x="260" y="60"/>
       <p2 x="720" y="60"/>
+    </wire>
+    <wire>
+      <p1 x="2380" y="60"/>
+      <p2 x="2400" y="60"/>
     </wire>
     <wire>
       <p1 x="260" y="320"/>
@@ -1449,8 +2020,24 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="2400" y="320"/>
     </wire>
     <wire>
-      <p1 x="-260" y="1600"/>
-      <p2 x="20" y="1600"/>
+      <p1 x="-900" y="320"/>
+      <p2 x="-860" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="-860" y="320"/>
+      <p2 x="-780" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="-1340" y="1600"/>
+      <p2 x="-1320" y="1600"/>
+    </wire>
+    <wire>
+      <p1 x="-460" y="1600"/>
+      <p2 x="-220" y="1600"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1600"/>
+      <p2 x="-1300" y="1600"/>
     </wire>
     <wire>
       <p1 x="1140" y="580"/>
@@ -1461,40 +2048,16 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1020" y="580"/>
     </wire>
     <wire>
-      <p1 x="-400" y="580"/>
-      <p2 x="-300" y="580"/>
-    </wire>
-    <wire>
-      <p1 x="-300" y="1860"/>
-      <p2 x="-280" y="1860"/>
-    </wire>
-    <wire>
-      <p1 x="-400" y="1860"/>
+      <p1 x="-360" y="1860"/>
       <p2 x="-320" y="1860"/>
-    </wire>
-    <wire>
-      <p1 x="-280" y="1860"/>
-      <p2 x="-120" y="1860"/>
     </wire>
     <wire>
       <p1 x="740" y="840"/>
       <p2 x="1160" y="840"/>
     </wire>
     <wire>
-      <p1 x="-1140" y="840"/>
-      <p2 x="-1060" y="840"/>
-    </wire>
-    <wire>
-      <p1 x="-100" y="840"/>
-      <p2 x="-80" y="840"/>
-    </wire>
-    <wire>
-      <p1 x="-300" y="2120"/>
-      <p2 x="-60" y="2120"/>
-    </wire>
-    <wire>
-      <p1 x="-300" y="1100"/>
-      <p2 x="-280" y="1100"/>
+      <p1 x="-460" y="840"/>
+      <p2 x="-220" y="840"/>
     </wire>
     <wire>
       <p1 x="1140" y="1100"/>
@@ -1505,6 +2068,18 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1020" y="1100"/>
     </wire>
     <wire>
+      <p1 x="-1340" y="1100"/>
+      <p2 x="-1180" y="1100"/>
+    </wire>
+    <wire>
+      <p1 x="-360" y="1100"/>
+      <p2 x="-340" y="1100"/>
+    </wire>
+    <wire>
+      <p1 x="-300" y="-80"/>
+      <p2 x="-280" y="-80"/>
+    </wire>
+    <wire>
       <p1 x="920" y="-80"/>
       <p2 x="1220" y="-80"/>
     </wire>
@@ -1513,24 +2088,56 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="860" y="-80"/>
     </wire>
     <wire>
-      <p1 x="-300" y="1360"/>
-      <p2 x="-60" y="1360"/>
+      <p1 x="-960" y="80"/>
+      <p2 x="-840" y="80"/>
     </wire>
     <wire>
-      <p1 x="920" y="1360"/>
-      <p2 x="1220" y="1360"/>
+      <p1 x="-1220" y="80"/>
+      <p2 x="-1200" y="80"/>
+    </wire>
+    <wire>
+      <p1 x="-1180" y="80"/>
+      <p2 x="-1080" y="80"/>
+    </wire>
+    <wire>
+      <p1 x="2380" y="80"/>
+      <p2 x="2400" y="80"/>
     </wire>
     <wire>
       <p1 x="260" y="80"/>
       <p2 x="700" y="80"/>
     </wire>
     <wire>
-      <p1 x="-340" y="340"/>
-      <p2 x="-280" y="340"/>
+      <p1 x="-840" y="80"/>
+      <p2 x="-780" y="80"/>
     </wire>
     <wire>
-      <p1 x="-260" y="340"/>
-      <p2 x="-240" y="340"/>
+      <p1 x="920" y="1360"/>
+      <p2 x="1220" y="1360"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1360"/>
+      <p2 x="-1300" y="1360"/>
+    </wire>
+    <wire>
+      <p1 x="-120" y="1360"/>
+      <p2 x="-100" y="1360"/>
+    </wire>
+    <wire>
+      <p1 x="-740" y="1360"/>
+      <p2 x="-720" y="1360"/>
+    </wire>
+    <wire>
+      <p1 x="-860" y="340"/>
+      <p2 x="-840" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="-800" y="340"/>
+      <p2 x="-780" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="2380" y="340"/>
+      <p2 x="2400" y="340"/>
     </wire>
     <wire>
       <p1 x="980" y="340"/>
@@ -1553,10 +2160,6 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="100" y="340"/>
     </wire>
     <wire>
-      <p1 x="2380" y="340"/>
-      <p2 x="2400" y="340"/>
-    </wire>
-    <wire>
       <p1 x="1140" y="1620"/>
       <p2 x="1180" y="1620"/>
     </wire>
@@ -1565,56 +2168,40 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1020" y="1620"/>
     </wire>
     <wire>
-      <p1 x="2380" y="600"/>
-      <p2 x="2440" y="600"/>
+      <p1 x="-460" y="1620"/>
+      <p2 x="-220" y="1620"/>
     </wire>
     <wire>
-      <p1 x="-1180" y="600"/>
-      <p2 x="-1160" y="600"/>
-    </wire>
-    <wire>
-      <p1 x="-1140" y="600"/>
-      <p2 x="-1120" y="600"/>
-    </wire>
-    <wire>
-      <p1 x="-1120" y="600"/>
-      <p2 x="-1060" y="600"/>
-    </wire>
-    <wire>
-      <p1 x="-300" y="1880"/>
-      <p2 x="-60" y="1880"/>
-    </wire>
-    <wire>
-      <p1 x="-40" y="1880"/>
-      <p2 x="0" y="1880"/>
-    </wire>
-    <wire>
-      <p1 x="40" y="1880"/>
-      <p2 x="60" y="1880"/>
+      <p1 x="-440" y="1880"/>
+      <p2 x="-420" y="1880"/>
     </wire>
     <wire>
       <p1 x="720" y="860"/>
       <p2 x="1180" y="860"/>
     </wire>
     <wire>
-      <p1 x="-1140" y="860"/>
-      <p2 x="-1120" y="860"/>
+      <p1 x="-460" y="860"/>
+      <p2 x="-220" y="860"/>
     </wire>
     <wire>
-      <p1 x="-1080" y="860"/>
-      <p2 x="-1060" y="860"/>
+      <p1 x="-1460" y="1120"/>
+      <p2 x="-1440" y="1120"/>
     </wire>
     <wire>
-      <p1 x="-100" y="860"/>
-      <p2 x="-80" y="860"/>
+      <p1 x="-1120" y="1120"/>
+      <p2 x="-1080" y="1120"/>
     </wire>
     <wire>
-      <p1 x="-300" y="2140"/>
-      <p2 x="-60" y="2140"/>
+      <p1 x="-260" y="1120"/>
+      <p2 x="-240" y="1120"/>
     </wire>
     <wire>
-      <p1 x="-300" y="1120"/>
-      <p2 x="-60" y="1120"/>
+      <p1 x="-460" y="1120"/>
+      <p2 x="-420" y="1120"/>
+    </wire>
+    <wire>
+      <p1 x="-1080" y="1120"/>
+      <p2 x="-960" y="1120"/>
     </wire>
     <wire>
       <p1 x="260" y="-100"/>
@@ -1625,12 +2212,12 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1180" y="-100"/>
     </wire>
     <wire>
-      <p1 x="-300" y="1380"/>
-      <p2 x="-60" y="1380"/>
+      <p1 x="-840" y="100"/>
+      <p2 x="-780" y="100"/>
     </wire>
     <wire>
-      <p1 x="940" y="1380"/>
-      <p2 x="1200" y="1380"/>
+      <p1 x="2380" y="100"/>
+      <p2 x="2400" y="100"/>
     </wire>
     <wire>
       <p1 x="1140" y="100"/>
@@ -1649,12 +2236,20 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="40" y="100"/>
     </wire>
     <wire>
-      <p1 x="-400" y="360"/>
-      <p2 x="-280" y="360"/>
+      <p1 x="940" y="1380"/>
+      <p2 x="1200" y="1380"/>
     </wire>
     <wire>
-      <p1 x="-260" y="360"/>
-      <p2 x="-240" y="360"/>
+      <p1 x="-1320" y="1380"/>
+      <p2 x="-1300" y="1380"/>
+    </wire>
+    <wire>
+      <p1 x="-660" y="1380"/>
+      <p2 x="-600" y="1380"/>
+    </wire>
+    <wire>
+      <p1 x="2380" y="360"/>
+      <p2 x="2400" y="360"/>
     </wire>
     <wire>
       <p1 x="820" y="360"/>
@@ -1673,16 +2268,20 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="100" y="360"/>
     </wire>
     <wire>
-      <p1 x="2380" y="360"/>
-      <p2 x="2400" y="360"/>
+      <p1 x="-1080" y="360"/>
+      <p2 x="-1060" y="360"/>
+    </wire>
+    <wire>
+      <p1 x="-1140" y="360"/>
+      <p2 x="-1120" y="360"/>
     </wire>
     <wire>
       <p1 x="1260" y="1640"/>
       <p2 x="1580" y="1640"/>
     </wire>
     <wire>
-      <p1 x="-40" y="1640"/>
-      <p2 x="-20" y="1640"/>
+      <p1 x="-460" y="1640"/>
+      <p2 x="-220" y="1640"/>
     </wire>
     <wire>
       <p1 x="1140" y="620"/>
@@ -1693,28 +2292,28 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1020" y="620"/>
     </wire>
     <wire>
-      <p1 x="-1120" y="620"/>
-      <p2 x="-1060" y="620"/>
-    </wire>
-    <wire>
-      <p1 x="-300" y="1900"/>
-      <p2 x="-60" y="1900"/>
+      <p1 x="-600" y="1900"/>
+      <p2 x="-320" y="1900"/>
     </wire>
     <wire>
       <p1 x="920" y="880"/>
       <p2 x="1220" y="880"/>
     </wire>
     <wire>
-      <p1 x="-100" y="880"/>
-      <p2 x="-80" y="880"/>
+      <p1 x="-980" y="880"/>
+      <p2 x="-960" y="880"/>
     </wire>
     <wire>
-      <p1 x="-300" y="2160"/>
-      <p2 x="-60" y="2160"/>
+      <p1 x="-1120" y="880"/>
+      <p2 x="-1080" y="880"/>
     </wire>
     <wire>
-      <p1 x="-300" y="1140"/>
-      <p2 x="-60" y="1140"/>
+      <p1 x="-460" y="880"/>
+      <p2 x="-220" y="880"/>
+    </wire>
+    <wire>
+      <p1 x="-1080" y="880"/>
+      <p2 x="-1020" y="880"/>
     </wire>
     <wire>
       <p1 x="1140" y="1140"/>
@@ -1725,8 +2324,32 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1020" y="1140"/>
     </wire>
     <wire>
+      <p1 x="-1380" y="1140"/>
+      <p2 x="-1360" y="1140"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1140"/>
+      <p2 x="-1300" y="1140"/>
+    </wire>
+    <wire>
+      <p1 x="-600" y="1140"/>
+      <p2 x="-340" y="1140"/>
+    </wire>
+    <wire>
       <p1 x="260" y="-120"/>
       <p2 x="1160" y="-120"/>
+    </wire>
+    <wire>
+      <p1 x="-1180" y="120"/>
+      <p2 x="-1080" y="120"/>
+    </wire>
+    <wire>
+      <p1 x="-960" y="120"/>
+      <p2 x="-860" y="120"/>
+    </wire>
+    <wire>
+      <p1 x="2380" y="120"/>
+      <p2 x="2400" y="120"/>
     </wire>
     <wire>
       <p1 x="-80" y="120"/>
@@ -1737,32 +2360,24 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="660" y="120"/>
     </wire>
     <wire>
-      <p1 x="-300" y="1400"/>
-      <p2 x="-60" y="1400"/>
-    </wire>
-    <wire>
-      <p1 x="-400" y="1400"/>
-      <p2 x="-320" y="1400"/>
+      <p1 x="2160" y="120"/>
+      <p2 x="2180" y="120"/>
     </wire>
     <wire>
       <p1 x="1000" y="1400"/>
       <p2 x="1260" y="1400"/>
     </wire>
     <wire>
-      <p1 x="1140" y="1660"/>
-      <p2 x="1220" y="1660"/>
+      <p1 x="-1320" y="1400"/>
+      <p2 x="-1300" y="1400"/>
     </wire>
     <wire>
-      <p1 x="1240" y="1660"/>
-      <p2 x="1600" y="1660"/>
+      <p1 x="-420" y="1400"/>
+      <p2 x="-400" y="1400"/>
     </wire>
     <wire>
-      <p1 x="380" y="1660"/>
-      <p2 x="1020" y="1660"/>
-    </wire>
-    <wire>
-      <p1 x="40" y="1660"/>
-      <p2 x="60" y="1660"/>
+      <p1 x="-740" y="1400"/>
+      <p2 x="-720" y="1400"/>
     </wire>
     <wire>
       <p1 x="2380" y="380"/>
@@ -1785,64 +2400,60 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="100" y="380"/>
     </wire>
     <wire>
-      <p1 x="2300" y="380"/>
-      <p2 x="2360" y="380"/>
+      <p1 x="-1000" y="380"/>
+      <p2 x="-980" y="380"/>
     </wire>
     <wire>
-      <p1 x="2240" y="380"/>
-      <p2 x="2280" y="380"/>
+      <p1 x="1140" y="1660"/>
+      <p2 x="1220" y="1660"/>
     </wire>
     <wire>
-      <p1 x="-300" y="1920"/>
-      <p2 x="-60" y="1920"/>
+      <p1 x="1240" y="1660"/>
+      <p2 x="1600" y="1660"/>
     </wire>
     <wire>
-      <p1 x="-100" y="900"/>
-      <p2 x="-80" y="900"/>
+      <p1 x="380" y="1660"/>
+      <p2 x="1020" y="1660"/>
+    </wire>
+    <wire>
+      <p1 x="-460" y="1660"/>
+      <p2 x="-220" y="1660"/>
     </wire>
     <wire>
       <p1 x="940" y="900"/>
       <p2 x="1200" y="900"/>
     </wire>
     <wire>
-      <p1 x="-280" y="2180"/>
-      <p2 x="-260" y="2180"/>
+      <p1 x="-1100" y="900"/>
+      <p2 x="-960" y="900"/>
     </wire>
     <wire>
-      <p1 x="-80" y="2180"/>
-      <p2 x="-60" y="2180"/>
+      <p1 x="-1340" y="900"/>
+      <p2 x="-1180" y="900"/>
     </wire>
     <wire>
-      <p1 x="-300" y="1160"/>
-      <p2 x="-60" y="1160"/>
+      <p1 x="-460" y="900"/>
+      <p2 x="-220" y="900"/>
+    </wire>
+    <wire>
+      <p1 x="-960" y="900"/>
+      <p2 x="-940" y="900"/>
     </wire>
     <wire>
       <p1 x="1260" y="1160"/>
       <p2 x="1500" y="1160"/>
     </wire>
     <wire>
+      <p1 x="-1480" y="1160"/>
+      <p2 x="-1440" y="1160"/>
+    </wire>
+    <wire>
       <p1 x="260" y="-140"/>
       <p2 x="880" y="-140"/>
     </wire>
     <wire>
-      <p1 x="-280" y="1420"/>
-      <p2 x="-260" y="1420"/>
-    </wire>
-    <wire>
-      <p1 x="-80" y="1420"/>
-      <p2 x="-60" y="1420"/>
-    </wire>
-    <wire>
-      <p1 x="-40" y="1420"/>
-      <p2 x="0" y="1420"/>
-    </wire>
-    <wire>
-      <p1 x="40" y="1420"/>
-      <p2 x="60" y="1420"/>
-    </wire>
-    <wire>
-      <p1 x="1020" y="1420"/>
-      <p2 x="1240" y="1420"/>
+      <p1 x="2380" y="140"/>
+      <p2 x="2400" y="140"/>
     </wire>
     <wire>
       <p1 x="1140" y="140"/>
@@ -1865,20 +2476,20 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="80" y="140"/>
     </wire>
     <wire>
-      <p1 x="1160" y="1680"/>
-      <p2 x="1620" y="1680"/>
+      <p1 x="1020" y="1420"/>
+      <p2 x="1240" y="1420"/>
     </wire>
     <wire>
-      <p1 x="360" y="1680"/>
-      <p2 x="960" y="1680"/>
+      <p1 x="-1320" y="1420"/>
+      <p2 x="-1300" y="1420"/>
     </wire>
     <wire>
-      <p1 x="-40" y="1680"/>
-      <p2 x="-20" y="1680"/>
+      <p1 x="-460" y="1420"/>
+      <p2 x="-440" y="1420"/>
     </wire>
     <wire>
-      <p1 x="120" y="1680"/>
-      <p2 x="220" y="1680"/>
+      <p1 x="-440" y="1420"/>
+      <p2 x="-400" y="1420"/>
     </wire>
     <wire>
       <p1 x="920" y="400"/>
@@ -1897,12 +2508,32 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="100" y="400"/>
     </wire>
     <wire>
-      <p1 x="2480" y="400"/>
-      <p2 x="2540" y="400"/>
+      <p1 x="-1080" y="400"/>
+      <p2 x="-1060" y="400"/>
     </wire>
     <wire>
-      <p1 x="-300" y="1940"/>
-      <p2 x="-60" y="1940"/>
+      <p1 x="-900" y="400"/>
+      <p2 x="-880" y="400"/>
+    </wire>
+    <wire>
+      <p1 x="-1400" y="400"/>
+      <p2 x="-1300" y="400"/>
+    </wire>
+    <wire>
+      <p1 x="-880" y="400"/>
+      <p2 x="-780" y="400"/>
+    </wire>
+    <wire>
+      <p1 x="1160" y="1680"/>
+      <p2 x="1620" y="1680"/>
+    </wire>
+    <wire>
+      <p1 x="360" y="1680"/>
+      <p2 x="960" y="1680"/>
+    </wire>
+    <wire>
+      <p1 x="-460" y="1680"/>
+      <p2 x="-220" y="1680"/>
     </wire>
     <wire>
       <p1 x="1140" y="660"/>
@@ -1913,32 +2544,20 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1020" y="660"/>
     </wire>
     <wire>
-      <p1 x="2480" y="660"/>
-      <p2 x="2500" y="660"/>
-    </wire>
-    <wire>
-      <p1 x="-340" y="660"/>
-      <p2 x="-300" y="660"/>
-    </wire>
-    <wire>
-      <p1 x="-100" y="920"/>
-      <p2 x="-80" y="920"/>
-    </wire>
-    <wire>
       <p1 x="1000" y="920"/>
       <p2 x="1260" y="920"/>
     </wire>
     <wire>
-      <p1 x="-1140" y="920"/>
-      <p2 x="-1060" y="920"/>
+      <p1 x="-1500" y="920"/>
+      <p2 x="-1460" y="920"/>
     </wire>
     <wire>
-      <p1 x="-200" y="2200"/>
-      <p2 x="-160" y="2200"/>
+      <p1 x="-1120" y="920"/>
+      <p2 x="-1040" y="920"/>
     </wire>
     <wire>
-      <p1 x="-300" y="1180"/>
-      <p2 x="-60" y="1180"/>
+      <p1 x="-460" y="920"/>
+      <p2 x="-220" y="920"/>
     </wire>
     <wire>
       <p1 x="1140" y="1180"/>
@@ -1953,16 +2572,28 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1020" y="1180"/>
     </wire>
     <wire>
+      <p1 x="-440" y="1180"/>
+      <p2 x="-400" y="1180"/>
+    </wire>
+    <wire>
       <p1 x="260" y="-160"/>
       <p2 x="900" y="-160"/>
     </wire>
     <wire>
-      <p1 x="-520" y="-160"/>
-      <p2 x="-340" y="-160"/>
+      <p1 x="220" y="-160"/>
+      <p2 x="240" y="-160"/>
     </wire>
     <wire>
-      <p1 x="-340" y="-160"/>
-      <p2 x="240" y="-160"/>
+      <p1 x="-1180" y="160"/>
+      <p2 x="-1080" y="160"/>
+    </wire>
+    <wire>
+      <p1 x="-960" y="160"/>
+      <p2 x="-880" y="160"/>
+    </wire>
+    <wire>
+      <p1 x="2380" y="160"/>
+      <p2 x="2400" y="160"/>
     </wire>
     <wire>
       <p1 x="-80" y="160"/>
@@ -1973,28 +2604,44 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="240" y="160"/>
     </wire>
     <wire>
-      <p1 x="-200" y="1440"/>
-      <p2 x="-180" y="1440"/>
+      <p1 x="1780" y="160"/>
+      <p2 x="1800" y="160"/>
     </wire>
     <wire>
-      <p1 x="980" y="1700"/>
-      <p2 x="1020" y="1700"/>
+      <p1 x="2200" y="160"/>
+      <p2 x="2220" y="160"/>
     </wire>
     <wire>
-      <p1 x="1140" y="1700"/>
-      <p2 x="1640" y="1700"/>
+      <p1 x="2140" y="160"/>
+      <p2 x="2160" y="160"/>
     </wire>
     <wire>
-      <p1 x="340" y="1700"/>
-      <p2 x="940" y="1700"/>
+      <p1 x="-860" y="160"/>
+      <p2 x="-840" y="160"/>
     </wire>
     <wire>
-      <p1 x="40" y="1700"/>
-      <p2 x="60" y="1700"/>
+      <p1 x="-840" y="160"/>
+      <p2 x="-820" y="160"/>
     </wire>
     <wire>
-      <p1 x="-700" y="1700"/>
-      <p2 x="-680" y="1700"/>
+      <p1 x="-820" y="160"/>
+      <p2 x="-780" y="160"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1440"/>
+      <p2 x="-1300" y="1440"/>
+    </wire>
+    <wire>
+      <p1 x="-300" y="1440"/>
+      <p2 x="-280" y="1440"/>
+    </wire>
+    <wire>
+      <p1 x="-280" y="1440"/>
+      <p2 x="-140" y="1440"/>
+    </wire>
+    <wire>
+      <p1 x="2380" y="420"/>
+      <p2 x="2440" y="420"/>
     </wire>
     <wire>
       <p1 x="940" y="420"/>
@@ -2013,76 +2660,48 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="100" y="420"/>
     </wire>
     <wire>
-      <p1 x="2300" y="420"/>
-      <p2 x="2360" y="420"/>
+      <p1 x="-1000" y="420"/>
+      <p2 x="-980" y="420"/>
     </wire>
     <wire>
-      <p1 x="2380" y="420"/>
-      <p2 x="2400" y="420"/>
+      <p1 x="980" y="1700"/>
+      <p2 x="1020" y="1700"/>
+    </wire>
+    <wire>
+      <p1 x="1140" y="1700"/>
+      <p2 x="1640" y="1700"/>
+    </wire>
+    <wire>
+      <p1 x="340" y="1700"/>
+      <p2 x="940" y="1700"/>
+    </wire>
+    <wire>
+      <p1 x="-460" y="1700"/>
+      <p2 x="-220" y="1700"/>
     </wire>
     <wire>
       <p1 x="1260" y="680"/>
       <p2 x="1420" y="680"/>
     </wire>
     <wire>
-      <p1 x="2380" y="680"/>
-      <p2 x="2420" y="680"/>
-    </wire>
-    <wire>
-      <p1 x="2500" y="680"/>
-      <p2 x="2520" y="680"/>
-    </wire>
-    <wire>
-      <p1 x="-240" y="680"/>
-      <p2 x="-220" y="680"/>
-    </wire>
-    <wire>
-      <p1 x="-180" y="680"/>
-      <p2 x="-160" y="680"/>
-    </wire>
-    <wire>
-      <p1 x="-1140" y="680"/>
-      <p2 x="-1120" y="680"/>
-    </wire>
-    <wire>
-      <p1 x="-1100" y="680"/>
-      <p2 x="-1060" y="680"/>
-    </wire>
-    <wire>
-      <p1 x="-160" y="680"/>
-      <p2 x="-40" y="680"/>
-    </wire>
-    <wire>
-      <p1 x="-1120" y="680"/>
-      <p2 x="-1100" y="680"/>
-    </wire>
-    <wire>
-      <p1 x="-300" y="1960"/>
-      <p2 x="-60" y="1960"/>
-    </wire>
-    <wire>
-      <p1 x="-100" y="940"/>
-      <p2 x="-80" y="940"/>
-    </wire>
-    <wire>
       <p1 x="1020" y="940"/>
       <p2 x="1240" y="940"/>
     </wire>
     <wire>
-      <p1 x="-1140" y="940"/>
-      <p2 x="-1120" y="940"/>
+      <p1 x="-1320" y="940"/>
+      <p2 x="-1300" y="940"/>
     </wire>
     <wire>
-      <p1 x="-1080" y="940"/>
-      <p2 x="-1060" y="940"/>
+      <p1 x="-1500" y="940"/>
+      <p2 x="-1480" y="940"/>
     </wire>
     <wire>
-      <p1 x="-280" y="2220"/>
-      <p2 x="-260" y="2220"/>
+      <p1 x="-460" y="940"/>
+      <p2 x="-220" y="940"/>
     </wire>
     <wire>
-      <p1 x="-300" y="1200"/>
-      <p2 x="-60" y="1200"/>
+      <p1 x="-1480" y="940"/>
+      <p2 x="-1360" y="940"/>
     </wire>
     <wire>
       <p1 x="1160" y="1200"/>
@@ -2093,12 +2712,20 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="960" y="1200"/>
     </wire>
     <wire>
-      <p1 x="-100" y="1460"/>
-      <p2 x="-80" y="1460"/>
+      <p1 x="-1120" y="1200"/>
+      <p2 x="-1100" y="1200"/>
     </wire>
     <wire>
-      <p1 x="-300" y="1460"/>
-      <p2 x="-260" y="1460"/>
+      <p1 x="-340" y="1200"/>
+      <p2 x="-200" y="1200"/>
+    </wire>
+    <wire>
+      <p1 x="-820" y="180"/>
+      <p2 x="-780" y="180"/>
+    </wire>
+    <wire>
+      <p1 x="2380" y="180"/>
+      <p2 x="2400" y="180"/>
     </wire>
     <wire>
       <p1 x="1140" y="180"/>
@@ -2117,16 +2744,16 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="80" y="180"/>
     </wire>
     <wire>
-      <p1 x="320" y="1720"/>
-      <p2 x="920" y="1720"/>
+      <p1 x="-1320" y="1460"/>
+      <p2 x="-1300" y="1460"/>
     </wire>
     <wire>
-      <p1 x="-620" y="1720"/>
-      <p2 x="-560" y="1720"/>
+      <p1 x="-460" y="1460"/>
+      <p2 x="-420" y="1460"/>
     </wire>
     <wire>
-      <p1 x="1260" y="1720"/>
-      <p2 x="1800" y="1720"/>
+      <p1 x="-420" y="1460"/>
+      <p2 x="-360" y="1460"/>
     </wire>
     <wire>
       <p1 x="1000" y="440"/>
@@ -2145,12 +2772,20 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="100" y="440"/>
     </wire>
     <wire>
-      <p1 x="2380" y="440"/>
-      <p2 x="2400" y="440"/>
+      <p1 x="-1020" y="440"/>
+      <p2 x="-880" y="440"/>
     </wire>
     <wire>
-      <p1 x="-400" y="700"/>
-      <p2 x="-300" y="700"/>
+      <p1 x="-1440" y="440"/>
+      <p2 x="-1380" y="440"/>
+    </wire>
+    <wire>
+      <p1 x="320" y="1720"/>
+      <p2 x="920" y="1720"/>
+    </wire>
+    <wire>
+      <p1 x="-460" y="1720"/>
+      <p2 x="-220" y="1720"/>
     </wire>
     <wire>
       <p1 x="1140" y="700"/>
@@ -2165,28 +2800,20 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1020" y="700"/>
     </wire>
     <wire>
-      <p1 x="2580" y="700"/>
-      <p2 x="2620" y="700"/>
+      <p1 x="-980" y="960"/>
+      <p2 x="-960" y="960"/>
     </wire>
     <wire>
-      <p1 x="-1100" y="700"/>
-      <p2 x="-1060" y="700"/>
+      <p1 x="-1120" y="960"/>
+      <p2 x="-1040" y="960"/>
     </wire>
     <wire>
-      <p1 x="-300" y="1980"/>
-      <p2 x="-60" y="1980"/>
+      <p1 x="-460" y="960"/>
+      <p2 x="-220" y="960"/>
     </wire>
     <wire>
-      <p1 x="-100" y="960"/>
-      <p2 x="-80" y="960"/>
-    </wire>
-    <wire>
-      <p1 x="-560" y="2240"/>
-      <p2 x="-160" y="2240"/>
-    </wire>
-    <wire>
-      <p1 x="-300" y="1220"/>
-      <p2 x="-60" y="1220"/>
+      <p1 x="-1040" y="960"/>
+      <p2 x="-1020" y="960"/>
     </wire>
     <wire>
       <p1 x="980" y="1220"/>
@@ -2201,6 +2828,34 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="940" y="1220"/>
     </wire>
     <wire>
+      <p1 x="-1340" y="1220"/>
+      <p2 x="-1180" y="1220"/>
+    </wire>
+    <wire>
+      <p1 x="-420" y="1220"/>
+      <p2 x="-400" y="1220"/>
+    </wire>
+    <wire>
+      <p1 x="-840" y="200"/>
+      <p2 x="-780" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="-1180" y="200"/>
+      <p2 x="-1080" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="-960" y="200"/>
+      <p2 x="-900" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="2380" y="200"/>
+      <p2 x="2400" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="2300" y="200"/>
+      <p2 x="2360" y="200"/>
+    </wire>
+    <wire>
       <p1 x="1260" y="200"/>
       <p2 x="1720" y="200"/>
     </wire>
@@ -2209,32 +2864,28 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1780" y="200"/>
     </wire>
     <wire>
-      <p1 x="2220" y="200"/>
-      <p2 x="2240" y="200"/>
-    </wire>
-    <wire>
       <p1 x="1820" y="200"/>
-      <p2 x="1860" y="200"/>
+      <p2 x="1960" y="200"/>
     </wire>
     <wire>
-      <p1 x="2240" y="200"/>
-      <p2 x="2400" y="200"/>
+      <p1 x="1960" y="200"/>
+      <p2 x="2140" y="200"/>
     </wire>
     <wire>
-      <p1 x="-560" y="1480"/>
-      <p2 x="-180" y="1480"/>
+      <p1 x="2140" y="200"/>
+      <p2 x="2280" y="200"/>
     </wire>
     <wire>
-      <p1 x="-260" y="1740"/>
-      <p2 x="-240" y="1740"/>
+      <p1 x="-1320" y="1480"/>
+      <p2 x="-1300" y="1480"/>
     </wire>
     <wire>
       <p1 x="1140" y="1740"/>
       <p2 x="1280" y="1740"/>
     </wire>
     <wire>
-      <p1 x="-700" y="1740"/>
-      <p2 x="-680" y="1740"/>
+      <p1 x="-460" y="1740"/>
+      <p2 x="-220" y="1740"/>
     </wire>
     <wire>
       <p1 x="1020" y="460"/>
@@ -2253,12 +2904,16 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="100" y="460"/>
     </wire>
     <wire>
-      <p1 x="2380" y="460"/>
-      <p2 x="2400" y="460"/>
+      <p1 x="-1000" y="460"/>
+      <p2 x="-880" y="460"/>
     </wire>
     <wire>
-      <p1 x="-100" y="720"/>
-      <p2 x="-80" y="720"/>
+      <p1 x="-1320" y="460"/>
+      <p2 x="-1300" y="460"/>
+    </wire>
+    <wire>
+      <p1 x="-1300" y="460"/>
+      <p2 x="-1080" y="460"/>
     </wire>
     <wire>
       <p1 x="1160" y="720"/>
@@ -2269,36 +2924,32 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="960" y="720"/>
     </wire>
     <wire>
-      <p1 x="2380" y="720"/>
-      <p2 x="2420" y="720"/>
+      <p1 x="-960" y="980"/>
+      <p2 x="-940" y="980"/>
     </wire>
     <wire>
-      <p1 x="2500" y="720"/>
-      <p2 x="2520" y="720"/>
+      <p1 x="-1340" y="980"/>
+      <p2 x="-1180" y="980"/>
     </wire>
     <wire>
-      <p1 x="-1120" y="720"/>
-      <p2 x="-1060" y="720"/>
-    </wire>
-    <wire>
-      <p1 x="-60" y="720"/>
-      <p2 x="-40" y="720"/>
-    </wire>
-    <wire>
-      <p1 x="-300" y="2000"/>
-      <p2 x="-60" y="2000"/>
-    </wire>
-    <wire>
-      <p1 x="-100" y="980"/>
-      <p2 x="-80" y="980"/>
-    </wire>
-    <wire>
-      <p1 x="-300" y="1240"/>
-      <p2 x="-60" y="1240"/>
+      <p1 x="-460" y="980"/>
+      <p2 x="-220" y="980"/>
     </wire>
     <wire>
       <p1 x="400" y="1240"/>
       <p2 x="920" y="1240"/>
+    </wire>
+    <wire>
+      <p1 x="-1460" y="1240"/>
+      <p2 x="-1440" y="1240"/>
+    </wire>
+    <wire>
+      <p1 x="-1120" y="1240"/>
+      <p2 x="-1080" y="1240"/>
+    </wire>
+    <wire>
+      <p1 x="-220" y="1500"/>
+      <p2 x="-200" y="1500"/>
     </wire>
     <wire>
       <p1 x="1140" y="1500"/>
@@ -2307,6 +2958,14 @@ Ensure logic modes only output when they are supposed to</string>
     <wire>
       <p1 x="960" y="1500"/>
       <p2 x="1020" y="1500"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1500"/>
+      <p2 x="-1300" y="1500"/>
+    </wire>
+    <wire>
+      <p1 x="2480" y="220"/>
+      <p2 x="2540" y="220"/>
     </wire>
     <wire>
       <p1 x="1140" y="220"/>
@@ -2321,32 +2980,32 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="920" y="220"/>
     </wire>
     <wire>
-      <p1 x="-520" y="220"/>
-      <p2 x="-400" y="220"/>
-    </wire>
-    <wire>
       <p1 x="220" y="220"/>
       <p2 x="240" y="220"/>
+    </wire>
+    <wire>
+      <p1 x="120" y="220"/>
+      <p2 x="140" y="220"/>
     </wire>
     <wire>
       <p1 x="920" y="220"/>
       <p2 x="1020" y="220"/>
     </wire>
     <wire>
-      <p1 x="-400" y="220"/>
-      <p2 x="140" y="220"/>
-    </wire>
-    <wire>
-      <p1 x="-300" y="1760"/>
-      <p2 x="-280" y="1760"/>
+      <p1 x="-460" y="1760"/>
+      <p2 x="-220" y="1760"/>
     </wire>
     <wire>
       <p1 x="1340" y="1760"/>
       <p2 x="1400" y="1760"/>
     </wire>
     <wire>
-      <p1 x="-280" y="1760"/>
-      <p2 x="-240" y="1760"/>
+      <p1 x="-1440" y="480"/>
+      <p2 x="-1380" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="2480" y="480"/>
+      <p2 x="2500" y="480"/>
     </wire>
     <wire>
       <p1 x="260" y="480"/>
@@ -2361,20 +3020,8 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="100" y="480"/>
     </wire>
     <wire>
-      <p1 x="2380" y="480"/>
-      <p2 x="2400" y="480"/>
-    </wire>
-    <wire>
-      <p1 x="-400" y="480"/>
-      <p2 x="-220" y="480"/>
-    </wire>
-    <wire>
-      <p1 x="-180" y="480"/>
-      <p2 x="-160" y="480"/>
-    </wire>
-    <wire>
-      <p1 x="-100" y="740"/>
-      <p2 x="-80" y="740"/>
+      <p1 x="-1020" y="480"/>
+      <p2 x="-980" y="480"/>
     </wire>
     <wire>
       <p1 x="980" y="740"/>
@@ -2389,24 +3036,60 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="940" y="740"/>
     </wire>
     <wire>
-      <p1 x="2480" y="740"/>
-      <p2 x="2500" y="740"/>
+      <p1 x="-460" y="1000"/>
+      <p2 x="-220" y="1000"/>
     </wire>
     <wire>
-      <p1 x="-300" y="2020"/>
-      <p2 x="-60" y="2020"/>
+      <p1 x="-1460" y="1000"/>
+      <p2 x="-1440" y="1000"/>
     </wire>
     <wire>
-      <p1 x="-100" y="1000"/>
-      <p2 x="-80" y="1000"/>
+      <p1 x="-1120" y="1000"/>
+      <p2 x="-1100" y="1000"/>
     </wire>
     <wire>
-      <p1 x="-300" y="1260"/>
-      <p2 x="-60" y="1260"/>
+      <p1 x="-420" y="1260"/>
+      <p2 x="-140" y="1260"/>
     </wire>
     <wire>
-      <p1 x="-280" y="1520"/>
-      <p2 x="-240" y="1520"/>
+      <p1 x="-1380" y="1260"/>
+      <p2 x="-1360" y="1260"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1260"/>
+      <p2 x="-1300" y="1260"/>
+    </wire>
+    <wire>
+      <p1 x="-1300" y="1260"/>
+      <p2 x="-1260" y="1260"/>
+    </wire>
+    <wire>
+      <p1 x="-460" y="1520"/>
+      <p2 x="-440" y="1520"/>
+    </wire>
+    <wire>
+      <p1 x="-500" y="1520"/>
+      <p2 x="-480" y="1520"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1520"/>
+      <p2 x="-1300" y="1520"/>
+    </wire>
+    <wire>
+      <p1 x="-440" y="1520"/>
+      <p2 x="-280" y="1520"/>
+    </wire>
+    <wire>
+      <p1 x="-880" y="240"/>
+      <p2 x="-860" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="-1080" y="240"/>
+      <p2 x="-1000" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="2300" y="240"/>
+      <p2 x="2360" y="240"/>
     </wire>
     <wire>
       <p1 x="2380" y="240"/>
@@ -2425,6 +3108,50 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="220" y="240"/>
     </wire>
     <wire>
+      <p1 x="1880" y="240"/>
+      <p2 x="1900" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="1940" y="240"/>
+      <p2 x="1960" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="-1180" y="240"/>
+      <p2 x="-1140" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="-1000" y="240"/>
+      <p2 x="-960" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="-860" y="240"/>
+      <p2 x="-780" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="-460" y="1780"/>
+      <p2 x="-220" y="1780"/>
+    </wire>
+    <wire>
+      <p1 x="1260" y="1780"/>
+      <p2 x="1280" y="1780"/>
+    </wire>
+    <wire>
+      <p1 x="1460" y="1780"/>
+      <p2 x="1480" y="1780"/>
+    </wire>
+    <wire>
+      <p1 x="-1080" y="500"/>
+      <p2 x="-1060" y="500"/>
+    </wire>
+    <wire>
+      <p1 x="2380" y="500"/>
+      <p2 x="2420" y="500"/>
+    </wire>
+    <wire>
+      <p1 x="2500" y="500"/>
+      <p2 x="2520" y="500"/>
+    </wire>
+    <wire>
       <p1 x="260" y="500"/>
       <p2 x="340" y="500"/>
     </wire>
@@ -2437,48 +3164,32 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="100" y="500"/>
     </wire>
     <wire>
-      <p1 x="2380" y="500"/>
-      <p2 x="2400" y="500"/>
+      <p1 x="-900" y="500"/>
+      <p2 x="-880" y="500"/>
     </wire>
     <wire>
-      <p1 x="1200" y="1780"/>
-      <p2 x="1260" y="1780"/>
+      <p1 x="-880" y="500"/>
+      <p2 x="-780" y="500"/>
     </wire>
     <wire>
-      <p1 x="1460" y="1780"/>
-      <p2 x="1480" y="1780"/>
-    </wire>
-    <wire>
-      <p1 x="-140" y="1780"/>
-      <p2 x="-120" y="1780"/>
-    </wire>
-    <wire>
-      <p1 x="1260" y="1780"/>
-      <p2 x="1280" y="1780"/>
-    </wire>
-    <wire>
-      <p1 x="-120" y="1780"/>
-      <p2 x="20" y="1780"/>
-    </wire>
-    <wire>
-      <p1 x="-100" y="760"/>
-      <p2 x="-80" y="760"/>
+      <p1 x="-460" y="760"/>
+      <p2 x="-440" y="760"/>
     </wire>
     <wire>
       <p1 x="480" y="760"/>
       <p2 x="920" y="760"/>
     </wire>
     <wire>
-      <p1 x="-1140" y="760"/>
-      <p2 x="-1060" y="760"/>
+      <p1 x="-460" y="1020"/>
+      <p2 x="-220" y="1020"/>
     </wire>
     <wire>
-      <p1 x="-300" y="2040"/>
-      <p2 x="-60" y="2040"/>
+      <p1 x="-1380" y="1020"/>
+      <p2 x="-1360" y="1020"/>
     </wire>
     <wire>
-      <p1 x="-120" y="1020"/>
-      <p2 x="-100" y="1020"/>
+      <p1 x="-1320" y="1020"/>
+      <p2 x="-1300" y="1020"/>
     </wire>
     <wire>
       <p1 x="1140" y="1020"/>
@@ -2489,24 +3200,16 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1020" y="1020"/>
     </wire>
     <wire>
-      <p1 x="-100" y="1020"/>
-      <p2 x="-80" y="1020"/>
-    </wire>
-    <wire>
       <p1 x="640" y="140"/>
       <p2 x="640" y="1340"/>
     </wire>
     <wire>
-      <p1 x="-260" y="1740"/>
-      <p2 x="-260" y="1800"/>
+      <p1 x="1920" y="260"/>
+      <p2 x="1920" y="280"/>
     </wire>
     <wire>
-      <p1 x="-260" y="1560"/>
-      <p2 x="-260" y="1600"/>
-    </wire>
-    <wire>
-      <p1 x="-260" y="1600"/>
-      <p2 x="-260" y="1620"/>
+      <p1 x="-900" y="200"/>
+      <p2 x="-900" y="320"/>
     </wire>
     <wire>
       <p1 x="900" y="-160"/>
@@ -2527,6 +3230,10 @@ Ensure logic modes only output when they are supposed to</string>
     <wire>
       <p1 x="1540" y="400"/>
       <p2 x="1540" y="1200"/>
+    </wire>
+    <wire>
+      <p1 x="2180" y="120"/>
+      <p2 x="2180" y="140"/>
     </wire>
     <wire>
       <p1 x="1160" y="-120"/>
@@ -2565,8 +3272,16 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="520" y="720"/>
     </wire>
     <wire>
-      <p1 x="1800" y="220"/>
-      <p2 x="1800" y="1720"/>
+      <p1 x="1800" y="160"/>
+      <p2 x="1800" y="180"/>
+    </wire>
+    <wire>
+      <p1 x="-140" y="1100"/>
+      <p2 x="-140" y="1260"/>
+    </wire>
+    <wire>
+      <p1 x="-140" y="1440"/>
+      <p2 x="-140" y="1520"/>
     </wire>
     <wire>
       <p1 x="780" y="0"/>
@@ -2577,36 +3292,32 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1420" y="680"/>
     </wire>
     <wire>
-      <p1 x="-400" y="220"/>
-      <p2 x="-400" y="360"/>
+      <p1 x="-1040" y="920"/>
+      <p2 x="-1040" y="960"/>
     </wire>
     <wire>
-      <p1 x="-400" y="820"/>
+      <p1 x="-400" y="1340"/>
       <p2 x="-400" y="1400"/>
-    </wire>
-    <wire>
-      <p1 x="-400" y="700"/>
-      <p2 x="-400" y="820"/>
-    </wire>
-    <wire>
-      <p1 x="-400" y="580"/>
-      <p2 x="-400" y="700"/>
-    </wire>
-    <wire>
-      <p1 x="-400" y="480"/>
-      <p2 x="-400" y="580"/>
-    </wire>
-    <wire>
-      <p1 x="-400" y="1400"/>
-      <p2 x="-400" y="1860"/>
-    </wire>
-    <wire>
-      <p1 x="-400" y="360"/>
-      <p2 x="-400" y="480"/>
     </wire>
     <wire>
       <p1 x="400" y="440"/>
       <p2 x="400" y="1240"/>
+    </wire>
+    <wire>
+      <p1 x="-1300" y="400"/>
+      <p2 x="-1300" y="460"/>
+    </wire>
+    <wire>
+      <p1 x="-1300" y="940"/>
+      <p2 x="-1300" y="1020"/>
+    </wire>
+    <wire>
+      <p1 x="-1300" y="1140"/>
+      <p2 x="-1300" y="1260"/>
+    </wire>
+    <wire>
+      <p1 x="-1300" y="1020"/>
+      <p2 x="-1300" y="1140"/>
     </wire>
     <wire>
       <p1 x="660" y="120"/>
@@ -2617,28 +3328,8 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="20" y="140"/>
     </wire>
     <wire>
-      <p1 x="20" y="1440"/>
-      <p2 x="20" y="1600"/>
-    </wire>
-    <wire>
-      <p1 x="20" y="1780"/>
-      <p2 x="20" y="1860"/>
-    </wire>
-    <wire>
-      <p1 x="-280" y="1860"/>
-      <p2 x="-280" y="2180"/>
-    </wire>
-    <wire>
-      <p1 x="-280" y="1100"/>
-      <p2 x="-280" y="1420"/>
-    </wire>
-    <wire>
-      <p1 x="-280" y="1680"/>
-      <p2 x="-280" y="1760"/>
-    </wire>
-    <wire>
-      <p1 x="-280" y="1420"/>
-      <p2 x="-280" y="1520"/>
+      <p1 x="-280" y="1440"/>
+      <p2 x="-280" y="1480"/>
     </wire>
     <wire>
       <p1 x="920" y="-80"/>
@@ -2685,18 +3376,6 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="540" y="700"/>
     </wire>
     <wire>
-      <p1 x="-160" y="480"/>
-      <p2 x="-160" y="560"/>
-    </wire>
-    <wire>
-      <p1 x="-160" y="680"/>
-      <p2 x="-160" y="800"/>
-    </wire>
-    <wire>
-      <p1 x="-160" y="560"/>
-      <p2 x="-160" y="680"/>
-    </wire>
-    <wire>
       <p1 x="800" y="-20"/>
       <p2 x="800" y="380"/>
     </wire>
@@ -2705,16 +3384,80 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1440" y="700"/>
     </wire>
     <wire>
+      <p1 x="-420" y="1400"/>
+      <p2 x="-420" y="1460"/>
+    </wire>
+    <wire>
+      <p1 x="-420" y="1220"/>
+      <p2 x="-420" y="1260"/>
+    </wire>
+    <wire>
+      <p1 x="-420" y="1260"/>
+      <p2 x="-420" y="1280"/>
+    </wire>
+    <wire>
       <p1 x="420" y="420"/>
       <p2 x="420" y="1220"/>
     </wire>
     <wire>
-      <p1 x="-40" y="1680"/>
-      <p2 x="-40" y="1840"/>
+      <p1 x="-1320" y="1300"/>
+      <p2 x="-1320" y="1320"/>
     </wire>
     <wire>
-      <p1 x="-40" y="1540"/>
-      <p2 x="-40" y="1640"/>
+      <p1 x="-1320" y="1580"/>
+      <p2 x="-1320" y="1600"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1560"/>
+      <p2 x="-1320" y="1580"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1540"/>
+      <p2 x="-1320" y="1560"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1520"/>
+      <p2 x="-1320" y="1540"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1500"/>
+      <p2 x="-1320" y="1520"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1480"/>
+      <p2 x="-1320" y="1500"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1460"/>
+      <p2 x="-1320" y="1480"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1440"/>
+      <p2 x="-1320" y="1460"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1420"/>
+      <p2 x="-1320" y="1440"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1400"/>
+      <p2 x="-1320" y="1420"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1380"/>
+      <p2 x="-1320" y="1400"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1360"/>
+      <p2 x="-1320" y="1380"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1340"/>
+      <p2 x="-1320" y="1360"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="1320"/>
+      <p2 x="-1320" y="1340"/>
     </wire>
     <wire>
       <p1 x="680" y="100"/>
@@ -2723,6 +3466,14 @@ Ensure logic modes only output when they are supposed to</string>
     <wire>
       <p1 x="40" y="180"/>
       <p2 x="40" y="260"/>
+    </wire>
+    <wire>
+      <p1 x="1960" y="200"/>
+      <p2 x="1960" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="-940" y="-40"/>
+      <p2 x="-940" y="40"/>
     </wire>
     <wire>
       <p1 x="940" y="-60"/>
@@ -2745,14 +3496,6 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1580" y="1640"/>
     </wire>
     <wire>
-      <p1 x="-560" y="1480"/>
-      <p2 x="-560" y="1720"/>
-    </wire>
-    <wire>
-      <p1 x="-560" y="1720"/>
-      <p2 x="-560" y="2240"/>
-    </wire>
-    <wire>
       <p1 x="1200" y="-60"/>
       <p2 x="1200" y="60"/>
     </wire>
@@ -2769,6 +3512,22 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1200" y="1500"/>
     </wire>
     <wire>
+      <p1 x="-820" y="160"/>
+      <p2 x="-820" y="180"/>
+    </wire>
+    <wire>
+      <p1 x="-1460" y="920"/>
+      <p2 x="-1460" y="1000"/>
+    </wire>
+    <wire>
+      <p1 x="-1460" y="1120"/>
+      <p2 x="-1460" y="1240"/>
+    </wire>
+    <wire>
+      <p1 x="-1460" y="1000"/>
+      <p2 x="-1460" y="1120"/>
+    </wire>
+    <wire>
       <p1 x="820" y="-40"/>
       <p2 x="820" y="360"/>
     </wire>
@@ -2777,12 +3536,96 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1460" y="720"/>
     </wire>
     <wire>
+      <p1 x="-440" y="1520"/>
+      <p2 x="-440" y="1840"/>
+    </wire>
+    <wire>
+      <p1 x="-440" y="760"/>
+      <p2 x="-440" y="1080"/>
+    </wire>
+    <wire>
+      <p1 x="-440" y="1340"/>
+      <p2 x="-440" y="1420"/>
+    </wire>
+    <wire>
+      <p1 x="-440" y="1080"/>
+      <p2 x="-440" y="1180"/>
+    </wire>
+    <wire>
+      <p1 x="-1080" y="880"/>
+      <p2 x="-1080" y="1080"/>
+    </wire>
+    <wire>
+      <p1 x="-1080" y="1120"/>
+      <p2 x="-1080" y="1240"/>
+    </wire>
+    <wire>
+      <p1 x="-1080" y="400"/>
+      <p2 x="-1080" y="460"/>
+    </wire>
+    <wire>
+      <p1 x="-1080" y="0"/>
+      <p2 x="-1080" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="-1080" y="460"/>
+      <p2 x="-1080" y="500"/>
+    </wire>
+    <wire>
       <p1 x="440" y="400"/>
       <p2 x="440" y="1200"/>
     </wire>
     <wire>
+      <p1 x="-1340" y="900"/>
+      <p2 x="-1340" y="920"/>
+    </wire>
+    <wire>
+      <p1 x="-1340" y="980"/>
+      <p2 x="-1340" y="1000"/>
+    </wire>
+    <wire>
+      <p1 x="-1340" y="1100"/>
+      <p2 x="-1340" y="1120"/>
+    </wire>
+    <wire>
+      <p1 x="-1340" y="1220"/>
+      <p2 x="-1340" y="1240"/>
+    </wire>
+    <wire>
       <p1 x="700" y="80"/>
       <p2 x="700" y="1280"/>
+    </wire>
+    <wire>
+      <p1 x="60" y="1340"/>
+      <p2 x="60" y="1800"/>
+    </wire>
+    <wire>
+      <p1 x="-960" y="880"/>
+      <p2 x="-960" y="900"/>
+    </wire>
+    <wire>
+      <p1 x="-960" y="960"/>
+      <p2 x="-960" y="980"/>
+    </wire>
+    <wire>
+      <p1 x="-960" y="240"/>
+      <p2 x="-960" y="280"/>
+    </wire>
+    <wire>
+      <p1 x="-960" y="-20"/>
+      <p2 x="-960" y="0"/>
+    </wire>
+    <wire>
+      <p1 x="-960" y="980"/>
+      <p2 x="-960" y="1120"/>
+    </wire>
+    <wire>
+      <p1 x="-320" y="-80"/>
+      <p2 x="-320" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="-320" y="-20"/>
+      <p2 x="-320" y="0"/>
     </wire>
     <wire>
       <p1 x="320" y="520"/>
@@ -2809,8 +3652,8 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1600" y="1660"/>
     </wire>
     <wire>
-      <p1 x="2240" y="200"/>
-      <p2 x="2240" y="380"/>
+      <p1 x="580" y="180"/>
+      <p2 x="580" y="300"/>
     </wire>
     <wire>
       <p1 x="1220" y="-80"/>
@@ -2829,16 +3672,40 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1220" y="1660"/>
     </wire>
     <wire>
-      <p1 x="580" y="180"/>
-      <p2 x="580" y="300"/>
+      <p1 x="2500" y="540"/>
+      <p2 x="2500" y="560"/>
     </wire>
     <wire>
-      <p1 x="2500" y="720"/>
-      <p2 x="2500" y="740"/>
+      <p1 x="2500" y="480"/>
+      <p2 x="2500" y="500"/>
     </wire>
     <wire>
-      <p1 x="2500" y="660"/>
-      <p2 x="2500" y="680"/>
+      <p1 x="-200" y="1340"/>
+      <p2 x="-200" y="1500"/>
+    </wire>
+    <wire>
+      <p1 x="-200" y="1200"/>
+      <p2 x="-200" y="1300"/>
+    </wire>
+    <wire>
+      <p1 x="-1480" y="940"/>
+      <p2 x="-1480" y="1040"/>
+    </wire>
+    <wire>
+      <p1 x="-1480" y="1160"/>
+      <p2 x="-1480" y="1280"/>
+    </wire>
+    <wire>
+      <p1 x="-1480" y="1040"/>
+      <p2 x="-1480" y="1160"/>
+    </wire>
+    <wire>
+      <p1 x="-840" y="80"/>
+      <p2 x="-840" y="100"/>
+    </wire>
+    <wire>
+      <p1 x="-840" y="160"/>
+      <p2 x="-840" y="200"/>
     </wire>
     <wire>
       <p1 x="840" y="-60"/>
@@ -2849,32 +3716,32 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1480" y="740"/>
     </wire>
     <wire>
-      <p1 x="-1100" y="680"/>
-      <p2 x="-1100" y="700"/>
+      <p1 x="-1100" y="900"/>
+      <p2 x="-1100" y="1000"/>
+    </wire>
+    <wire>
+      <p1 x="-1100" y="260"/>
+      <p2 x="-1100" y="280"/>
+    </wire>
+    <wire>
+      <p1 x="-1100" y="1000"/>
+      <p2 x="-1100" y="1200"/>
     </wire>
     <wire>
       <p1 x="460" y="380"/>
       <p2 x="460" y="1180"/>
     </wire>
     <wire>
-      <p1 x="2380" y="560"/>
-      <p2 x="2380" y="600"/>
+      <p1 x="2380" y="380"/>
+      <p2 x="2380" y="420"/>
     </wire>
     <wire>
-      <p1 x="2380" y="600"/>
-      <p2 x="2380" y="680"/>
+      <p1 x="2380" y="420"/>
+      <p2 x="2380" y="500"/>
     </wire>
     <wire>
-      <p1 x="2380" y="680"/>
-      <p2 x="2380" y="720"/>
-    </wire>
-    <wire>
-      <p1 x="-80" y="1420"/>
-      <p2 x="-80" y="1460"/>
-    </wire>
-    <wire>
-      <p1 x="-80" y="2180"/>
-      <p2 x="-80" y="2220"/>
+      <p1 x="2380" y="500"/>
+      <p2 x="2380" y="540"/>
     </wire>
     <wire>
       <p1 x="80" y="260"/>
@@ -2941,22 +3808,6 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="720" y="860"/>
     </wire>
     <wire>
-      <p1 x="-340" y="-160"/>
-      <p2 x="-340" y="340"/>
-    </wire>
-    <wire>
-      <p1 x="-340" y="660"/>
-      <p2 x="-340" y="780"/>
-    </wire>
-    <wire>
-      <p1 x="-340" y="540"/>
-      <p2 x="-340" y="660"/>
-    </wire>
-    <wire>
-      <p1 x="-340" y="340"/>
-      <p2 x="-340" y="540"/>
-    </wire>
-    <wire>
       <p1 x="980" y="340"/>
       <p2 x="980" y="740"/>
     </wire>
@@ -2981,6 +3832,14 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1620" y="1680"/>
     </wire>
     <wire>
+      <p1 x="-600" y="1140"/>
+      <p2 x="-600" y="1380"/>
+    </wire>
+    <wire>
+      <p1 x="-600" y="1380"/>
+      <p2 x="-600" y="1900"/>
+    </wire>
+    <wire>
       <p1 x="1240" y="-20"/>
       <p2 x="1240" y="220"/>
     </wire>
@@ -2997,12 +3856,24 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1240" y="1660"/>
     </wire>
     <wire>
-      <p1 x="220" y="220"/>
-      <p2 x="220" y="240"/>
+      <p1 x="-860" y="320"/>
+      <p2 x="-860" y="340"/>
     </wire>
     <wire>
-      <p1 x="220" y="1680"/>
-      <p2 x="220" y="1800"/>
+      <p1 x="-860" y="240"/>
+      <p2 x="-860" y="260"/>
+    </wire>
+    <wire>
+      <p1 x="-860" y="120"/>
+      <p2 x="-860" y="160"/>
+    </wire>
+    <wire>
+      <p1 x="-860" y="260"/>
+      <p2 x="-860" y="280"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="220"/>
+      <p2 x="220" y="240"/>
     </wire>
     <wire>
       <p1 x="860" y="-80"/>
@@ -3017,80 +3888,28 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1500" y="1160"/>
     </wire>
     <wire>
-      <p1 x="-1120" y="600"/>
-      <p2 x="-1120" y="620"/>
+      <p1 x="2140" y="160"/>
+      <p2 x="2140" y="200"/>
     </wire>
     <wire>
-      <p1 x="-1120" y="680"/>
-      <p2 x="-1120" y="720"/>
+      <p1 x="-1120" y="260"/>
+      <p2 x="-1120" y="280"/>
     </wire>
     <wire>
       <p1 x="480" y="360"/>
       <p2 x="480" y="760"/>
     </wire>
     <wire>
-      <p1 x="-100" y="720"/>
-      <p2 x="-100" y="740"/>
-    </wire>
-    <wire>
-      <p1 x="-100" y="1000"/>
-      <p2 x="-100" y="1020"/>
-    </wire>
-    <wire>
-      <p1 x="-100" y="980"/>
-      <p2 x="-100" y="1000"/>
-    </wire>
-    <wire>
-      <p1 x="-100" y="960"/>
-      <p2 x="-100" y="980"/>
-    </wire>
-    <wire>
-      <p1 x="-100" y="940"/>
-      <p2 x="-100" y="960"/>
-    </wire>
-    <wire>
-      <p1 x="-100" y="920"/>
-      <p2 x="-100" y="940"/>
-    </wire>
-    <wire>
-      <p1 x="-100" y="900"/>
-      <p2 x="-100" y="920"/>
-    </wire>
-    <wire>
-      <p1 x="-100" y="880"/>
-      <p2 x="-100" y="900"/>
-    </wire>
-    <wire>
-      <p1 x="-100" y="860"/>
-      <p2 x="-100" y="880"/>
-    </wire>
-    <wire>
-      <p1 x="-100" y="840"/>
-      <p2 x="-100" y="860"/>
-    </wire>
-    <wire>
-      <p1 x="-100" y="820"/>
-      <p2 x="-100" y="840"/>
-    </wire>
-    <wire>
-      <p1 x="-100" y="800"/>
-      <p2 x="-100" y="820"/>
-    </wire>
-    <wire>
-      <p1 x="-100" y="780"/>
-      <p2 x="-100" y="800"/>
-    </wire>
-    <wire>
-      <p1 x="-100" y="760"/>
-      <p2 x="-100" y="780"/>
-    </wire>
-    <wire>
-      <p1 x="-100" y="740"/>
-      <p2 x="-100" y="760"/>
-    </wire>
-    <wire>
       <p1 x="740" y="40"/>
       <p2 x="740" y="840"/>
+    </wire>
+    <wire>
+      <p1 x="-1000" y="420"/>
+      <p2 x="-1000" y="460"/>
+    </wire>
+    <wire>
+      <p1 x="-1000" y="0"/>
+      <p2 x="-1000" y="240"/>
     </wire>
     <wire>
       <p1 x="1000" y="-40"/>
@@ -3133,12 +3952,24 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1260" y="1640"/>
     </wire>
     <wire>
-      <p1 x="1260" y="1720"/>
-      <p2 x="1260" y="1780"/>
+      <p1 x="-240" y="1080"/>
+      <p2 x="-240" y="1120"/>
     </wire>
     <wire>
-      <p1 x="-240" y="1680"/>
-      <p2 x="-240" y="1740"/>
+      <p1 x="-240" y="1840"/>
+      <p2 x="-240" y="1880"/>
+    </wire>
+    <wire>
+      <p1 x="-880" y="460"/>
+      <p2 x="-880" y="500"/>
+    </wire>
+    <wire>
+      <p1 x="-880" y="400"/>
+      <p2 x="-880" y="440"/>
+    </wire>
+    <wire>
+      <p1 x="-880" y="160"/>
+      <p2 x="-880" y="240"/>
     </wire>
     <wire>
       <p1 x="240" y="160"/>
@@ -3165,20 +3996,16 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="1520" y="1180"/>
     </wire>
     <wire>
-      <p1 x="-1140" y="920"/>
-      <p2 x="-1140" y="940"/>
+      <p1 x="-1140" y="1300"/>
+      <p2 x="-1140" y="1320"/>
     </wire>
     <wire>
-      <p1 x="-1140" y="840"/>
-      <p2 x="-1140" y="860"/>
+      <p1 x="-1140" y="240"/>
+      <p2 x="-1140" y="360"/>
     </wire>
     <wire>
-      <p1 x="-1140" y="760"/>
-      <p2 x="-1140" y="780"/>
-    </wire>
-    <wire>
-      <p1 x="-1140" y="780"/>
-      <p2 x="-1140" y="800"/>
+      <p1 x="-1140" y="360"/>
+      <p2 x="-1140" y="540"/>
     </wire>
     <wire>
       <p1 x="1140" y="300"/>
@@ -3213,12 +4040,16 @@ Ensure logic modes only output when they are supposed to</string>
       <p2 x="500" y="740"/>
     </wire>
     <wire>
-      <p1 x="-120" y="1780"/>
-      <p2 x="-120" y="1820"/>
+      <p1 x="-1400" y="-40"/>
+      <p2 x="-1400" y="400"/>
     </wire>
     <wire>
       <p1 x="760" y="20"/>
       <p2 x="760" y="820"/>
+    </wire>
+    <wire>
+      <p1 x="-1020" y="440"/>
+      <p2 x="-1020" y="480"/>
     </wire>
     <wire>
       <p1 x="380" y="460"/>
