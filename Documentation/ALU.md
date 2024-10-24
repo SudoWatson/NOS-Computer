@@ -13,7 +13,7 @@ The possible logical operations are
 - Shifts
 - Rotates
 
-The ALU gets its inputs from the Left Hand Bus and the Right Hand Bus from the registers. Which registers go to which bus is determined by the [[Register Controller]]. Any operations that uses a single input (Not, Shifts, Rotates) will use the Right Hand Bus and anything on the Left Hand Bus will be ignored.
+The ALU gets its inputs from the Left Hand Bus and the Right Hand Bus from the registers. Which registers go to which bus is determined by the [Register Controller](documentation/Register-Controller.md). Any operations that uses a single input (Not, Shifts, Rotates) will use the Right Hand Bus and anything on the Left Hand Bus will be ignored.
 
 The ALU takes in a 5 bit instruction. The left-most bit puts the ALU into arithmetic (0) or logic (1) mode, where the remaining 4 bits determine what operation is done depending on the mode.
 #### Instructions

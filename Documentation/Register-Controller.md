@@ -1,9 +1,9 @@
-This part is what controls the various registers of the Nos computer. It takes a 12-bit input to determine what registers follow its instructions. The left 4 index the register for the left hand bus, the middle 4 for the right hand bus, and the right 4 for the main bus (verify this true?). The register controller is able to control up to 15 [[General Purpose Registers]], and the 4 [[Special Purpose Registers]]. 
+This part is what controls the various registers of the Nos computer. It takes a 12-bit input to determine what registers follow its instructions. The left 4 index the register for the left hand bus, the middle 4 for the right hand bus, and the right 4 for the main bus (verify this true?). The register controller is able to control up to 15 [General Purpose Registers](documentation/General-Purpose-Registers.md), and the 4 [[Special Purpose Registers]]. 
 
 
 
 
-### Going with the always bypass through ALU method. Register OE line is now "Output to main bus instead of RHB" note on [[ALU]] has this note as well
+### Going with the always bypass through ALU method. Register OE line is now "Output to main bus instead of RHB" note on [ALU](documentation/ALU.md) has this note as well
 
 
 #### Thoughts, need to be properly documented
