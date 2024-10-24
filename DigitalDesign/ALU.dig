@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <circuit>
   <version>2</version>
-  <attributes/>
+  <attributes>
+    <entry>
+      <string>romContent</string>
+      <romList>
+        <roms/>
+      </romList>
+    </entry>
+    <entry>
+      <string>Width</string>
+      <int>9</int>
+    </entry>
+  </attributes>
   <visualElements>
     <visualElement>
       <elementName>In</elementName>
@@ -1422,12 +1433,12 @@ If Bit 5 on (logic mode)
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>EO</string>
-        </entry>
-        <entry>
           <string>Description</string>
           <string>ALU Result Out</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>EO</string>
         </entry>
       </elementAttributes>
       <pos x="2160" y="120"/>
@@ -1491,10 +1502,11 @@ If Bit 5 on (logic mode)
       <elementAttributes>
         <entry>
           <string>Description</string>
-          <string>Bit 5 D Latch</string>
+          <string>Bit 5 D Latch
+Or just use another 173</string>
         </entry>
       </elementAttributes>
-      <pos x="-1060" y="560"/>
+      <pos x="-1040" y="560"/>
     </visualElement>
     <visualElement>
       <elementName>Ground</elementName>
@@ -1510,12 +1522,12 @@ If Bit 5 on (logic mode)
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>CLKEdge</string>
-        </entry>
-        <entry>
           <string>Description</string>
           <string>Rising edge of clock</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>CLKEdge</string>
         </entry>
       </elementAttributes>
       <pos x="-1440" y="440"/>
