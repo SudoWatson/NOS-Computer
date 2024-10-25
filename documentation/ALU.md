@@ -62,5 +62,16 @@ The ALU takes in a 5 bit instruction. The left-most bit puts the ALU into arithm
 | 0     | 1     | And                                       |
 | 1     | 0     | Or                                        |
 | 1     | 1     | Xor                                       |
-> [!IMPORTANT]  
-> Need to update to take in a "Bypass RHBus to Out", which will, as it suggests, output the RHBus contents directly instead of the results it has. This is for the Registers to output through without requiring instruction setup.
+
+### Explanation of Inputs
+
+| Pin | Name                  | Use                                                                                                                        |
+| --- | --------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| LH# | Left Hand Pin #       |                                                                                                                            |
+| RH# | Right Hand Pin #      |                                                                                                                            |
+| ∑I  | ALU Instruction In    | Loads the instruction for the ALU from the main bus (∑ is the symbol for the ALU because I want it to be)                  |
+| ∑#  | ALU Instruction #     | Pins for input from the main bus to the internal instruction register                                                      |
+| ∑O  | Result Out            |                                                                                                                            |
+| BRO | Bypass Right Hand Out | Bypasses the ALU to output the Right Hand Bus. This is used by the Register Controller to transfer a register into another |
+| CI  | Carry In              | Carry In flag                                                                                                              |
+| CLK | Clock                 |                                                                                                                            |

@@ -10,14 +10,14 @@ This part is what controls the various registers of the Nos computer. It takes a
 GPR register 0000 can't exist
 2 lines to index the SPR
 1 line to say "Hey use the SPR instead of the GPR"
-2 lines to say "Hey SPR ## output somewhere". 0 register not have this ability. 0 will be the natural off state of this to avoid having another line for it. Just don't connect register 0 to this and it should work
+1 line on the ALU to Bypass Right Hand Bus Out (BRO pin)
+2 lines to say "Hey SPR ## output somewhere". 00 register not have this ability. 00 will be the natural off state of this to avoid having another line for it. Just don't connect register 00 to this and it should work
+Should be able to wire both lines just like normal GPR. Should be able to just use GPRs for this
 
+### Explanation of Instructions for Moves
 ##### To move GPR to GPR
 Move out GPR to RHBus, In GPR to Register Enable
-> ALU should have a "Bypass out" flag, or, registers should have a "right hand output actually means regular output" line absolutely 0 thought but leaning towards option B although 1 thought provides that adding the ALU bypass could possibly remove the need for possible separation of the RHOut and the regular Out, dropping some needed bits by 33.3̅% but another half thought worries that interferes with Move GPR to SPR rules
-
-Somehow bypass register to output onto the main bus (either via ALU or bypass line) and load into register
-Move
+BRO on and load into register; Move
 
 ##### To move SPR into SPR
 2 lines indexed to the input register, 1 line set to SPR mode, 2 lines set to output register (00 not an option)
@@ -29,5 +29,16 @@ Move in GPR to register enable
 Move
 
 ##### To move GPR to SPR
-Move out GPR to righthand out, 2 lines indexed to SPR, 1 line set to SPR, somehow bypass register to output onto main bus
-Move
+Move out GPR to right hand out
+2 lines indexed to SPR, 1 line set to SPR, BRO on; Move
+
+
+## Explanation of Inputs
+
+| Pin    | Name                   | Use                                                                                                                                     |
+| ------ | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| CLK    | Clock line             | -                                                                                                                                       |
+| R̅C̅I̅ | Register Controller In | Stores the contents of the bus in the internal register for indexing the registers                                                      |
+| CRM    | Crement                | To perform an in/decrement operation. Which one it does is determined by the 5th bit from the right, next to the regular register index |
+| RES    | Reset                  | Resets all registers including the internal register                                                                                    |
+| B#     | Bus Bit # In           | Pins connecting to the main bus for input                                                                                               |
