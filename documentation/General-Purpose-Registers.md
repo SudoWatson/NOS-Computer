@@ -1,0 +1,4 @@
+# General Purpose Registers
+GPRs are controlled by the [Register Controller](documentation/Register-Controller.md), which can control up to 16 GPRs. Each GPR is able to independantly increment and decrement, load from the main bus, from an SPR, or another GPR. Each GPR is able to output to the left-hand and right-hand bus to the ALU. The Register Controller sends 3 types of enable lines to each register, based on the index the RC received: Register Enable, Right Hand Out Enable, and Left Hand Out Enable. The Register Enable is the general enable for register functions, and the other 2 control outputting to one of the 2 ALU lines. Enabling the BRO line on the ALU allows the register on the Right Hand side to output to the main bus.
+
+The register activated with the Register Enable is able to load in from the main bus, increment/decrement, (other things?). The enables for the 2 ALU busses are not dependent on the state of the main register enable.

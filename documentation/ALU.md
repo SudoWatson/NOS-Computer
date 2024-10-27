@@ -18,41 +18,40 @@ The ALU gets its inputs from the Left Hand Bus and the Right Hand Bus from the r
 The ALU takes in a 5 bit instruction. The left-most bit puts the ALU into arithmetic (0) or logic (1) mode, where the remaining 4 bits determine what operation is done depending on the mode.
 #### Instructions
 <table>
-	<tr>
-		<td colspan="5" align="center">Bits</td>
-	</tr>
-	<tr>
-		<td>5</td>
-		<td>4</td>
-		<td>3</td>
-		<td>2</td>
-		<td>1</td>
-	</tr>
-	<tr>
-		<td rowspan="2">(0) Arithmetic</td>
-		<td rowspan="2" colspan="2">Unused</td>
-		<td>(0) Add</td>
-		<td rowspan="2">Use CarryIn Flag</td>
-	</tr>
-	
-	<tr>
-		<td>(1) Subtract</td>
-	</tr>
-	<tr>
-		<td rowspan="3">(1) Logic</td>
-		<td>(0) Bitwise Mode</td>
-		<td>Invert Result</td>
-		<td colspan="2">Operation Instruction*</td>
-	</tr>
-	<tr>
-		<td rowspan="2">(1) Shift Mode</td>
-		<td>(0) Rotate</td>
-		<td rowspan="2">Direction (0 - Left?)</td>
-		<td rowspan="2">Use Carry </td>
-	</tr>
-	<tr>
-		<td>(1) Logical Shift</td>
-	</tr>
+    <tr>
+        <td colspan="5" align="center">Bits</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>4</td>
+        <td>3</td>
+        <td>2</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td rowspan="2">(0) Arithmetic</td>
+        <td rowspan="2" colspan="2">Unused</td>
+        <td>(0) Add</td>
+        <td rowspan="2">Use CarryIn Flag</td>
+    </tr>
+    <tr>
+        <td>(1) Subtract</td>
+    </tr>
+    <tr>
+        <td rowspan="3">(1) Logic</td>
+        <td>(0) Bitwise Mode</td>
+        <td>Invert Result</td>
+        <td colspan="2">Operation Instruction*</td>
+    </tr>
+    <tr>
+        <td rowspan="2">(1) Shift Mode</td>
+        <td>(0) Rotate</td>
+        <td rowspan="2">Direction (0 - Left?)</td>
+        <td rowspan="2">Use Carry </td>
+    </tr>
+    <tr>
+        <td>(1) Logical Shift</td>
+    </tr>
 </table>
 
 ##### Bitwise Operations
