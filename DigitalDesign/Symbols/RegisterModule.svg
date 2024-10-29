@@ -4,7 +4,7 @@
    version="1.1"
    id="svg13"
    sodipodi:docname="RegisterModule.svg"
-   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -21,15 +21,16 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
-     inkscape:zoom="4.8294118"
-     inkscape:cx="130.65773"
-     inkscape:cy="214.20828"
+     inkscape:zoom="3.4149098"
+     inkscape:cx="162.66901"
+     inkscape:cy="130.60374"
      inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-height="1008"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg13">
+     inkscape:current-layer="svg13"
+     inkscape:pageshadow="0">
     <inkscape:grid
        type="xygrid"
        empspacing="4"
@@ -76,22 +77,6 @@
      x="35.091351"
      y="-17.515224">Label</text>
   <g
-     id="g1"
-     transform="translate(-20.292326,40.170524)">
-    <circle
-       fill="#0000b2"
-       id="pin:OE"
-       cx="0"
-       cy="0"
-       r="3" />
-    <text
-       fill="#808080"
-       font-size="18px"
-       x="4"
-       y="6"
-       id="text1">OE</text>
-  </g>
-  <g
      id="g4"
      transform="translate(-19.464069,-60.048722)">
     <circle
@@ -125,7 +110,7 @@
   </g>
   <g
      id="g6"
-     transform="translate(-20.292326,-39.756395)">
+     transform="translate(-20.31456,-59.360064)">
     <circle
        fill="#0000b2"
        id="pin:INC"
@@ -141,7 +126,7 @@
   </g>
   <g
      id="g7"
-     transform="translate(-19.878197,-39.342266)">
+     transform="translate(-19.900431,-58.945935)">
     <circle
        fill="#0000b2"
        id="pin:DEC"
@@ -157,7 +142,7 @@
   </g>
   <g
      id="g8"
-     transform="translate(-19.878197)">
+     transform="translate(-20.03641,-39.012521)">
     <circle
        fill="#0000b2"
        id="pin:Reset"
@@ -173,7 +158,7 @@
   </g>
   <g
      id="g9"
-     transform="translate(-19.878197,-59.220463)">
+     transform="translate(-19.900431,-78.824132)">
     <circle
        fill="#0000b2"
        id="pin:Load"
@@ -202,23 +187,6 @@
        x="4"
        y="186"
        id="text10">Enablei</text>
-  </g>
-  <g
-     id="g11"
-     transform="translate(-1.2423873,159.02558)">
-    <circle
-       fill="#b20000"
-       id="pin:OUT"
-       cx="100"
-       cy="0"
-       r="3" />
-    <text
-       fill="#808080"
-       font-size="18px"
-       text-anchor="end"
-       x="96"
-       y="6"
-       id="text11">OUT</text>
   </g>
   <g
      id="g12"
@@ -270,43 +238,5 @@
        y="46.579647"
        id="text3"
        transform="rotate(-1.0372949)">RHOEi</text>
-  </g>
-  <g
-     id="g11-2"
-     transform="translate(14.115716,-61.244393)">
-    <circle
-       fill="#0000b2"
-       id="pin:RHBusIn"
-       cx="85.621193"
-       cy="200.31059"
-       r="3" />
-    <text
-       fill="#808080"
-       font-size="18px"
-       x="24.913521"
-       y="206.6212"
-       id="text11-7"
-       inkscape:label="text11-7"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#808080"><tspan
-         sodipodi:role="line"
-         id="tspan1"
-         x="24.913521"
-         y="206.6212">RHBIn</tspan></text>
-  </g>
-  <g
-     id="g12-1"
-     transform="translate(-19.428744,-100.27606)">
-    <circle
-       fill="#0000b2"
-       id="pin:RHIN"
-       cx="0"
-       cy="220"
-       r="3" />
-    <text
-       fill="#808080"
-       font-size="18px"
-       x="4"
-       y="226"
-       id="text12-7">RHIN</text>
   </g>
 </svg>

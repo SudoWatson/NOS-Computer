@@ -1,9 +1,13 @@
-This part is what controls the various registers of the Nos computer. The register controller is able to control up to 15 [General Purpose Registers](documentation/General-Purpose-Registers.md), and the main 4 [[Special Purpose Registers]] (Program Counter, Instruction Register, Memory Access Register, and Stack Pointer). It takes a 12-bit input to determine what GPR follows its instructions. The left 4 index the register for the left hand bus, the middle 4 for the right hand bus/output register, and the right 4 for the main bus (verify this true?). There is an instruction line to signal to use the SPRs instead, which leads the RC to use 2 instruction lines to index which SPR follows the instruction. There are 2 other instruction lines to index which SPR to push to the bus (SPR 00, the MAR, is not indexible as 00 is treated as no output) which ignores the SPR enable line. There is also a line to bypass the register set to the RHB to output to the main bus through the ALU instaed. This is to enable cross-register movements which are desrcibed below (idk how to link and am just typing rn).
+This part is what controls the various registers of the Nos computer. The register controller is able to control up to 15 [General Purpose Registers](documentation/General-Purpose-Registers.md), and the main 4 [[Special Purpose Registers]] (Program Counter, Instruction Register, Memory Access Register, and Stack Pointer). It takes an 8-bit input to determine what GPR follows its instructions. The left 4 index the register for the left hand bus and the right 4 index the right hand bus. There is also a line to bypass the register set to the RHB to output to the main bus through the ALU instead.
+> [!NOTE]
+> This likely doesn't need to go to the instruction controller, and will likely be able to be activated by a Register Output line and the SPR line off
+
+There is an instruction line to signal to use the SPRs instead, which leads the RC to use 2 instruction lines to index which SPR follows the instruction. There are 2 other instruction lines to index which SPR to push to the bus (SPR 00, the MAR, is not indexible as 00 is treated as no output) which ignores the SPR enable line.  This is to enable cross-register movements which are described below (idk how to link and am just typing rn).
 
 
 
 
-### Going with the always bypass through ALU method. Register OE line is now "Output to main bus instead of RHB" note on [ALU](documentation/ALU.md) has this note as well
+### Going with the always bypass through ALU method. Register OE line is now "Output to main bus instead of RHB" note on [ALU](ALU.md) has this note as well
 2 lines to say "Hey SPR ## output somewhere". 00 register not have this ability. 00 will be the natural off state of this to avoid having another line for it. Just don't connect register 00 to this and it should work
 Should be able to wire both lines just like normal GPR. Should be able to just use GPRs for this
 
