@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="-80 -80 340 300"
+   version="1.1"
+   id="svg189"
+   sodipodi:docname="ALU.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs191" />
+  <sodipodi:namedview
+     showgrid="true"
+     id="namedview119"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:zoom="2.6666667"
+     inkscape:cx="161.4375"
+     inkscape:cy="151.875"
+     inkscape:window-width="1920"
+     inkscape:window-height="1008"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg189">
+    <inkscape:grid
+       type="xygrid"
+       empspacing="4"
+       spacingx="5"
+       spacingy="5"
+       id="grid117" />
+  </sodipodi:namedview>
+  <rect
+     stroke="#000000"
+     stroke-width="4.64969"
+     fill="#ffffb4"
+     fill-opacity="0.784314"
+     x="-17.675158"
+     y="-17.675158"
+     width="235.35031"
+     height="165.35031"
+     id="rect121" />
+  <text
+     id="label"
+     fill="#000000"
+     font-size="24px"
+     text-anchor="middle"
+     x="103.44185"
+     y="-23.243393">Label</text>
+  <g
+     id="g127"
+     transform="translate(-15.726583,87.675781)">
+    <circle
+       fill="#0000b2"
+       id="pin:Left Hand Bus"
+       cx="0"
+       cy="0"
+       r="3" />
+    <text
+       fill="#808080"
+       font-size="18px"
+       x="4"
+       y="6"
+       id="text125">Left Hand Bus</text>
+  </g>
+  <g
+     id="g132"
+     transform="translate(-17,87.675781)">
+    <circle
+       fill="#0000b2"
+       id="pin:Right Hand Bus"
+       cx="0"
+       cy="20"
+       r="3" />
+    <text
+       fill="#808080"
+       font-size="18px"
+       x="4"
+       y="26"
+       id="text130">Right Hand Bus</text>
+  </g>
+  <g
+     id="g137"
+     transform="translate(-17,7.359375)">
+    <circle
+       fill="#0000b2"
+       id="pin:Carry In"
+       cx="0"
+       cy="40"
+       r="3" />
+    <text
+       fill="#808080"
+       font-size="18px"
+       x="4"
+       y="46"
+       id="text135">Carry In</text>
+  </g>
+  <g
+     id="g142"
+     transform="translate(-17,-52.324219)">
+    <circle
+       fill="#0000b2"
+       id="pin:Instruction"
+       cx="0"
+       cy="60"
+       r="3" />
+    <text
+       fill="#808080"
+       font-size="18px"
+       x="4"
+       y="66"
+       id="text140">Instruction</text>
+  </g>
+  <g
+     id="g384"
+     transform="translate(423.948,98.577675)">
+    <circle
+       fill="#0000b2"
+       id="pin:EO"
+       cx="-205.71414"
+       cy="-71.2183"
+       r="3" />
+    <text
+       fill="#808080"
+       font-size="18px"
+       x="-235.7146"
+       y="-65.2183"
+       id="text145">EO</text>
+  </g>
+  <g
+     id="g152"
+     transform="translate(-17,-32.324219)">
+    <circle
+       fill="#0000b2"
+       id="pin:CLKEdge"
+       cx="0"
+       cy="100"
+       r="3" />
+    <text
+       fill="#808080"
+       font-size="18px"
+       x="4"
+       y="106"
+       id="text150">CLKEdge</text>
+  </g>
+  <g
+     id="g157"
+     transform="translate(-17,-92.87793)">
+    <circle
+       fill="#0000b2"
+       id="pin:EIN"
+       cx="0"
+       cy="120"
+       r="3" />
+    <text
+       fill="#808080"
+       font-size="18px"
+       x="4"
+       y="126"
+       id="text155">EIN</text>
+  </g>
+  <g
+     id="g390"
+     transform="translate(423.729,90.744453)">
+    <circle
+       fill="#0000b2"
+       id="pin:BRO"
+       cx="-206.496"
+       cy="-43.385078"
+       r="3" />
+    <text
+       fill="#808080"
+       font-size="18px"
+       x="-250.49561"
+       y="-37.385078"
+       id="text160">BRO</text>
+  </g>
+  <g
+     id="g167"
+     transform="translate(37.850586,7.6757812)">
+    <circle
+       fill="#b20000"
+       id="pin:Result"
+       cx="180"
+       cy="0"
+       r="3" />
+    <text
+       fill="#808080"
+       font-size="18px"
+       text-anchor="end"
+       x="176"
+       y="6"
+       id="text165">Result</text>
+  </g>
+  <g
+     id="g172"
+     transform="translate(37.080078,47.359375)">
+    <circle
+       fill="#b20000"
+       id="pin:Carry Out"
+       cx="180"
+       cy="20"
+       r="3" />
+    <text
+       fill="#808080"
+       font-size="18px"
+       text-anchor="end"
+       x="176"
+       y="26"
+       id="text170">Carry Out</text>
+  </g>
+  <g
+     id="g177"
+     transform="translate(37.574219,47.675781)">
+    <circle
+       fill="#b20000"
+       id="pin:Signed"
+       cx="180"
+       cy="40"
+       r="3" />
+    <text
+       fill="#808080"
+       font-size="18px"
+       text-anchor="end"
+       x="176"
+       y="46"
+       id="text175">Signed</text>
+  </g>
+  <g
+     id="g182"
+     transform="translate(37.356445,47.675781)">
+    <circle
+       fill="#b20000"
+       id="pin:Overflow"
+       cx="180"
+       cy="60"
+       r="3" />
+    <text
+       fill="#808080"
+       font-size="18px"
+       text-anchor="end"
+       x="176"
+       y="66"
+       id="text180">Overflow</text>
+  </g>
+  <g
+     id="g187"
+     transform="translate(37.614258,47.12207)">
+    <circle
+       fill="#b20000"
+       id="pin:Zero"
+       cx="180"
+       cy="80"
+       r="3" />
+    <text
+       fill="#808080"
+       font-size="18px"
+       text-anchor="end"
+       x="176"
+       y="86"
+       id="text185">Zero</text>
+  </g>
+</svg>
