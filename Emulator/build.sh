@@ -9,7 +9,9 @@ fi
 cd build
 
 # Run CMake to configure the project and generate Makefiles
-cmake ..
+# cmake ..
+# TODO: Can I add this as flag in cmake file instead?
+cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..
 
 # Compile the project using Make
 make
