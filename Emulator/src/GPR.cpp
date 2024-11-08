@@ -5,21 +5,21 @@ GPR::GPR() {
 }
 
 void GPR::LoadFromMainBus() {
-    value = MainBus->ReadValue();
+    value = *MainBus->GetValue();
 }
 
 void GPR::AssertToLeftHandBus() {
-    LeftHandBus->AssertFrom(this);
+    LeftHandBus->AssertFrom(&value);
 }
 
 void GPR::UnAssertToLeftHandBus() {
-    LeftHandBus->UnAssertFrom(this);
+    LeftHandBus->UnAssertFrom(&value);
 }
 
 void GPR::AssertToRightHandBus() {
-    RightHandBus->AssertFrom(this);
+    RightHandBus->AssertFrom(&value);
 }
 
 void GPR::UnAssertToRightHandBus() {
-    RightHandBus->UnAssertFrom(this);
+    RightHandBus->UnAssertFrom(&value);
 }

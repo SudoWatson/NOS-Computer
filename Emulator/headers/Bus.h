@@ -1,11 +1,14 @@
 #pragma once
 #include "IHasValue.h"
+#include <cstdint>
 
 class Bus {
-    IHasValue* valueHoldingObject;
+    uint16_t* ptrValue;
 public:
     Bus();
     void AssertFrom(IHasValue* valueHolder);
     void UnAssertFrom(IHasValue* valueHolder);
-    uint16_t ReadValue();
+    void AssertFrom(uint16_t* _ptrValue);
+    void UnAssertFrom(uint16_t* _ptrValue);
+    uint16_t* GetValue();
 };

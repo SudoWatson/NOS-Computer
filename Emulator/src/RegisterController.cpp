@@ -58,7 +58,7 @@ void RC::UnAssertToMainBus() {
 void RC::LoadFromMainBus() {
     // GPRs that are asserting on the bus is determined by the internal register, so we want to change the ones asserting when the RC updates
     unAssertRegisters();
-    value = MainBus->ReadValue();
+    value = *MainBus->GetValue();
     assertRegisters();
 }
 

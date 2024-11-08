@@ -3,7 +3,7 @@
 #include "IHasValue.h"
 #include <cstdint>
 
-class RegisterController : IHasValue {
+class RegisterController : public IHasValue {
     Bus* MainBus;
     Bus* LeftHandBus;
     Bus* RightHandBus;

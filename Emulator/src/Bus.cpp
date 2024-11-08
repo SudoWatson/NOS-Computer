@@ -1,25 +1,40 @@
 #include "../headers/Bus.h"
+#include <cstdint>
 #include <iostream>
 
 Bus::Bus() {
-    valueHoldingObject = nullptr;
+    ptrValue = nullptr;
 }
 
 void Bus::AssertFrom(IHasValue* valueHolder) {
-    if (valueHoldingObject != nullptr) {
-        std::cout << "Trying to assert to the bus when already asserted to via " << valueHoldingObject;
+    if (ptrValue != nullptr) {
+        std::cout << "Trying to assert to the bus when already asserted to via " << ptrValue;
     }
 
-    valueHoldingObject = valueHolder;
+    ptrValue = &(valueHolder->value);
 }
 
 void Bus::UnAssertFrom(IHasValue* valueHolder) {
-    if (valueHoldingObject == valueHolder) {
-        valueHoldingObject = nullptr;
+    if (ptrValue == &(valueHolder->value)) {
+        ptrValue = nullptr;
     }
 }
 
-uint16_t Bus::ReadValue() {
-    if (valueHoldingObject == nullptr) return 0;
-    return valueHoldingObject->value;
+void Bus::AssertFrom(uint16_t* _ptrValue) {
+    if (ptrValue != nullptr) {
+        std::cout << "Trying to assert to the bus when already asserted to via " << ptrValue;
+    }
+
+    ptrValue = _ptrValue;
+}
+
+void Bus::UnAssertFrom(uint16_t* _ptrValue) {
+    if (ptrValue == _ptrValue) {
+        ptrValue = nullptr;
+    }
+}
+
+uint16_t* Bus::GetValue() {
+    if (ptrValue == nullptr) return 0;
+    return ptrValue;
 }
