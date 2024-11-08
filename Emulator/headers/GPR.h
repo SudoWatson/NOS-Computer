@@ -1,16 +1,21 @@
 #pragma once
 #include "Bus.h"
 #include "IHasValue.h"
-#include <cstdint>
 
-class GPR : IHasValue {
+class GPR : public IHasValue {
 public:
-    GPR();
-    uint16_t* leftHandBus;
-    uint16_t* rightHandBus;
     Bus* MainBus;
+    Bus* LeftHandBus;
+    Bus* RightHandBus;
 
-    void AssertToMainBus();
-    void UnAssertToMainBus();
+    GPR();
+
     void LoadFromMainBus();
+
+    void AssertToLeftHandBus();
+    void UnAssertToLeftHandBus();
+
+    void AssertToRightHandBus();
+    void UnAssertToRightHandBus();
 };
+
