@@ -1,25 +1,17 @@
-#include "GPR.h"
+#include "../headers/GPR.h"
 
-void GPR::increment() {
-    value++;
+GPR::GPR() {
+    value = 0;
 }
 
-void GPR::decrament() {
-    value--;
+void GPR::AssertToMainBus() {
+    MainBus->AssertFrom(this);
 }
 
-void GPR::assert() {
-    mainBus->AssertTo(this);
+void GPR::UnAssertToMainBus() {
+    MainBus->UnAssertFrom(this);
 }
 
-void GPR::load() {
-    value = mainBus->ReadFrom();
-}
-
-uint16_t GPR::getValue() {
-    return value;
-}
-
-void GPR::setValue(uint16_t val) {
-    value = val;
+void GPR::LoadFromMainBus() {
+    value = MainBus->ReadValue();
 }

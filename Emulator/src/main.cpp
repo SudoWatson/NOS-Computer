@@ -1,7 +1,7 @@
 // src/main.cpp
-#include "GPR.h"
-#include "Bus.h"
-#include "IHasValue.h"
+#include "../headers/GPR.h"
+#include "../headers/Bus.h"
+#include "../headers/IHasValue.h"
 #include <iostream>
 
 
@@ -9,16 +9,20 @@ int main() {
     Bus bus;
 
     GPR gpr;
-    gpr.setValue(5);
-    gpr.mainBus = &bus;
-    std::cout << "GPR Value: " << gpr.getValue() << std::endl;
+    gpr.MainBus = &bus;
+    gpr.AssertToMainBus();
+    std::cout << "GPR Value: " << bus.ReadValue() << std::endl;
+    gpr.UnAssertToMainBus();
 
     IHasValue valueTest;
     valueTest.value = 10;
-    bus.AssertTo(&valueTest);
-    gpr.load();
-    bus.UnAssertSelf(&valueTest);
-    std::cout << "GPR Value: " << gpr.getValue() << std::endl;
+    bus.AssertFrom(&valueTest);
+    gpr.LoadFromMainBus();
+    bus.UnAssertFrom(&valueTest);
+
+    gpr.AssertToMainBus();
+    std::cout << "GPR Value: " << bus.ReadValue() << std::endl;
+    gpr.UnAssertToMainBus();
 
 
     std::cin.get();

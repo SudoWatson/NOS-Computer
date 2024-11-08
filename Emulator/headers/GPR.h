@@ -5,15 +5,12 @@
 
 class GPR : IHasValue {
 public:
+    GPR();
     uint16_t* leftHandBus;
     uint16_t* rightHandBus;
-    Bus* mainBus;
+    Bus* MainBus;
 
-    void increment();
-    void decrament();
-    void assert();
-    void load();
-
-    uint16_t getValue();
-    void setValue(uint16_t val);
+    void AssertToMainBus();
+    void UnAssertToMainBus();
+    void LoadFromMainBus();
 };
