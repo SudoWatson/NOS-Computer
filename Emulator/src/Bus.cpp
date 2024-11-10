@@ -1,15 +1,16 @@
 #include "../headers/Bus.h"
 #include <cstdint>
-#include <iostream>
+// #include <iostream>
 
 Bus::Bus() {
     ptrValue = nullptr;
 }
 
 void Bus::Assert(uint16_t* _ptrValue) {
-    if (ptrValue != nullptr) {
-        std::cout << "Trying to assert to the bus when already asserted to via " << ptrValue;
-    }
+    // NOTE: Commenting this should allow me to change devices that are asserting without breaking
+    // if (ptrValue != nullptr) {
+    //     std::cout << "Trying to assert to the bus when already asserted to via " << ptrValue;
+    // }
 
     ptrValue = _ptrValue;
 }

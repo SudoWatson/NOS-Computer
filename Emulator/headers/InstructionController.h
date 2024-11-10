@@ -16,8 +16,7 @@ class InstructionController {
     void evaluateStep();
     /**
      * After all the lines are updated, this will notify any module so it can do what it needs
-     * EX: Assert to bus. Actually that could be problematic, might need a couple of these
-     *  to do Unassert to Buses, then Assert to Busses
+     * EX: Assert to bus
     */
     void alertLinesUpdated();
 public:

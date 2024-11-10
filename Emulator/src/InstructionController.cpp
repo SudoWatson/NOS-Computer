@@ -15,7 +15,7 @@ IC::InstructionController(Bus& mainBus) {
 
 void IC::LoadFromMainBus() {
     storedInstruction = *MainBus->GetValue();
-    // evaluateInstruction();
+    evaluateStep();
 }
 
 void IC::AssertToMainBus() {
