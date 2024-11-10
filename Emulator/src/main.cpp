@@ -23,30 +23,30 @@ int main() {
     ALU alu(mainBus, lhBus, rhBus);
 
     // 5 to bus and into selected (0) register
-    mainBus.AssertFrom(&inputValue.value);
+    mainBus.Assert(&inputValue.value);
     rc.LoadFromMainBusToRegister();
-    mainBus.UnAssertFrom(&inputValue.value);
+    mainBus.UnAssert(&inputValue.value);
     std::cout << "Register Value: " << *rhBus.GetValue() << std::endl;  // 5
 
     // 0 1 2 to bus and into RC
     inputValue.value = 0x011;
-    mainBus.AssertFrom(&inputValue.value);
+    mainBus.Assert(&inputValue.value);
     rc.LoadFromMainBus();
-    mainBus.UnAssertFrom(&inputValue.value);
+    mainBus.UnAssert(&inputValue.value);
     std::cout << "Register Value: " << *rhBus.GetValue() << std::endl;  // 0
 
     // 8 to bus and into selected (1) register
     inputValue.value = 8;
-    mainBus.AssertFrom(&inputValue.value);
+    mainBus.Assert(&inputValue.value);
     rc.LoadFromMainBusToRegister();
-    mainBus.UnAssertFrom(&inputValue.value);
+    mainBus.UnAssert(&inputValue.value);
     std::cout << "Register Value: " << *rhBus.GetValue() << std::endl;  // 8
 
     // 0 1 2 to bus and into RC
     inputValue.value = 0x012;
-    mainBus.AssertFrom(&inputValue.value);
+    mainBus.Assert(&inputValue.value);
     rc.LoadFromMainBus();
-    mainBus.UnAssertFrom(&inputValue.value);
+    mainBus.UnAssert(&inputValue.value);
     std::cout << "Register Value: " << *rhBus.GetValue() << std::endl;  // 0
 
     std::cout << std::endl;
@@ -60,16 +60,16 @@ int main() {
 
     // 0 2 0 to bus and into RC
     inputValue.value = 0x020;
-    mainBus.AssertFrom(&inputValue.value);
+    mainBus.Assert(&inputValue.value);
     rc.LoadFromMainBus();
-    mainBus.UnAssertFrom(&inputValue.value);
+    mainBus.UnAssert(&inputValue.value);
     std::cout << "Register Value: " << *rhBus.GetValue() << std::endl;  // 13
 
     // 0 0 0 to bus and into RC
     inputValue.value = 0x000;
-    mainBus.AssertFrom(&inputValue.value);
+    mainBus.Assert(&inputValue.value);
     rc.LoadFromMainBus();
-    mainBus.UnAssertFrom(&inputValue.value);
+    mainBus.UnAssert(&inputValue.value);
     std::cout << "Register Value: " << *rhBus.GetValue() << std::endl;  // 5
 
     return 0;

@@ -16,9 +16,9 @@ void ALU::calculateValue() {
 // Interactions between the main bus and ALU
 void ALU::AssertToMainBus() {
     calculateValue();
-    MainBus->AssertFrom(&value);
+    MainBus->Assert(&value);
 }
 void ALU::UnAssertToMainBus() {
-    MainBus->UnAssertFrom(&value);
+    MainBus->UnAssert(&value);
 }
 

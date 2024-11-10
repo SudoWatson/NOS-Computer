@@ -9,17 +9,17 @@ void GPR::LoadFromMainBus() {
 }
 
 void GPR::AssertToLeftHandBus() {
-    LeftHandBus->AssertFrom(&value);
+    LeftHandBus->Assert(&value);
 }
 
 void GPR::UnAssertToLeftHandBus() {
-    LeftHandBus->UnAssertFrom(&value);
+    LeftHandBus->UnAssert(&value);
 }
 
 void GPR::AssertToRightHandBus() {
-    RightHandBus->AssertFrom(&value);
+    RightHandBus->Assert(&value);
 }
 
 void GPR::UnAssertToRightHandBus() {
-    RightHandBus->UnAssertFrom(&value);
+    RightHandBus->UnAssert(&value);
 }
