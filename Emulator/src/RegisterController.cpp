@@ -50,10 +50,10 @@ void RC::LoadFromMainBusToRegister() {
 
 // Interactions between the main bus and the RC internal register
 void RC::AssertToMainBus() {
-    MainBus->AssertFrom(this);
+    MainBus->AssertFrom(&value);
 }
 void RC::UnAssertToMainBus() {
-    MainBus->UnAssertFrom(this);
+    MainBus->UnAssertFrom(&value);
 }
 void RC::LoadFromMainBus() {
     // GPRs that are asserting on the bus is determined by the internal register, so we want to change the ones asserting when the RC updates

@@ -1,9 +1,9 @@
 #include "GPR.h"
 #include "Bus.h"
-#include "IHasValue.h"
 #include <cstdint>
 
-class RegisterController : public IHasValue {
+class RegisterController {
+    uint16_t value;
     Bus* MainBus;
     Bus* LeftHandBus;
     Bus* RightHandBus;

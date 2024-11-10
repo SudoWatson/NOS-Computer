@@ -1,9 +1,10 @@
 #pragma once
 #include "Bus.h"
-#include "IHasValue.h"
+#include <cstdint>
 
-class GPR : public IHasValue {
+class GPR {
 public:
+    uint16_t value;
     Bus* MainBus;
     Bus* LeftHandBus;
     Bus* RightHandBus;

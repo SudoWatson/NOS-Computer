@@ -1,7 +1,8 @@
 #include "Bus.h"
-#include "IHasValue.h"
+#include <cstdint>
 
-class ALU : IHasValue {
+class ALU {
+    uint16_t value;
     Bus* MainBus;
     Bus* LeftHandBus;
     Bus* RightHandBus;
