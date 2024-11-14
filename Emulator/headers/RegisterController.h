@@ -3,7 +3,7 @@
 #include "Module.h"
 #include <cstdint>
 
-class RegisterController : Module {
+class RegisterController : public Module {
     bool* RegisterControllerIn = nullptr;
     bool* RegisterIn = nullptr;
 

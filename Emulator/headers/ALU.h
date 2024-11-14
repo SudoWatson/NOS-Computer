@@ -2,7 +2,7 @@
 #include "Module.h"
 #include <cstdint>
 
-class ALU : Module {
+class ALU : public Module {
     bool* BypassRegisterOut = nullptr;
 
     uint16_t value;

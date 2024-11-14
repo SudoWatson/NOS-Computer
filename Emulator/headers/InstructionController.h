@@ -4,16 +4,16 @@
 #include "Module.h"
 #include <cstdint>
 #include <initializer_list>
-#define INSTRUCTION_WORD_LENGTH 16
-#define STEP_SIZE 0b1111
+#define INSTRUCTION_WORD_LENGTH 64
+#define STEP_SIZE 0b1+1
 
-class InstructionController : Module, IInstructionController {
+class InstructionController : public Module, public IInstructionController {
 private:
     uint8_t currentStep;
     uint16_t storedInstruction;
     Bus* MainBus;
     bool controlLines[INSTRUCTION_WORD_LENGTH]; // NOTE: This is sad space efficient because bools are dumb
-    uint64_t instructionSet[0xFFFF][STEP_SIZE];
+    uint64_t instructionSet[0xFFFF+1][STEP_SIZE];
 
     bool* instructionRegisterIn;
     bool* instructionRegisterOut;
@@ -23,15 +23,13 @@ private:
     void addInstruction(uint16_t instruction, std::initializer_list<uint64_t> steps);
     void addInstruction(uint16_t instructionLow, uint16_t instructionHigh, std::initializer_list<uint64_t> steps);
 
-public:
-
-
-    InstructionController(Bus& mainBus);
-
     void performReset() override;
     void performClockHigh() override;
     void performClockLow() override;
     void performUpdateLines() override;
+
+public:
+    InstructionController(Bus& mainBus);
 
     void performRegisterControlLines(IInstructionController &ptrIC) override;
 
@@ -40,5 +38,5 @@ public:
     void UnAssertToMainBus();
 
     /** Gets a pointer to the bool for the control line requested */
-    bool* GetControlLinePtr(ControlLines controlLine) override;
+    virtual bool* GetControlLinePtr(ControlLines controlLine) override;
 };

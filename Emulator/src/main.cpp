@@ -2,8 +2,11 @@
 #include "../headers/Bus.h"
 #include "../headers/RegisterController.h"
 #include "../headers/ALU.h"
+#include "InstructionController.h"
 #include <cstdint>
 #include <iostream>
+
+#define log(x) std::cout << x << std::endl
 
 class valueHolder {
 public:
@@ -18,59 +21,63 @@ int main() {
     Bus lhBus;
     Bus rhBus;
 
-    RegisterController rc(mainBus, lhBus, rhBus);
+
+    InstructionController ic(mainBus);
+    ic.RegisterControlLines(ic);
 
     ALU alu(mainBus, lhBus, rhBus);
+    alu.RegisterControlLines(ic);
 
-    // 5 to bus and into selected (0) register
-    mainBus.Assert(&inputValue.value);
-    rc.LoadFromMainBusToRegister();
-    mainBus.UnAssert(&inputValue.value);
-    std::cout << "Register Value: " << *rhBus.GetValue() << std::endl;  // 5
+    RegisterController rc(mainBus, lhBus, rhBus);
+    rc.RegisterControlLines(ic);
 
-    // 0 1 2 to bus and into RC
-    inputValue.value = 0x011;
-    mainBus.Assert(&inputValue.value);
-    rc.LoadFromMainBus();
-    mainBus.UnAssert(&inputValue.value);
-    std::cout << "Register Value: " << *rhBus.GetValue() << std::endl;  // 0
 
-    // 8 to bus and into selected (1) register
-    inputValue.value = 8;
-    mainBus.Assert(&inputValue.value);
-    rc.LoadFromMainBusToRegister();
-    mainBus.UnAssert(&inputValue.value);
-    std::cout << "Register Value: " << *rhBus.GetValue() << std::endl;  // 8
+    ic.Reset();
 
-    // 0 1 2 to bus and into RC
-    inputValue.value = 0x012;
-    mainBus.Assert(&inputValue.value);
-    rc.LoadFromMainBus();
-    mainBus.UnAssert(&inputValue.value);
-    std::cout << "Register Value: " << *rhBus.GetValue() << std::endl;  // 0
-
-    std::cout << std::endl;
-    // Load ALU into 3
-    alu.AssertToMainBus();
-    rc.LoadFromMainBusToRegister();
-    std::cout << "Main Bus Value: " << *mainBus.GetValue() << std::endl;  // 13
-    alu.UnAssertToMainBus();
-    std::cout << "Right Hand Register Value: " << *rhBus.GetValue() << std::endl;  // 8
-    std::cout << std::endl;
-
-    // 0 2 0 to bus and into RC
-    inputValue.value = 0x020;
-    mainBus.Assert(&inputValue.value);
-    rc.LoadFromMainBus();
-    mainBus.UnAssert(&inputValue.value);
-    std::cout << "Register Value: " << *rhBus.GetValue() << std::endl;  // 13
-
-    // 0 0 0 to bus and into RC
+    // Load instruction 0
     inputValue.value = 0x000;
     mainBus.Assert(&inputValue.value);
-    rc.LoadFromMainBus();
+    ic.ClockHigh();
+    alu.ClockHigh();
+    rc.ClockHigh();
     mainBus.UnAssert(&inputValue.value);
-    std::cout << "Register Value: " << *rhBus.GetValue() << std::endl;  // 5
+
+    // Index register 0
+    inputValue.value = 0x000;
+    mainBus.Assert(&inputValue.value);
+    ic.ClockHigh();
+    alu.ClockHigh();
+    rc.ClockHigh();
+    mainBus.UnAssert(&inputValue.value);
+
+    // Load instruction 1
+    inputValue.value = 0x001;
+    mainBus.Assert(&inputValue.value);
+    ic.ClockHigh();
+    alu.ClockHigh();
+    rc.ClockHigh();
+    mainBus.UnAssert(&inputValue.value);
+
+    // Load value into register
+    inputValue.value = 0xF08B;
+    mainBus.Assert(&inputValue.value);
+    ic.ClockHigh();
+    alu.ClockHigh();
+    rc.ClockHigh();
+    mainBus.UnAssert(&inputValue.value);
+
+    // Load instruction 2
+    inputValue.value = 0x002;
+    mainBus.Assert(&inputValue.value);
+    ic.ClockHigh();
+    alu.ClockHigh();
+    rc.ClockHigh();
+    mainBus.UnAssert(&inputValue.value);
+
+    // Read back value from register
+    ic.ClockHigh();
+    alu.ClockHigh();
+    rc.ClockHigh();
 
     return 0;
 }

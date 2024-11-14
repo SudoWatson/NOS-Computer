@@ -2,6 +2,7 @@
 #include <cstdint>
 
 class Bus {
+public:
     uint16_t* ptrValue;
 public:
     Bus();

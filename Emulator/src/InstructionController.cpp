@@ -6,6 +6,10 @@
 IC::InstructionController(Bus& mainBus) {
     MainBus = &mainBus;
 
+    for (int i = 0; i < sizeof(controlLines)/sizeof(*controlLines); i++) {
+        controlLines[i] = false;
+    }
+
     Reset();
 }
 
@@ -81,7 +85,9 @@ void IC::addInstruction(uint16_t instructionLow, uint16_t instructionHigh, std::
 }
 
 void IC::setupInstructionSet() {
-    addInstruction(0x0000, 0x0FFF, {});
+    addInstruction(0x0000, {IRI, RCI});
+    addInstruction(0x0001, {IRI, RI});
+    addInstruction(0x0002, {IRI, BRO});
     // Move register to register
     //
 }

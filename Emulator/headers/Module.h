@@ -12,6 +12,7 @@ private:
     virtual void performUpdateLines();
 
     virtual void performRegisterControlLines(IInstructionController &ptrIC);
+
 public:
 
     void Reset();

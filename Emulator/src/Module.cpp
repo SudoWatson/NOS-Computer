@@ -1,5 +1,11 @@
 #include "../headers/Module.h"
 
+void Module::performReset() { }
+void Module::performClockHigh() { }
+void Module::performClockLow() { }
+void Module::performUpdateLines() { }
+void Module::performRegisterControlLines(IInstructionController &ptrIC) { }
+
 void Module::Reset() {
     performReset();
     performUpdateLines();
@@ -18,5 +24,5 @@ void Module::UpdateLines() {
 }
 
 void Module::RegisterControlLines(IInstructionController &ptrIC) {
-    RegisterControlLines(ptrIC);
+    performRegisterControlLines(ptrIC);
 }
