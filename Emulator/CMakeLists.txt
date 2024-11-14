@@ -6,6 +6,7 @@ project(NOSComputer)
 
 # Set the C++ standard (optional but recommended)
 set(CMAKE_CXX_STANDARD 17)   # You can also set 14 or 20 depending on your needs
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)  # Generate a Compile Commands json for ClangD lsp
 
 # Define where to find header files (optional)
 # You can add paths to third-party libraries here, like if you're using an external math library

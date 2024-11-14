@@ -1,8 +1,12 @@
 #include "GPR.h"
 #include "Bus.h"
+#include "Module.h"
 #include <cstdint>
 
-class RegisterController {
+class RegisterController : Module {
+    bool* RegisterControllerIn = nullptr;
+    bool* RegisterIn = nullptr;
+
     uint16_t value;
     Bus* MainBus;
     Bus* LeftHandBus;
@@ -18,6 +22,11 @@ class RegisterController {
 
 public:
     RegisterController(Bus& mainBus, Bus& leftHandBus, Bus& rightHandBus);
+
+    void performReset() override;
+    void performClockHigh() override;
+    void performUpdateLines() override;
+    void performRegisterControlLines(IInstructionController &ptrIC) override;
 
     void LoadFromMainBusToRegister();
 

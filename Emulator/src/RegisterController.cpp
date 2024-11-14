@@ -3,7 +3,6 @@
 #define RC RegisterController
 
 RC::RegisterController(Bus& mainBus, Bus& leftHandBus, Bus& rightHandBus) {
-    value = 0;
     MainBus = &mainBus;
     LeftHandBus = &leftHandBus;
     RightHandBus = &rightHandBus;
@@ -17,7 +16,31 @@ RC::RegisterController(Bus& mainBus, Bus& leftHandBus, Bus& rightHandBus) {
         gpr.RightHandBus = RightHandBus;
         generalRegisters[i] = gpr;
     }
+
+    performReset();
+}
+
+void RC::performReset() {
+    value = 0;
     assertRegisters();
+}
+
+void RC::performClockHigh() {
+    if (*RegisterControllerIn) {
+        LoadFromMainBus();
+    }
+    if (*RegisterIn) {
+        LoadFromMainBusToRegister();
+    }
+}
+
+void RC::performUpdateLines() {
+
+}
+
+void RC::performRegisterControlLines(IInstructionController &ptrIC) {
+    RegisterControllerIn = ptrIC.GetControlLinePtr(ptrIC.RCI);
+    RegisterIn = ptrIC.GetControlLinePtr(ptrIC.RI);
 }
 
 // Methods for getting the various register indexes
