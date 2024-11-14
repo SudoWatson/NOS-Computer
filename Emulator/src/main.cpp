@@ -3,6 +3,7 @@
 #include "../headers/RegisterController.h"
 #include "../headers/ALU.h"
 #include "InstructionController.h"
+#include "ModuleCommonControl.h"
 #include <cstdint>
 #include <iostream>
 
@@ -10,107 +11,77 @@
 
 class valueHolder {
 public:
+    valueHolder(uint16_t _value=0) {value = _value;}
     uint16_t value;
 };
 
 int main() {
     valueHolder inputValue;
-    inputValue.value = 5;
 
     Bus mainBus;
     Bus lhBus;
     Bus rhBus;
 
 
+    ModuleCommonControl mcc;
+
     InstructionController ic(mainBus);
-    ic.RegisterControlLines(ic);
+    mcc.AddModule(&ic);
 
     ALU alu(mainBus, lhBus, rhBus);
-    alu.RegisterControlLines(ic);
+    mcc.AddModule(&alu);
 
     RegisterController rc(mainBus, lhBus, rhBus);
-    rc.RegisterControlLines(ic);
+    mcc.AddModule(&rc);
 
+    mcc.RegisterControlLines(ic);
 
 
     // Load instruction 0
     inputValue.value = 0x000;
     mainBus.Assert(&inputValue.value);
-    ic.ClockHigh();
-    alu.ClockHigh();
-    rc.ClockHigh();
-    ic.ClockLow();
-    alu.ClockLow();
-    rc.ClockLow();
+    mcc.ClockHigh();
+    mcc.ClockLow();
+    mcc.UpdateLines();
     mainBus.UnAssert(&inputValue.value);
 
 
     // Index register 0
     inputValue.value = 0x000;
     mainBus.Assert(&inputValue.value);
-    ic.ClockHigh();
-    alu.ClockHigh();
-    rc.ClockHigh();
-    ic.ClockLow();
-    alu.ClockLow();
-    rc.ClockLow();
-    ic.UpdateLines();
-    alu.UpdateLines();
-    rc.UpdateLines();
+    mcc.ClockHigh();
+    mcc.ClockLow();
+    mcc.UpdateLines();
     mainBus.UnAssert(&inputValue.value);
 
     // Load instruction 1
     inputValue.value = 0x001;
     mainBus.Assert(&inputValue.value);
-    ic.ClockHigh();
-    alu.ClockHigh();
-    rc.ClockHigh();
-    ic.ClockLow();
-    alu.ClockLow();
-    rc.ClockLow();
-    ic.UpdateLines();
-    alu.UpdateLines();
-    rc.UpdateLines();
+    mcc.ClockHigh();
+    mcc.ClockLow();
+    mcc.UpdateLines();
     mainBus.UnAssert(&inputValue.value);
 
     // Load value into register
     inputValue.value = 0xF08B;
     mainBus.Assert(&inputValue.value);
-    ic.ClockHigh();
-    alu.ClockHigh();
-    rc.ClockHigh();
-    ic.ClockLow();
-    alu.ClockLow();
-    rc.ClockLow();
-    ic.UpdateLines();
-    alu.UpdateLines();
-    rc.UpdateLines();
+    mcc.ClockHigh();
+    mcc.ClockLow();
+    mcc.UpdateLines();
     mainBus.UnAssert(&inputValue.value);
 
     // Load instruction 2
     inputValue.value = 0x002;
     mainBus.Assert(&inputValue.value);
-    ic.ClockHigh();
-    alu.ClockHigh();
-    rc.ClockHigh();
-    ic.ClockLow();
-    alu.ClockLow();
-    rc.ClockLow();
-    ic.UpdateLines();
-    alu.UpdateLines();
-    rc.UpdateLines();
+    mcc.ClockHigh();
+    mcc.ClockLow();
+    mcc.UpdateLines();
     mainBus.UnAssert(&inputValue.value);
 
     // Read back value from register
-    ic.ClockHigh();
-    alu.ClockHigh();
-    rc.ClockHigh();
-    ic.ClockLow();
-    alu.ClockLow();
-    rc.ClockLow();
-    ic.UpdateLines();
-    alu.UpdateLines();
-    rc.UpdateLines();
+    mcc.ClockHigh();
+    mcc.ClockLow();
+    mcc.UpdateLines();
 
     std::cout << *mainBus.GetValue() << std::endl;
 
