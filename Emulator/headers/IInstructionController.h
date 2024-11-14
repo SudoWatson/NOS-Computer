@@ -7,7 +7,7 @@ public:
         IRO = 1 << 1,  // Instructino Register Out
         RCI = 1 << 2,  // Register Controller In
         RI  = 1 << 3,  // Register In
-        RO  = 1 << 4,  // Register Out
+        BRO = 1 << 4,  // Bypass Register Out
     };
 
     /** Gets a pointer to the bool for the control line requested */
