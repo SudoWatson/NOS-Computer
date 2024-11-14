@@ -10,6 +10,7 @@ IC::InstructionController(Bus& mainBus) {
         controlLines[i] = false;
     }
 
+    setupInstructionSet();
     Reset();
 }
 
@@ -51,7 +52,7 @@ void IC::performClockHigh() {
 
 void IC::performClockLow() {
     currentStep++;
-    if (currentStep > STEP_SIZE)
+    if (currentStep >= STEP_SIZE)
     {
         currentStep = 0;
     }

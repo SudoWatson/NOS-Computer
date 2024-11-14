@@ -9,7 +9,7 @@ fi
 cd build
 
 # Run CMake to configure the project and generate Makefiles
-cmake ..
+cmake -DCMAKE_BUILD_TYPE=Debug ..
 
 # Compile the project using Make
 make

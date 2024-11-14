@@ -32,7 +32,6 @@ int main() {
     rc.RegisterControlLines(ic);
 
 
-    ic.Reset();
 
     // Load instruction 0
     inputValue.value = 0x000;
@@ -40,7 +39,11 @@ int main() {
     ic.ClockHigh();
     alu.ClockHigh();
     rc.ClockHigh();
+    ic.ClockLow();
+    alu.ClockLow();
+    rc.ClockLow();
     mainBus.UnAssert(&inputValue.value);
+
 
     // Index register 0
     inputValue.value = 0x000;
@@ -48,6 +51,12 @@ int main() {
     ic.ClockHigh();
     alu.ClockHigh();
     rc.ClockHigh();
+    ic.ClockLow();
+    alu.ClockLow();
+    rc.ClockLow();
+    ic.UpdateLines();
+    alu.UpdateLines();
+    rc.UpdateLines();
     mainBus.UnAssert(&inputValue.value);
 
     // Load instruction 1
@@ -56,6 +65,12 @@ int main() {
     ic.ClockHigh();
     alu.ClockHigh();
     rc.ClockHigh();
+    ic.ClockLow();
+    alu.ClockLow();
+    rc.ClockLow();
+    ic.UpdateLines();
+    alu.UpdateLines();
+    rc.UpdateLines();
     mainBus.UnAssert(&inputValue.value);
 
     // Load value into register
@@ -64,6 +79,12 @@ int main() {
     ic.ClockHigh();
     alu.ClockHigh();
     rc.ClockHigh();
+    ic.ClockLow();
+    alu.ClockLow();
+    rc.ClockLow();
+    ic.UpdateLines();
+    alu.UpdateLines();
+    rc.UpdateLines();
     mainBus.UnAssert(&inputValue.value);
 
     // Load instruction 2
@@ -72,12 +93,27 @@ int main() {
     ic.ClockHigh();
     alu.ClockHigh();
     rc.ClockHigh();
+    ic.ClockLow();
+    alu.ClockLow();
+    rc.ClockLow();
+    ic.UpdateLines();
+    alu.UpdateLines();
+    rc.UpdateLines();
     mainBus.UnAssert(&inputValue.value);
 
     // Read back value from register
     ic.ClockHigh();
     alu.ClockHigh();
     rc.ClockHigh();
+    ic.ClockLow();
+    alu.ClockLow();
+    rc.ClockLow();
+    ic.UpdateLines();
+    alu.UpdateLines();
+    rc.UpdateLines();
+
+    std::cout << *mainBus.GetValue() << std::endl;
+
 
     return 0;
 }
