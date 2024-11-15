@@ -9,12 +9,16 @@ RC::RegisterController(Bus& mainBus, Bus& leftHandBus, Bus& rightHandBus) {
 
     // Initialize the 16 GPRs
     // TODO: Do we actually want to create the 16 registers outside of here and tie them to the RC?
-    for (int i = 0; i < sizeof(generalRegisters)/sizeof(*generalRegisters); i++) {
-        GPR gpr;
+    for (int i = 0; i < GPR_COUNT; i++) {
+        *registerEnables[i] = false;
+        *registerLHEnables[i] = false;
+        *registerRHEnables[i] = false;
+
+        GPR gpr(registerEnables[i], registerLHEnables[i], registerRHEnables[i]);
         gpr.MainBus = MainBus;
         gpr.LeftHandBus = LeftHandBus;
         gpr.RightHandBus = RightHandBus;
-        generalRegisters[i] = gpr;
+        generalRegisters[i] = &gpr;
     }
 
     performReset();
@@ -22,25 +26,32 @@ RC::RegisterController(Bus& mainBus, Bus& leftHandBus, Bus& rightHandBus) {
 
 void RC::performReset() {
     value = 0;
-    assertRegisters();
+    for (auto gpr : generalRegisters) {
+        gpr->Reset();
+    }
 }
 
 void RC::performClockHigh() {
     if (*RegisterControllerIn) {
         LoadFromMainBus();
     }
-    if (*RegisterIn) {
-        LoadFromMainBusToRegister();
+    for (auto gpr : generalRegisters) {
+        gpr->ClockHigh();
     }
 }
 
 void RC::performUpdateLines() {
-
+    for (auto gpr : generalRegisters) {
+        gpr->UpdateLines();
+    }
 }
 
-void RC::performRegisterControlLines(IInstructionController &ptrIC) {
+void RC::performConnectControlLines(IInstructionController &ptrIC) {
     RegisterControllerIn = ptrIC.GetControlLinePtr(ptrIC.RCI);
     RegisterIn = ptrIC.GetControlLinePtr(ptrIC.RI);
+    for (auto gpr : generalRegisters) {
+        gpr->RegisterControlLines(ptrIC, *this);
+    }
 }
 
 // Methods for getting the various register indexes
@@ -56,21 +67,6 @@ uint8_t  RC::lhRegisterIndex() {
     return (value >> 8) & 0b1111;
 }
 
-// Interactions between the busses and selected registers
-void RC::unAssertRegisters() {
-    generalRegisters[lhRegisterIndex()].UnAssertToLeftHandBus();
-    generalRegisters[rhRegisterIndex()].UnAssertToRightHandBus();
-}
-
-void RC::assertRegisters() {
-    generalRegisters[lhRegisterIndex()].AssertToLeftHandBus();
-    generalRegisters[rhRegisterIndex()].AssertToRightHandBus();
-}
-
-void RC::LoadFromMainBusToRegister() {
-    generalRegisters[registerIndex()].LoadFromMainBus();
-}
-
 // Interactions between the main bus and the RC internal register
 void RC::AssertToMainBus() {
     MainBus->Assert(&value);
@@ -79,9 +75,15 @@ void RC::UnAssertToMainBus() {
     MainBus->UnAssert(&value);
 }
 void RC::LoadFromMainBus() {
-    // GPRs that are asserting on the bus is determined by the internal register, so we want to change the ones asserting when the RC updates
-    unAssertRegisters();
+    *registerEnables[registerIndex()] = false;
+    *registerLHEnables[lhRegisterIndex()] = false;
+    *registerRHEnables[rhRegisterIndex()] = false;
     value = *MainBus->GetValue();
-    assertRegisters();
+    *registerEnables[registerIndex()] = true;
+    *registerLHEnables[lhRegisterIndex()] = true;
+    *registerRHEnables[rhRegisterIndex()] = true;
 }
 
+bool* RC::GetRegisterInControlLinePtr() {
+    return RegisterIn;
+}

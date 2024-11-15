@@ -11,12 +11,12 @@ class InstructionController : public Module, public IInstructionController {
 private:
     uint8_t currentStep;
     uint16_t storedInstruction;
-    Bus* MainBus;
+    Bus* MainBus = nullptr;
     bool controlLines[INSTRUCTION_WORD_LENGTH]; // NOTE: This is sad space efficient because bools are dumb
     uint64_t instructionSet[0xFFFF+1][STEP_SIZE];
 
-    bool* instructionRegisterIn;
-    bool* instructionRegisterOut;
+    bool* instructionRegisterIn = nullptr;
+    bool* instructionRegisterOut = nullptr;
 
     void evaluateStep();
     void setupInstructionSet();
@@ -31,7 +31,7 @@ private:
 public:
     InstructionController(Bus& mainBus);
 
-    void performRegisterControlLines(IInstructionController &ptrIC) override;
+    void performConnectControlLines(IInstructionController &ptrIC) override;
 
     void LoadFromMainBus();
     void AssertToMainBus();

@@ -6,15 +6,15 @@ class ALU : public Module {
     bool* BypassRegisterOut = nullptr;
 
     uint16_t value;
-    Bus* MainBus;
-    Bus* LeftHandBus;
-    Bus* RightHandBus;
+    Bus* MainBus = nullptr;
+    Bus* LeftHandBus = nullptr;
+    Bus* RightHandBus = nullptr;
 
     void calculateValue();
 
     virtual void performClockHigh() override;
     virtual void performUpdateLines() override;
-    virtual void performRegisterControlLines(IInstructionController &ptrIC) override;
+    virtual void performConnectControlLines(IInstructionController &ptrIC) override;
 
 public:
     ALU(Bus& mainBus, Bus& leftHandBus, Bus& rightHandBus);

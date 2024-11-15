@@ -3,7 +3,7 @@
 
 class Bus {
 public:
-    uint16_t* ptrValue;
+    uint16_t* ptrValue = nullptr;
 public:
     Bus();
     void Assert(uint16_t* _ptrValue);
