@@ -32,7 +32,7 @@ bool* IC::GetControlLinePtr(ControlLines controlLine) {
     return &controlLines[index];
 }
 
-void IC::performRegisterControlLines(IInstructionController &ptrIC) {
+void IC::performConnectControlLines(IInstructionController &ptrIC) {
     instructionRegisterIn = ptrIC.GetControlLinePtr(ptrIC.IRI);
     instructionRegisterOut = ptrIC.GetControlLinePtr(ptrIC.IRO);
 }

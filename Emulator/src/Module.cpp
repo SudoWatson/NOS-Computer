@@ -4,7 +4,7 @@ void Module::performReset() { }
 void Module::performClockHigh() { }
 void Module::performClockLow() { }
 void Module::performUpdateLines() { }
-void Module::performRegisterControlLines(IInstructionController &ptrIC) { }
+void Module::performConnectControlLines(IInstructionController &ptrIC) { }
 
 void Module::Reset() {
     performReset();
@@ -23,6 +23,6 @@ void Module::UpdateLines() {
     performUpdateLines();
 }
 
-void Module::RegisterControlLines(IInstructionController &ptrIC) {
-    performRegisterControlLines(ptrIC);
+void Module::ConnectControlLines(IInstructionController &ptrIC) {
+    performConnectControlLines(ptrIC);
 }

@@ -34,7 +34,7 @@ int main() {
     RegisterController rc(mainBus, lhBus, rhBus);
     mcc.AddModule(&rc);
 
-    mcc.RegisterControlLines(ic);
+    mcc.ConnectControlLines(ic);
 
 
     // Load instruction 0

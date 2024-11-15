@@ -10,7 +10,7 @@ class ModuleCommonControl : public Module {
     virtual void performClockHigh() override;
     virtual void performClockLow() override;
     virtual void performUpdateLines() override;
-    virtual void performRegisterControlLines(IInstructionController &ptrIC) override;
+    virtual void performConnectControlLines(IInstructionController &ptrIC) override;
 
 public:
     void AddModule(Module* ptrModule);

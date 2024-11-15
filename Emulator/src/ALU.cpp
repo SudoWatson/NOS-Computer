@@ -14,7 +14,7 @@ void ALU::performUpdateLines() {
         AssertToMainBus();
     }
 }
-void ALU::performRegisterControlLines(IInstructionController &ptrIC) {
+void ALU::performConnectControlLines(IInstructionController &ptrIC) {
     BypassRegisterOut = ptrIC.GetControlLinePtr(ptrIC.BRO);
 }
 

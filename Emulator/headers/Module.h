@@ -11,7 +11,7 @@ private:
     /** Updates the control lines on the module */
     virtual void performUpdateLines();
 
-    virtual void performRegisterControlLines(IInstructionController &ptrIC);
+    virtual void performConnectControlLines(IInstructionController &ptrIC);
 
 public:
 
@@ -19,6 +19,6 @@ public:
     void ClockHigh();
     void ClockLow();
     void UpdateLines();
-    void RegisterControlLines(IInstructionController &ptrIC);
+    void ConnectControlLines(IInstructionController &ptrIC);
 };
 

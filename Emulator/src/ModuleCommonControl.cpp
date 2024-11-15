@@ -21,9 +21,9 @@ void ModuleCommonControl::performUpdateLines() {
         module->UpdateLines();
     }
 }
-void ModuleCommonControl::performRegisterControlLines(IInstructionController &ptrIC) {
+void ModuleCommonControl::performConnectControlLines(IInstructionController &ptrIC) {
     for (auto module : modulePtrs) {
-        module->RegisterControlLines(ptrIC);
+        module->ConnectControlLines(ptrIC);
     }
 }
 
