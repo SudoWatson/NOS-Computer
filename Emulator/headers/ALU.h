@@ -6,6 +6,7 @@ class ALU : public Module {
     bool* BypassRegisterOut = nullptr;
 
     uint16_t value;
+    uint16_t instructionValue;
     Bus* MainBus = nullptr;
     Bus* LeftHandBus = nullptr;
     Bus* RightHandBus = nullptr;
@@ -21,4 +22,5 @@ public:
 
     void AssertToMainBus();
     void UnAssertToMainBus();
+    void LoadFromMainBus();
 };
