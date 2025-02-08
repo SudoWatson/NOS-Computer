@@ -54,69 +54,42 @@ int main() {
 
 
     // Load 2 into register 1
-    // Load loadRegCont instruction
-    inputValue.value = 0x1002;
-    mainBus.Assert(&inputValue.value);
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
-
-
-    // Execute loadRegCont instruction
-    inputValue.value = 0x0008;
-    mainBus.Assert(&inputValue.value);
-    mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
-
-    // Load 2 into register 1
-    // Load loadRegCont instruction
     inputValue.value = 0x1001;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
+    inputValue.value = 0x2002;
+    mainBus.Assert(&inputValue.value);
+    mcc.FullCycle();
+    mainBus.UnAssert(&inputValue.value);
 
-    // Execute loadRegCont instruction
-    inputValue.value = 0x0005;
+    // Load 2 into register 2
+    inputValue.value = 0x1002;
+    mainBus.Assert(&inputValue.value);
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mainBus.UnAssert(&inputValue.value);
+    inputValue.value = 0x0013;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
 
     // Calculate ALU of reg 0 + reg 1 into register 2
-    // Load loadRegCont instruction
-    inputValue.value = loadRegControllerInst;
+    inputValue.value = 0x0123;  // Add reg 1 + 2 into 3
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
-
-    // Execute loadRegCont instruction
-    inputValue.value = 0x0210;
-    mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
     mcc.FullCycle();
 
-    // Load aluInstIn instruction
-    inputValue.value = aluInstructionInInst;
+    // Read Register result
+    inputValue.value = 0x2030;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
-
-    // Execute aluInstIn instruction
-    inputValue.value = 0x0000;  // Add without carry
-    mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
-    mcc.FullCycle();
-
-
-    // Load Read ALU result
-    inputValue.value = aluResultOutInst;
-    mainBus.Assert(&inputValue.value);
-    mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
-
-    // Read ALU result
+    //mcc.FullCycle();
     std::cout << *mainBus.GetValue() << std::endl;
 
 

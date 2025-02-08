@@ -86,12 +86,9 @@ void IC::addInstruction(uint16_t instructionLow, uint16_t instructionHigh, std::
 
 void IC::setupInstructionSet() {
     // Load Register
+    addInstruction(0x0000, 0x0FFF, {/*RO|*/ IRI, RCI|EI, /*RO|*/ EO|RI});
     addInstruction(0x1000, 0x1FFF, {/*RO|*/ IRI, RCI, /*RO|*/ RI});
-    addInstruction(0x0000, {IRI, RCI, 0});
-    addInstruction(0x0001, {IRI, RI, 0});
-    addInstruction(0x0002, {IRI, BRO, 0});
-    addInstruction(0x0003, {IRI, EI, 0});
-    addInstruction(0x0004, {IRI, EO, 0});
+    addInstruction(0x2000, 0x2FFF, {/*RO|*/ IRI, RCI, /*RO|*/ EO|BRO});
 
 
     // Move register to register
