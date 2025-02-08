@@ -59,7 +59,7 @@ int main() {
     mcc.FullCycle();
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
-    inputValue.value = 0x2002;
+    inputValue.value = 0x0005;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
@@ -70,13 +70,13 @@ int main() {
     mcc.FullCycle();
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
-    inputValue.value = 0x0013;
+    inputValue.value = 0x0003;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
 
     // Calculate ALU of reg 0 + reg 1 into register 2
-    inputValue.value = 0x0123;  // Add reg 1 + 2 into 3
+    inputValue.value = 0x2123;  // Sub reg 1 - 2 into 3
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mcc.FullCycle();
@@ -84,7 +84,7 @@ int main() {
     mcc.FullCycle();
 
     // Read Register result
-    inputValue.value = 0x2030;
+    inputValue.value = 0x0030;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mcc.FullCycle();

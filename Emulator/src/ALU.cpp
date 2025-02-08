@@ -58,12 +58,12 @@ void ALU::calculateArithmeticValue() {
     // TODO: Handle carry in flag
     if (((instructionValue >> 4) & 0b0010) != 0b0010)
     {  // Third bit 0
-        value = *RightHandBus->GetValue() + *LeftHandBus->GetValue();
+        value = *LeftHandBus->GetValue() + *RightHandBus->GetValue() ;
         return;
     }
     else
     {  // Third bit 1
-        value = *RightHandBus->GetValue() - *LeftHandBus->GetValue();
+        value = *LeftHandBus->GetValue() - *RightHandBus->GetValue() ;
         return;
     }
 }
@@ -127,13 +127,13 @@ void ALU::calculateBitwiseLogic() {
             preValue = *RightHandBus->GetValue();
             break;
         case 0b01:
-            preValue = *RightHandBus->GetValue() & *LeftHandBus->GetValue();
+            preValue = *LeftHandBus->GetValue() & *RightHandBus->GetValue();
             break;
         case 0b10:
-            preValue = *RightHandBus->GetValue() | *LeftHandBus->GetValue();
+            preValue = *LeftHandBus->GetValue() | *RightHandBus->GetValue();
             break;
         case 0b11:  // XOR
-            preValue = *RightHandBus->GetValue() ^ *LeftHandBus->GetValue();
+            preValue = *LeftHandBus->GetValue() ^ *RightHandBus->GetValue();
             break;
         default:
             throw new std::exception();  // I don't even know how this could happen
