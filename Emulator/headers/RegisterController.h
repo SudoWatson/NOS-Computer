@@ -1,10 +1,11 @@
 #include "Bus.h"
+#include "IRegisterController.h"
 #include "Module.h"
+#include "GPR.h"
 #include <cstdint>
 
-class GPR;  // Forward declaration
 
-class RegisterController : public Module {
+class RegisterController : public Module, public IRegisterController {
     // RC Control Lines
     bool* RegisterControllerIn = nullptr;
 
@@ -33,10 +34,11 @@ class RegisterController : public Module {
 
 public:
     RegisterController(Bus& mainBus, Bus& leftHandBus, Bus& rightHandBus);
+    ~RegisterController();
 
     void AssertToMainBus();
     void UnAssertToMainBus();
     void LoadFromMainBus();
 
-    bool* GetRegisterInControlLinePtr();
+    bool* GetRegisterInControlLinePtr() override;
 };

@@ -1,4 +1,5 @@
 #include "../headers/RegisterController.h"
+#include "iostream"
 
 #define RC RegisterController
 
@@ -10,23 +11,34 @@ RC::RegisterController(Bus& mainBus, Bus& leftHandBus, Bus& rightHandBus) {
     // Initialize the 16 GPRs
     // TODO: Do we actually want to create the 16 registers outside of here and tie them to the RC?
     for (int i = 0; i < GPR_COUNT; i++) {
-        *registerEnables[i] = false;
-        *registerLHEnables[i] = false;
-        *registerRHEnables[i] = false;
+        bool* enable =  new bool(false);
+        bool* lhEnable = new bool(false);
+        bool* rhEnable = new bool(false);
 
-        GPR gpr(registerEnables[i], registerLHEnables[i], registerRHEnables[i]);
-        gpr.MainBus = MainBus;
-        gpr.LeftHandBus = LeftHandBus;
-        gpr.RightHandBus = RightHandBus;
-        generalRegisters[i] = &gpr;
+        registerEnables[i] = enable;
+        registerLHEnables[i] = lhEnable;
+        registerRHEnables[i] = rhEnable;
+
+        GPR* gpr = new GPR(registerEnables[i], registerLHEnables[i], registerRHEnables[i]);
+        gpr->MainBus = MainBus;
+        gpr->LeftHandBus = LeftHandBus;
+        gpr->RightHandBus = RightHandBus;
+        generalRegisters[i] = gpr;
     }
+}
 
-    performReset();
+RC::~RegisterController() {
+    for (int i = 0; i < GPR_COUNT; i++) {
+        delete generalRegisters[i];
+        delete registerEnables[i];
+        delete registerLHEnables[i];
+        delete registerRHEnables[i];
+    }
 }
 
 void RC::performReset() {
     value = 0;
-    for (auto gpr : generalRegisters) {
+    for (GPR* gpr : generalRegisters) {
         gpr->Reset();
     }
 }
@@ -35,13 +47,13 @@ void RC::performClockHigh() {
     if (*RegisterControllerIn) {
         LoadFromMainBus();
     }
-    for (auto gpr : generalRegisters) {
+    for (GPR* gpr : generalRegisters) {
         gpr->ClockHigh();
     }
 }
 
 void RC::performUpdateLines() {
-    for (auto gpr : generalRegisters) {
+    for (GPR* gpr : generalRegisters) {
         gpr->UpdateLines();
     }
 }
@@ -49,7 +61,7 @@ void RC::performUpdateLines() {
 void RC::performConnectControlLines(IInstructionController &ptrIC) {
     RegisterControllerIn = ptrIC.GetControlLinePtr(ptrIC.RCI);
     RegisterIn = ptrIC.GetControlLinePtr(ptrIC.RI);
-    for (auto gpr : generalRegisters) {
+    for (GPR* gpr : generalRegisters) {
         gpr->RegisterControlLines(ptrIC, *this);
     }
 }

@@ -2,7 +2,7 @@
 
 #include "Bus.h"
 #include "Module.h"
-#include "RegisterController.h"
+#include "IRegisterController.h"
 #include <cstdint>
 
 class GPR : public Module {
@@ -18,7 +18,7 @@ class GPR : public Module {
     void performClockHigh() override;
     void performUpdateLines() override;
     void performConnectControlLines(IInstructionController &ptrIC) override;
-    void performConnectControlLines(IInstructionController &ptrIC, RegisterController &ptrRC);
+    void performConnectControlLines(IInstructionController &ptrIC, IRegisterController &ptrRC);
 
 public:
     GPR(bool* _ptrEnable, bool* _ptrLHEnable, bool* _ptrRHEnable);
@@ -34,6 +34,6 @@ public:
     void AssertToRightHandBus();
     void UnAssertToRightHandBus();
 
-    void RegisterControlLines(IInstructionController &ptrIC, RegisterController &ptrRC);
+    void RegisterControlLines(IInstructionController &ptrIC, IRegisterController &ptrRC);
 };
 

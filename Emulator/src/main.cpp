@@ -45,7 +45,6 @@ int main() {
     mcc.UpdateLines();
     mainBus.UnAssert(&inputValue.value);
 
-
     // Index register 0
     inputValue.value = 0x000;
     mainBus.Assert(&inputValue.value);

@@ -5,7 +5,6 @@ GPR::GPR(bool* _ptrEnable, bool* _ptrLHEnable, bool* _ptrRHEnable) {
     ptrEnable = _ptrEnable;
     ptrLHEnable = _ptrLHEnable;
     ptrRHEnable = _ptrRHEnable;
-    Reset();
 }
 
 void GPR::performReset() {
@@ -13,6 +12,10 @@ void GPR::performReset() {
 }
 void GPR::performClockHigh() {
     // If register is enabled and load line on, read
+    if (*ptrEnable && *RegisterIn)
+    {
+        LoadFromMainBus();
+    }
 }
 void GPR::performUpdateLines() {
     // If register is enabled assert
@@ -32,8 +35,13 @@ void GPR::performConnectControlLines(IInstructionController &ptrIC) {
     throw std::invalid_argument("GPRs get some control lines from the Register Controller and as thus need a pointer to the RC");
 }
 
-void GPR::performConnectControlLines(IInstructionController &ptrIC, RegisterController &ptrRC) {
+void GPR::performConnectControlLines(IInstructionController &ptrIC, IRegisterController &ptrRC) {
     RegisterIn = ptrRC.GetRegisterInControlLinePtr();
+}
+
+void GPR::RegisterControlLines(IInstructionController &ptrIC, IRegisterController &ptrRC)
+{
+    performConnectControlLines(ptrIC, ptrRC);
 }
 
 void GPR::LoadFromMainBus() {

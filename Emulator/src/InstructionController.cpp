@@ -11,7 +11,6 @@ IC::InstructionController(Bus& mainBus) {
     }
 
     setupInstructionSet();
-    Reset();
 }
 
 void IC::LoadFromMainBus() {
