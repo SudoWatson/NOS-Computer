@@ -39,27 +39,13 @@ int main() {
     mcc.Reset();
 
 
-    int loadRegControllerInst = 0;
-    int registerInInst = 1;
-    int bypassRegisterOutInst = 2;
-    int aluInstructionInInst = 3;
-    int aluResultOutInst = 4;
-
-
-    // Load 1 into register 0
-    // Load 2 into register 1
-    // Load add command into ALU
-    // ALU result into register 2
-    // Read result of register 2
-
-
     // Load 2 into register 1
     inputValue.value = 0x1001;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
-    inputValue.value = 0x0005;
+    inputValue.value = 0x0000;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
@@ -70,28 +56,47 @@ int main() {
     mcc.FullCycle();
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
-    inputValue.value = 0x0003;
+    inputValue.value = 0x0001;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
 
-    // Calculate ALU of reg 0 + reg 1 into register 2
-    inputValue.value = 0x2123;  // Sub reg 1 - 2 into 3
-    mainBus.Assert(&inputValue.value);
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
-    mcc.FullCycle();
+    for (int i = 0; i < 255; i++)
+    {
 
-    // Read Register result
-    inputValue.value = 0x0030;
-    mainBus.Assert(&inputValue.value);
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
-    //mcc.FullCycle();
-    std::cout << *mainBus.GetValue() << std::endl;
+        // Calculate ALU of reg 0 + reg 1 into register 2
+        inputValue.value = 0x0123;  // Sub reg 1 - 2 into 3
+        mainBus.Assert(&inputValue.value);
+        mcc.FullCycle();
+        mcc.FullCycle();
+        mainBus.UnAssert(&inputValue.value);
+        mcc.FullCycle();
 
+        // Move reg 2 to 1
+        inputValue.value = 0x3021;
+        mainBus.Assert(&inputValue.value);
+        mcc.FullCycle();
+        mcc.FullCycle();
+        mainBus.UnAssert(&inputValue.value);
+        mcc.FullCycle();
+
+        // Move reg 3 to 2
+        inputValue.value = 0x3032;
+        mainBus.Assert(&inputValue.value);
+        mcc.FullCycle();
+        mcc.FullCycle();
+        mainBus.UnAssert(&inputValue.value);
+        mcc.FullCycle();
+
+        // Read Register result
+        inputValue.value = 0x2010;
+        mainBus.Assert(&inputValue.value);
+        mcc.FullCycle();
+        mcc.FullCycle();
+        mainBus.UnAssert(&inputValue.value);
+        std::cout << "Cycle " << i << ": " << *mainBus.GetValue() << std::endl;
+        mcc.FullCycle();
+    }
 
     return 0;
 }
