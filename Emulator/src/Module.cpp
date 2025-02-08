@@ -17,6 +17,7 @@ void Module::ClockHigh() {
 
 void Module::ClockLow() {
     performClockLow();
+    UpdateLines();
 }
 
 void Module::UpdateLines() {

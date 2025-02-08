@@ -30,3 +30,8 @@ void ModuleCommonControl::performConnectControlLines(IInstructionController &ptr
 void ModuleCommonControl::AddModule(Module* ptrModule) {
     modulePtrs.push_back(ptrModule);
 }
+
+void ModuleCommonControl::FullCycle() {
+    ClockHigh();
+    ClockLow();
+}

@@ -36,6 +36,8 @@ int main() {
 
     mcc.ConnectControlLines(ic);
 
+    mcc.Reset();
+
 
     int loadRegControllerInst = 0;
     int registerInInst = 1;
@@ -51,121 +53,67 @@ int main() {
     // Read result of register 2
 
 
-    // Load 1 into register 0
+    // Load 2 into register 1
     // Load loadRegCont instruction
-    inputValue.value = loadRegControllerInst;
+    inputValue.value = 0x1002;
     mainBus.Assert(&inputValue.value);
-    mcc.ClockHigh();
-    mcc.ClockLow();
-    mcc.UpdateLines();
+    mcc.FullCycle();
+    mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
+
 
     // Execute loadRegCont instruction
-    inputValue.value = 0x0000;
+    inputValue.value = 0x0008;
     mainBus.Assert(&inputValue.value);
-    mcc.ClockHigh();
-    mcc.ClockLow();
-    mcc.UpdateLines();
-    mainBus.UnAssert(&inputValue.value);
-
-    // Load registerIn instruction
-    inputValue.value = registerInInst;
-    mainBus.Assert(&inputValue.value);
-    mcc.ClockHigh();
-    mcc.ClockLow();
-    mcc.UpdateLines();
-    mainBus.UnAssert(&inputValue.value);
-
-    // Execute registerIn instruction
-    inputValue.value = 0x003B;
-    mainBus.Assert(&inputValue.value);
-    mcc.ClockHigh();
-    mcc.ClockLow();
-    mcc.UpdateLines();
+    mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
 
     // Load 2 into register 1
     // Load loadRegCont instruction
-    inputValue.value = loadRegControllerInst;
+    inputValue.value = 0x1001;
     mainBus.Assert(&inputValue.value);
-    mcc.ClockHigh();
-    mcc.ClockLow();
-    mcc.UpdateLines();
+    mcc.FullCycle();
+    mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
 
     // Execute loadRegCont instruction
-    inputValue.value = 0x0001;
+    inputValue.value = 0x0005;
     mainBus.Assert(&inputValue.value);
-    mcc.ClockHigh();
-    mcc.ClockLow();
-    mcc.UpdateLines();
+    mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
-
-    // Load registerIn instruction
-    inputValue.value = registerInInst;
-    mainBus.Assert(&inputValue.value);
-    mcc.ClockHigh();
-    mcc.ClockLow();
-    mcc.UpdateLines();
-    mainBus.UnAssert(&inputValue.value);
-
-    // Execute registerIn instruction
-    inputValue.value = 0x0F06;
-    mainBus.Assert(&inputValue.value);
-    mcc.ClockHigh();
-    mcc.ClockLow();
-    mcc.UpdateLines();
-    mainBus.UnAssert(&inputValue.value);
-
-    // // Load instruction 2
-    // inputValue.value = bypassRegisterOutInst;
-    // mainBus.Assert(&inputValue.value);
-    // mcc.ClockHigh();
-    // mcc.ClockLow();
-    // mcc.UpdateLines();
-    // mainBus.UnAssert(&inputValue.value);
-
 
     // Calculate ALU of reg 0 + reg 1 into register 2
     // Load loadRegCont instruction
     inputValue.value = loadRegControllerInst;
     mainBus.Assert(&inputValue.value);
-    mcc.ClockHigh();
-    mcc.ClockLow();
-    mcc.UpdateLines();
+    mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
 
     // Execute loadRegCont instruction
-    inputValue.value = 0x0012;
+    inputValue.value = 0x0210;
     mainBus.Assert(&inputValue.value);
-    mcc.ClockHigh();
-    mcc.ClockLow();
-    mcc.UpdateLines();
+    mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
+    mcc.FullCycle();
 
     // Load aluInstIn instruction
     inputValue.value = aluInstructionInInst;
     mainBus.Assert(&inputValue.value);
-    mcc.ClockHigh();
-    mcc.ClockLow();
-    mcc.UpdateLines();
+    mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
 
     // Execute aluInstIn instruction
     inputValue.value = 0x0000;  // Add without carry
     mainBus.Assert(&inputValue.value);
-    mcc.ClockHigh();
-    mcc.ClockLow();
-    mcc.UpdateLines();
+    mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
+    mcc.FullCycle();
 
 
     // Load Read ALU result
     inputValue.value = aluResultOutInst;
     mainBus.Assert(&inputValue.value);
-    mcc.ClockHigh();
-    mcc.ClockLow();
-    mcc.UpdateLines();
+    mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
 
     // Read ALU result

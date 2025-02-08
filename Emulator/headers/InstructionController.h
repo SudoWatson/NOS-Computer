@@ -5,7 +5,7 @@
 #include <cstdint>
 #include <initializer_list>
 #define INSTRUCTION_WORD_LENGTH 64
-#define STEP_SIZE 0b1+1
+#define STEP_SIZE 0b10+1  // Define the addressable bits and our count is plus 1 of the value of them all on // 3 steps
 
 class InstructionController : public Module, public IInstructionController {
 private:

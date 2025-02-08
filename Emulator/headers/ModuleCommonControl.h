@@ -14,5 +14,6 @@ class ModuleCommonControl : public Module {
 
 public:
     void AddModule(Module* ptrModule);
+    void FullCycle();
 };
 
