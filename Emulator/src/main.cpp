@@ -61,9 +61,8 @@ int main() {
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
 
-    for (int i = 0; i < 255; i++)
+    for (int i = 0; i < 24; i++)
     {
-
         // Calculate ALU of reg 0 + reg 1 into register 2
         inputValue.value = 0x0123;  // Sub reg 1 - 2 into 3
         mainBus.Assert(&inputValue.value);
