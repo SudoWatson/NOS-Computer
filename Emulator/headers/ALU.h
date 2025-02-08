@@ -4,14 +4,22 @@
 
 class ALU : public Module {
     bool* BypassRegisterOut = nullptr;
+    bool* ALUResultOut = nullptr;
+    bool* ALUInstructionIn = nullptr;
 
     uint16_t value;
-    uint16_t instructionValue;
+    uint8_t instructionValue;
     Bus* MainBus = nullptr;
     Bus* LeftHandBus = nullptr;
     Bus* RightHandBus = nullptr;
 
     void calculateValue();
+    void calculateArithmeticValue();
+    void calculateLogicValue();
+
+    void calculateShiftLogic();
+    void calculateBitwiseLogic();
+
 
     virtual void performClockHigh() override;
     virtual void performUpdateLines() override;

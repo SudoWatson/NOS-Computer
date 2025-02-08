@@ -88,6 +88,8 @@ void IC::setupInstructionSet() {
     addInstruction(0x0000, {IRI, RCI});
     addInstruction(0x0001, {IRI, RI});
     addInstruction(0x0002, {IRI, BRO});
+    addInstruction(0x0003, {IRI, EI});
+    addInstruction(0x0004, {IRI, EO});
     // Move register to register
     //
 }
