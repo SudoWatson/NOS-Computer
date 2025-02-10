@@ -6,6 +6,7 @@
 #include "ModuleCommonControl.h"
 #include <cstdint>
 #include <iostream>
+#include <ostream>
 
 #define log(x) std::cout << x << std::endl
 
@@ -39,63 +40,107 @@ int main() {
     mcc.Reset();
 
 
-    // Load 2 into register 1
+    // Load value into reg 0
+    inputValue.value = 0x1000;
+    mainBus.Assert(&inputValue.value);
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mainBus.UnAssert(&inputValue.value);
+    inputValue.value = 0b00011011;
+    mainBus.Assert(&inputValue.value);
+    mcc.FullCycle();
+    mainBus.UnAssert(&inputValue.value);
+
+    // Load value into reg 1
     inputValue.value = 0x1001;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
-    inputValue.value = 0x0000;
+    inputValue.value = 0b01001101;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
 
-    // Load 2 into register 2
-    inputValue.value = 0x1002;
+    // ALU Logic Tests
+    inputValue.value = 0x8812;  // Pass through register 1 into 2 (Bitwise no operation)
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
-    inputValue.value = 0x0001;
-    mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
 
-    for (int i = 0; i < 24; i++)
+    // AND
+    inputValue.value = 0x9013;
+    mainBus.Assert(&inputValue.value);
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mainBus.UnAssert(&inputValue.value);
+    mcc.FullCycle();
+
+    // OR
+    inputValue.value = 0xA014;
+    mainBus.Assert(&inputValue.value);
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mainBus.UnAssert(&inputValue.value);
+    mcc.FullCycle();
+
+    // XOR
+    inputValue.value = 0xB015;
+    mainBus.Assert(&inputValue.value);
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mainBus.UnAssert(&inputValue.value);
+    mcc.FullCycle();
+
+    // NOT
+    inputValue.value = 0xC816;  // Not register 1 into 2
+    mainBus.Assert(&inputValue.value);
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mainBus.UnAssert(&inputValue.value);
+    mcc.FullCycle();
+
+    // NAND
+    inputValue.value = 0xD017;
+    mainBus.Assert(&inputValue.value);
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mainBus.UnAssert(&inputValue.value);
+    mcc.FullCycle();
+
+    // NOR
+    inputValue.value = 0xE018;
+    mainBus.Assert(&inputValue.value);
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mainBus.UnAssert(&inputValue.value);
+    mcc.FullCycle();
+
+    // XNOR
+    inputValue.value = 0xF019;
+    mainBus.Assert(&inputValue.value);
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mainBus.UnAssert(&inputValue.value);
+    mcc.FullCycle();
+
+
+    std::cout << "Register Values:" << std::endl;
+    for (int i = 0; i < 16; i++)
     {
-        // Calculate ALU of reg 0 + reg 1 into register 2
-        inputValue.value = 0x0123;  // Sub reg 1 - 2 into 3
+        std::cout << "Register " << i << ": ";
+        // Read register value
+        inputValue.value = 0x2000 | (i << 4);
         mainBus.Assert(&inputValue.value);
         mcc.FullCycle();
         mcc.FullCycle();
         mainBus.UnAssert(&inputValue.value);
-        mcc.FullCycle();
-
-        // Move reg 2 to 1
-        inputValue.value = 0x3021;
-        mainBus.Assert(&inputValue.value);
-        mcc.FullCycle();
-        mcc.FullCycle();
-        mainBus.UnAssert(&inputValue.value);
-        mcc.FullCycle();
-
-        // Move reg 3 to 2
-        inputValue.value = 0x3032;
-        mainBus.Assert(&inputValue.value);
-        mcc.FullCycle();
-        mcc.FullCycle();
-        mainBus.UnAssert(&inputValue.value);
-        mcc.FullCycle();
-
-        // Read Register result
-        inputValue.value = 0x2010;
-        mainBus.Assert(&inputValue.value);
-        mcc.FullCycle();
-        mcc.FullCycle();
-        mainBus.UnAssert(&inputValue.value);
-        std::cout << "Cycle " << i << ": " << *mainBus.GetValue() << std::endl;
+        std::cout << *mainBus.GetValue() << std::endl;
         mcc.FullCycle();
     }
+
 
     return 0;
 }

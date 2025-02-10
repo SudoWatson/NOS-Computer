@@ -18,7 +18,7 @@ void ALU::performClockHigh() {
 }
 
 void ALU::performUpdateLines() {
-    if (*BypassRegisterOut || *ALUResultOut) {
+    if (*ALUResultOut) {
         AssertToMainBus();
     } else {
         UnAssertToMainBus();
@@ -72,7 +72,7 @@ void ALU::calculateLogicValue() {
     if (((instructionValue >> 4) & 0b0011) == 0b0000)
     {  // Last 2 bits both 0
         // Instruction is 1X00-XXXX
-        if (((instructionValue >> 4) & 0b00001) != 0b00001)
+        if (((instructionValue >> 3) & 0b00001) != 0b00001)
         {  // Fifth bit 0
             calculateShiftLogic();
         }
@@ -138,10 +138,11 @@ void ALU::calculateBitwiseLogic() {
         default:
             throw new std::exception();  // I don't even know how this could happen
     }
-    if ((instructionValue & 0b0100) == 0b0100)
+    if (((instructionValue >> 4) & 0b0100) == 0b0100)
     {
         preValue = ~preValue;  // Not
     }
+    value = preValue;
 }
 
 // Interactions between the main bus and ALU

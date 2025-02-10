@@ -1,6 +1,8 @@
 #include "../headers/InstructionController.h"
 #include <cstdint>
 #include <bits/stdc++.h>
+#include <iostream>
+#include <ostream>
 #define IC InstructionController
 
 IC::InstructionController(Bus& mainBus) {
@@ -81,12 +83,17 @@ void IC::addInstruction(uint16_t instructionLow, uint16_t instructionHigh, std::
         for (auto& step : steps) {
             instructionSet[instructionLow][stepIndex++] = step;
         }
+        if (instructionLow == 0xFFFF) // Will overflow and never get higher than max instructionHigh
+        {
+            break;
+        }
     }
 }
 
 void IC::setupInstructionSet() {
-    // Load Register
-    addInstruction(0x0000, 0x0FFF, {/*RO|*/ IRI, RCI|EI, /*RO|*/ EO|RI});
+    addInstruction(0x0000, 0xFFFF, {/*RO|*/ IRI, 0, /*RO|*/ 0});
+
+    addInstruction(0x8000, 0xFFFF, {/*RO|*/ IRI, RCI|EI, /*RO|*/ EO|RI});
     addInstruction(0x1000, 0x1FFF, {/*RO|*/ IRI, RCI, /*RO|*/ RI});
     addInstruction(0x2000, 0x2FFF, {/*RO|*/ IRI, RCI, /*RO|*/ EO|BRO});
     addInstruction(0x3000, 0x3FFF, {/*RO|*/ IRI, RCI, /*RO|*/ EO|BRO|RI});
