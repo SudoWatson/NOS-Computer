@@ -93,14 +93,14 @@ void ALU::calculateShiftLogic() {
     {  // Second bit 0 in second nibble
         // Rotate
         // TODO: Handle carry and fourth bit of second nibble
-        if ((instructionValue & 0b0010) != 0b0100)
+        if ((instructionValue & 0b0010) != 0b0010)
         {  // Third bit 0 in second nibble
-            bool fallingValue = value & (0b1 << 15) >> 15;
+            bool fallingValue = (*RightHandBus->GetValue() & (1 << 15)) >> 15;
             value = (*RightHandBus->GetValue() << 1) + fallingValue;
         }
         else
         {  // Third bit 1 in second nibble
-            bool fallingValue = value & 0b1;
+            bool fallingValue = *RightHandBus->GetValue() & 0b1;
             value = (*RightHandBus->GetValue() >> 1) + (fallingValue << 15);
         }
     }
@@ -108,7 +108,7 @@ void ALU::calculateShiftLogic() {
     {  // Second bit 1 in second nibble
         // Shift
         // TODO: Handle carry and fourth bit of second nibble
-        if ((instructionValue & 0b0010) != 0b0100)
+        if ((instructionValue & 0b0010) != 0b0010)
         {  // Third bit 0 in second nibble
             value = *RightHandBus->GetValue() << 1; 
         }

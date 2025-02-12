@@ -46,80 +46,40 @@ int main() {
     mcc.FullCycle();
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
-    inputValue.value = 0b00011011;
+    inputValue.value = 0b1000000000011011;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
 
-    // Load value into reg 1
-    inputValue.value = 0x1001;
-    mainBus.Assert(&inputValue.value);
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
-    inputValue.value = 0b01001101;
-    mainBus.Assert(&inputValue.value);
-    mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
+    
+    // 1000 00DC and 01DC for Rotate and Shift
 
-    // ALU Logic Tests
-    inputValue.value = 0x8812;  // Pass through register 1 into 2 (Bitwise no operation)
+    // Rotate Left 0 into 1
+    inputValue.value = 0x8001;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
     mcc.FullCycle();
 
-    // AND
-    inputValue.value = 0x9013;
+    // Rotate Right 0 into 2
+    inputValue.value = 0x8202;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
     mcc.FullCycle();
 
-    // OR
-    inputValue.value = 0xA014;
+    // Shift Left 0 into 3
+    inputValue.value = 0x8403;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
     mcc.FullCycle();
 
-    // XOR
-    inputValue.value = 0xB015;
-    mainBus.Assert(&inputValue.value);
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
-    mcc.FullCycle();
-
-    // NOT
-    inputValue.value = 0xC816;  // Not register 1 into 2
-    mainBus.Assert(&inputValue.value);
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
-    mcc.FullCycle();
-
-    // NAND
-    inputValue.value = 0xD017;
-    mainBus.Assert(&inputValue.value);
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
-    mcc.FullCycle();
-
-    // NOR
-    inputValue.value = 0xE018;
-    mainBus.Assert(&inputValue.value);
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
-    mcc.FullCycle();
-
-    // XNOR
-    inputValue.value = 0xF019;
+    // Shift Right 0 into 4
+    inputValue.value = 0x8604;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mcc.FullCycle();
