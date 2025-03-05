@@ -40,7 +40,6 @@ int main() {
     mcc.Reset();
 
 
-    // Not actually loading value. Need to see why
     // Load into SPR
     inputValue.value = 0x0000;
     mainBus.Assert(&inputValue.value);
@@ -83,6 +82,31 @@ int main() {
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
+    mcc.FullCycle();
+
+
+    // Move SPR
+    inputValue.value = 0x0004;
+    mainBus.Assert(&inputValue.value);
+    mcc.FullCycle();
+    mainBus.UnAssert(&inputValue.value);
+    mcc.FullCycle();
+    mcc.FullCycle();
+
+    // Move SPR
+    inputValue.value = 0x0005;
+    mainBus.Assert(&inputValue.value);
+    mcc.FullCycle();
+    mainBus.UnAssert(&inputValue.value);
+    mcc.FullCycle();
+    mcc.FullCycle();
+
+    // Move SPR
+    inputValue.value = 0x0006;
+    mainBus.Assert(&inputValue.value);
+    mcc.FullCycle();
+    mainBus.UnAssert(&inputValue.value);
+    mcc.FullCycle();
     mcc.FullCycle();
 
     return 0;

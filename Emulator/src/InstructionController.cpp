@@ -104,6 +104,12 @@ void IC::setupInstructionSet() {
     addInstruction(0x0001, {/*RO|*/ IRI, SRE | SI1 | RI, /*RO|*/0 });
     addInstruction(0x0002, {/*RO|*/ IRI, SRE | SI2 | RI, /*RO|*/0 });
     addInstruction(0x0003, {/*RO|*/ IRI, SRE | SI1 | SI2 | RI, /*RO|*/0 });
+    
+     
+    addInstruction(0x0004, {/*RO|*/ IRI, SO1 | SRE | SI1 | SI2 | RI, /*RO|*/0 });
+    addInstruction(0x0005, {/*RO|*/ IRI, SO2 | SRE | SI1 | SI2 | RI, /*RO|*/0 });
+    addInstruction(0x0006, {/*RO|*/ IRI, SO1 | SO2 | SRE | SI1 | RI, /*RO|*/0 });
+    
 
 
     // Move register to register

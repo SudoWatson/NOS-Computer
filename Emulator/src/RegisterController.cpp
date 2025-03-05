@@ -35,7 +35,7 @@ RC::RegisterController(Bus& mainBus, Bus& leftHandBus, Bus& rightHandBus) {
 
         GPR* spr = new GPR(sprEnables[i], nullptr, sprOutEnables[i]);
         spr->MainBus = MainBus;
-        spr->RightHandBus = RightHandBus;  // TODO: Can this just be the main bus?
+        spr->RightHandBus = MainBus;  // TODO: Can this just be the main bus?
         specialRegisters[i] = spr;
     }
 }
@@ -81,9 +81,6 @@ void RC::performUpdateLines() {
     for (GPR* gpr : generalRegisters) {
         gpr->UpdateLines();
     }
-    for (GPR* spr : specialRegisters) {
-        spr->UpdateLines();
-    }
 
 
     for (int i = 0; i < SPR_COUNT; i++) {
@@ -93,8 +90,12 @@ void RC::performUpdateLines() {
     if (*RegisterControllerSPREnable) {
         *sprEnables[getSPRIndex()] = true;
     }
-    if (*RegisterControllerSPROutIndex1 || *RegisterControllerSPROutIndex2) {
+    if (*RegisterControllerSPROutIndex1 | *RegisterControllerSPROutIndex2) {
         *sprOutEnables[getSPROutIndex()] = true;
+    }
+
+    for (GPR* spr : specialRegisters) {
+        spr->UpdateLines();
     }
 }
 
