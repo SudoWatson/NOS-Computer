@@ -102,14 +102,10 @@ void IC::setupInstructionSet() {
     // 000   00XX
     //
 
-    addInstruction(0x0000, { SRE | RI  });
-    addInstruction(0x0001, { SRE | SI1 | RI  });
-    addInstruction(0x0002, { SRE | SI2 | RI  });
-    addInstruction(0x0003, { SRE | SI1 | SI2 | RI  });
-
-    addInstruction(0x0004, { SO1 | SRE | SI1 | SI2 | RI });
-    addInstruction(0x0005, { SO2 | SRE | SI1 | SI2 | RI });
-    addInstruction(0x0006, { SO1 | SO2 | SRE | SI1 | RI });
+    //                   Index register  MAR in     Register into ram
+    addInstruction(0x0000, 0x0FFF, { IRO | RCI, SRE | RI, EO | BRO | RMI  });
+    addInstruction(0x1000, 0x1FFF, { IRO | RCI, SRE | RI, RMO | RI });
+    addInstruction(0x2000, 0x2FFF, { IRO | RCI, RI, 0});
 
 
     // Move register to register

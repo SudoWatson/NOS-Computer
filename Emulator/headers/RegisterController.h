@@ -21,6 +21,7 @@ class RegisterController : public Module, public IRegisterController {
     Bus* MainBus = nullptr;
     Bus* LeftHandBus = nullptr;
     Bus* RightHandBus = nullptr;
+    Bus* MARBus = nullptr;
 
     const static char GPR_COUNT = 0b1111 + 1;
     const static char SPR_COUNT = 0b11 + 1;
@@ -46,7 +47,7 @@ class RegisterController : public Module, public IRegisterController {
     uint8_t getSPROutIndex();
 
 public:
-    RegisterController(Bus& mainBus, Bus& leftHandBus, Bus& rightHandBus);
+    RegisterController(Bus& mainBus, Bus& leftHandBus, Bus& rightHandBus, Bus& marBus);
     ~RegisterController();
 
     void AssertToMainBus();

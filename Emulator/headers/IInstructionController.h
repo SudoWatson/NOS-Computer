@@ -8,16 +8,18 @@ public:
     enum ControlLines {
         IRI = 1 << 0,  // Instruction Register In
         IRO = 1 << 1,  // Instructino Register Out
-        RCI = 1 << 2,  // Register Controller In
+        RCI = 1 << 2,  // Register Controller In - Might be able to just always do this in the fetch cycle
         SI1 = 1 << 3,  // Register Controller SPR Index 1
         SI2 = 1 << 4,  // Register Controller SPR Index 2
         SRE = 1 << 5,  // Register Controller Enable SPR instead
         SO1 = 1 << 6,  // Register Controller SPR Out Index 1
         SO2 = 1 << 7,  // Register Controller SPR Out Index 1
         RI  = 1 << 8,  // Register In
-        BRO = 1 << 9,  // Bypass Register Out
+        BRO = 1 << 9,  // Bypass Register Out - Needs EO at same time
         EI  = 1 << 10,  // ALU Instruction In
         EO  = 1 << 11,  // ALU Out
+        RMI = 1 << 12,  // RAM In
+        RMO = 1 << 13,  // RAM Out
     };
 
     const uint16_t MAR = SRE;             // Memory Address Register Enable

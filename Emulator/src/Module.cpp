@@ -8,7 +8,6 @@ void Module::performConnectControlLines(IInstructionController &ptrIC) { }
 
 void Module::Reset() {
     performReset();
-    performUpdateLines();
 }
 
 void Module::ClockHigh() {

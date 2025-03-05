@@ -1,7 +1,8 @@
 // src/main.cpp
-#include "../headers/Bus.h"
-#include "../headers/RegisterController.h"
 #include "../headers/ALU.h"
+#include "../headers/Bus.h"
+#include "../headers/RAM.h"
+#include "../headers/RegisterController.h"
 #include "InstructionController.h"
 #include "ModuleCommonControl.h"
 #include <cstdint>
@@ -22,6 +23,7 @@ int main() {
     Bus mainBus;
     Bus lhBus;
     Bus rhBus;
+    Bus marBus;
 
 
     ModuleCommonControl mcc;
@@ -32,82 +34,59 @@ int main() {
     ALU alu(mainBus, lhBus, rhBus);
     mcc.AddModule(&alu);
 
-    RegisterController rc(mainBus, lhBus, rhBus);
+    RegisterController rc(mainBus, lhBus, rhBus, marBus);
     mcc.AddModule(&rc);
+
+    RAM ram(mainBus, marBus);
+    mcc.AddModule(&ram);
 
     mcc.ConnectControlLines(ic);
 
     mcc.Reset();
+    mcc.UpdateLines();
 
 
-    // Load into SPR
-    inputValue.value = 0x0000;
+    // This one works
+    // Load into Register
+    inputValue.value = 0x2001;
     mcc.FullCycle();
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
-    inputValue.value = 0x0015;
+    mcc.FullCycle();
+    inputValue.value = 0xA675;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
+    mcc.FullCycle();
 
-    // Load into SPR
+    // This is loading 2 into the GPR for some reason. Also loading 0 before hand for some reason
+    // Load into Register
     inputValue.value = 0x0001;
     mcc.FullCycle();
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
-    inputValue.value = 0x0034;
-    mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
-
-    // Load into SPR
     inputValue.value = 0x0002;
-    mcc.FullCycle();
-    mainBus.Assert(&inputValue.value);
-    mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
-    inputValue.value = 0x0084;
-    mainBus.Assert(&inputValue.value);
-    mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
-
-    // Load into SPR
-    inputValue.value = 0x0003;
-    mcc.FullCycle();
-    mainBus.Assert(&inputValue.value);
-    mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
-    inputValue.value = 0x0672;
-    mainBus.Assert(&inputValue.value);
-    mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
-
-
-    // Move SPR
-    inputValue.value = 0x0004;
-    mcc.FullCycle();
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
     mcc.FullCycle();
 
-    // Move SPR
-    inputValue.value = 0x0005;
+    // Load into Register
+    inputValue.value = 0x1002;
     mcc.FullCycle();
+    mainBus.Assert(&inputValue.value);
+    mcc.FullCycle();
+    mainBus.UnAssert(&inputValue.value);
+    mcc.FullCycle();
+    inputValue.value = 0x0002;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
     mcc.FullCycle();
 
-    // Move SPR
-    inputValue.value = 0x0006;
-    mcc.FullCycle();
-    mainBus.Assert(&inputValue.value);
-    mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
-    mcc.FullCycle();
 
     return 0;
 }

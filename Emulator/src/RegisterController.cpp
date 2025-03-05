@@ -3,10 +3,11 @@
 
 #define RC RegisterController
 
-RC::RegisterController(Bus& mainBus, Bus& leftHandBus, Bus& rightHandBus) {
+RC::RegisterController(Bus& mainBus, Bus& leftHandBus, Bus& rightHandBus, Bus& marBus) {
     MainBus = &mainBus;
     LeftHandBus = &leftHandBus;
     RightHandBus = &rightHandBus;
+    MARBus = &marBus;
 
     // Initialize the 16 GPRs
     // TODO: Do we actually want to create the 16 registers outside of here and tie them to the RC?
@@ -26,7 +27,7 @@ RC::RegisterController(Bus& mainBus, Bus& leftHandBus, Bus& rightHandBus) {
         generalRegisters[i] = gpr;
     }
 
-    for (int i = 0; i < SPR_COUNT; i++) {
+    for (char i = 0; i < SPR_COUNT; i++) {
         bool* enable =  new bool(false);
         bool* outEnable =  new bool(false);
 
@@ -35,7 +36,11 @@ RC::RegisterController(Bus& mainBus, Bus& leftHandBus, Bus& rightHandBus) {
 
         GPR* spr = new GPR(sprEnables[i], nullptr, sprOutEnables[i]);
         spr->MainBus = MainBus;
-        spr->RightHandBus = MainBus;  // TODO: Can this just be the main bus?
+        spr->RightHandBus = MainBus;
+        if (i == 0)
+        {  // MAR is connected to a different bus
+            spr->RightHandBus = MARBus;
+        }
         specialRegisters[i] = spr;
     }
 }
@@ -83,16 +88,14 @@ void RC::performUpdateLines() {
     }
 
 
-    for (int i = 0; i < SPR_COUNT; i++) {
+    for (char i = 0; i < SPR_COUNT; i++) {
         *sprEnables[i] = false;
-        *sprOutEnables[i] = false;
+        *sprOutEnables[i] = i == 0;  // MAR Always outputs, everything else should stop outputting
     }
     if (*RegisterControllerSPREnable) {
         *sprEnables[getSPRIndex()] = true;
     }
-    if (*RegisterControllerSPROutIndex1 | *RegisterControllerSPROutIndex2) {
-        *sprOutEnables[getSPROutIndex()] = true;
-    }
+    *sprOutEnables[getSPROutIndex()] = true;
 
     for (GPR* spr : specialRegisters) {
         spr->UpdateLines();
