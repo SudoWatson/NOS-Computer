@@ -1,4 +1,5 @@
 #include "../headers/InstructionController.h"
+#include "IInstructionController.h"
 #include <cstdint>
 #include <bits/stdc++.h>
 #include <iostream>
@@ -91,12 +92,18 @@ void IC::addInstruction(uint16_t instructionLow, uint16_t instructionHigh, std::
 }
 
 void IC::setupInstructionSet() {
+    // NOP in all spaces by default
     addInstruction(0x0000, 0xFFFF, {/*RO|*/ IRI, 0, /*RO|*/ 0});
 
-    addInstruction(0x8000, 0xFFFF, {/*RO|*/ IRI, RCI|EI, /*RO|*/ EO|RI});
-    addInstruction(0x1000, 0x1FFF, {/*RO|*/ IRI, RCI, /*RO|*/ RI});
-    addInstruction(0x2000, 0x2FFF, {/*RO|*/ IRI, RCI, /*RO|*/ EO|BRO});
-    addInstruction(0x3000, 0x3FFF, {/*RO|*/ IRI, RCI, /*RO|*/ EO|BRO|RI});
+
+    // Load SPR 00
+    // 000   00XX
+    //
+
+    addInstruction(0x0000, {/*RO|*/ IRI, SRE | RI, /*RO|*/0 });
+    addInstruction(0x0001, {/*RO|*/ IRI, SRE | SI1 | RI, /*RO|*/0 });
+    addInstruction(0x0002, {/*RO|*/ IRI, SRE | SI2 | RI, /*RO|*/0 });
+    addInstruction(0x0003, {/*RO|*/ IRI, SRE | SI1 | SI2 | RI, /*RO|*/0 });
 
 
     // Move register to register

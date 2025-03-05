@@ -40,67 +40,50 @@ int main() {
     mcc.Reset();
 
 
-    // Load value into reg 0
-    inputValue.value = 0x1000;
-    mainBus.Assert(&inputValue.value);
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
-    inputValue.value = 0b1000000000011011;
+    // Not actually loading value. Need to see why
+    // Load into SPR
+    inputValue.value = 0x0000;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
-
-    
-    // 1000 00DC and 01DC for Rotate and Shift
-
-    // Rotate Left 0 into 1
-    inputValue.value = 0x8001;
+    inputValue.value = 0x0015;
     mainBus.Assert(&inputValue.value);
-    mcc.FullCycle();
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
     mcc.FullCycle();
 
-    // Rotate Right 0 into 2
-    inputValue.value = 0x8202;
+    // Load into SPR
+    inputValue.value = 0x0001;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
+    mainBus.UnAssert(&inputValue.value);
+    inputValue.value = 0x0034;
+    mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
     mcc.FullCycle();
 
-    // Shift Left 0 into 3
-    inputValue.value = 0x8403;
+    // Load into SPR
+    inputValue.value = 0x0002;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
+    mainBus.UnAssert(&inputValue.value);
+    inputValue.value = 0x0084;
+    mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
     mcc.FullCycle();
 
-    // Shift Right 0 into 4
-    inputValue.value = 0x8604;
+    // Load into SPR
+    inputValue.value = 0x0003;
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
+    mainBus.UnAssert(&inputValue.value);
+    inputValue.value = 0x0672;
+    mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
     mcc.FullCycle();
-
-
-    std::cout << "Register Values:" << std::endl;
-    for (int i = 0; i < 16; i++)
-    {
-        std::cout << "Register " << i << ": ";
-        // Read register value
-        inputValue.value = 0x2000 | (i << 4);
-        mainBus.Assert(&inputValue.value);
-        mcc.FullCycle();
-        mcc.FullCycle();
-        mainBus.UnAssert(&inputValue.value);
-        std::cout << *mainBus.GetValue() << std::endl;
-        mcc.FullCycle();
-    }
-
 
     return 0;
 }

@@ -25,6 +25,19 @@ RC::RegisterController(Bus& mainBus, Bus& leftHandBus, Bus& rightHandBus) {
         gpr->RightHandBus = RightHandBus;
         generalRegisters[i] = gpr;
     }
+
+    for (int i = 0; i < SPR_COUNT; i++) {
+        bool* enable =  new bool(false);
+        bool* outEnable =  new bool(false);
+
+        sprEnables[i] = enable;
+        sprOutEnables[i] = outEnable;
+
+        GPR* spr = new GPR(sprEnables[i], nullptr, sprOutEnables[i]);
+        spr->MainBus = MainBus;
+        spr->RightHandBus = RightHandBus;  // TODO: Can this just be the main bus?
+        specialRegisters[i] = spr;
+    }
 }
 
 RC::~RegisterController() {
@@ -34,12 +47,21 @@ RC::~RegisterController() {
         delete registerLHEnables[i];
         delete registerRHEnables[i];
     }
+
+    for (int i = 0; i < SPR_COUNT; i++) {
+        delete specialRegisters[i];
+        delete sprEnables[i];
+        delete sprOutEnables[i];
+    }
 }
 
 void RC::performReset() {
     value = 0;
     for (GPR* gpr : generalRegisters) {
         gpr->Reset();
+    }
+    for (GPR* spr : specialRegisters) {
+        spr->Reset();
     }
 }
 
@@ -50,32 +72,70 @@ void RC::performClockHigh() {
     for (GPR* gpr : generalRegisters) {
         gpr->ClockHigh();
     }
+    for (GPR* spr : specialRegisters) {
+        spr->ClockHigh();
+    }
 }
 
 void RC::performUpdateLines() {
     for (GPR* gpr : generalRegisters) {
         gpr->UpdateLines();
     }
+    for (GPR* spr : specialRegisters) {
+        spr->UpdateLines();
+    }
+
+
+    for (int i = 0; i < SPR_COUNT; i++) {
+        *sprEnables[i] = false;
+        *sprOutEnables[i] = false;
+    }
+    if (*RegisterControllerSPREnable) {
+        *sprEnables[getSPRIndex()] = true;
+    }
+    if (*RegisterControllerSPROutIndex1 || *RegisterControllerSPROutIndex2) {
+        *sprOutEnables[getSPROutIndex()] = true;
+    }
+}
+
+uint8_t RC::getSPRIndex() {
+    return (*RegisterControllerSPRIndex2 << 1) | *RegisterControllerSPRIndex1;
+}
+
+uint8_t RC::getSPROutIndex() {
+    return (*RegisterControllerSPROutIndex2 << 1) | *RegisterControllerSPROutIndex1;
 }
 
 void RC::performConnectControlLines(IInstructionController &ptrIC) {
     RegisterControllerIn = ptrIC.GetControlLinePtr(ptrIC.RCI);
     RegisterIn = ptrIC.GetControlLinePtr(ptrIC.RI);
+
+    RegisterControllerSPREnable = ptrIC.GetControlLinePtr(ptrIC.SRE);
+
+    RegisterControllerSPRIndex1 = ptrIC.GetControlLinePtr(ptrIC.SI1);
+    RegisterControllerSPRIndex2 = ptrIC.GetControlLinePtr(ptrIC.SI2);
+
+    RegisterControllerSPROutIndex1 = ptrIC.GetControlLinePtr(ptrIC.SO1);
+    RegisterControllerSPROutIndex2 = ptrIC.GetControlLinePtr(ptrIC.SO2);
+
     for (GPR* gpr : generalRegisters) {
         gpr->RegisterControlLines(ptrIC, *this);
+    }
+    for (GPR* spr : specialRegisters) {
+        spr->RegisterControlLines(ptrIC, *this);
     }
 }
 
 // Methods for getting the various register indexes
 // NOTE: Would be nice if these could be like getters
 // WARN: Probably needs to be rethinked to get the SPRs working as well
-uint8_t RC::registerIndex() {
+uint8_t RC::getGPRIndex() {
     return value & 0b1111;
 }
-uint8_t RC::rhRegisterIndex() {
+uint8_t RC::getGPRRHIndex() {
     return (value >> 4) & 0b1111;
 }
-uint8_t  RC::lhRegisterIndex() {
+uint8_t  RC::getGPRLHIndex() {
     return (value >> 8) & 0b1111;
 }
 
@@ -87,13 +147,20 @@ void RC::UnAssertToMainBus() {
     MainBus->UnAssert(&value);
 }
 void RC::LoadFromMainBus() {
-    *registerEnables[registerIndex()] = false;
-    *registerLHEnables[lhRegisterIndex()] = false;
-    *registerRHEnables[rhRegisterIndex()] = false;
+    *registerEnables[getGPRIndex()] = false;
+    *registerRHEnables[getGPRRHIndex()] = false;
+    *registerLHEnables[getGPRLHIndex()] = false;
     value = *MainBus->GetValue();
-    *registerEnables[registerIndex()] = true;
-    *registerLHEnables[lhRegisterIndex()] = true;
-    *registerRHEnables[rhRegisterIndex()] = true;
+    *registerLHEnables[getGPRLHIndex()] = true;
+
+    if (!*RegisterControllerSPREnable) {
+        *registerEnables[getGPRIndex()] = true;
+    }
+
+    if (!*RegisterControllerSPROutIndex1 && !*RegisterControllerSPROutIndex2) {
+        *registerRHEnables[getGPRRHIndex()] = true;
+    }
+
 }
 
 bool* RC::GetRegisterInControlLinePtr() {

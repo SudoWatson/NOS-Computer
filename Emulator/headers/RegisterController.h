@@ -8,6 +8,11 @@
 class RegisterController : public Module, public IRegisterController {
     // RC Control Lines
     bool* RegisterControllerIn = nullptr;
+    bool* RegisterControllerSPREnable = nullptr;
+    bool* RegisterControllerSPRIndex1 = nullptr;
+    bool* RegisterControllerSPRIndex2 = nullptr;
+    bool* RegisterControllerSPROutIndex1 = nullptr;
+    bool* RegisterControllerSPROutIndex2 = nullptr;
 
     // Register Control Lines
     bool* RegisterIn = nullptr;
@@ -18,19 +23,27 @@ class RegisterController : public Module, public IRegisterController {
     Bus* RightHandBus = nullptr;
 
     const static char GPR_COUNT = 0b1111 + 1;
+    const static char SPR_COUNT = 0b11 + 1;
     GPR* generalRegisters[GPR_COUNT];
     bool* registerEnables[GPR_COUNT];
     bool* registerLHEnables[GPR_COUNT];
     bool* registerRHEnables[GPR_COUNT];
+
+    GPR* specialRegisters[SPR_COUNT];
+    bool* sprEnables[SPR_COUNT];
+    bool* sprOutEnables[SPR_COUNT];
 
     void performReset() override;
     void performClockHigh() override;
     void performUpdateLines() override;
     void performConnectControlLines(IInstructionController &ptrIC) override;
 
-    uint8_t registerIndex();
-    uint8_t rhRegisterIndex();
-    uint8_t lhRegisterIndex();
+    uint8_t getGPRIndex();
+    uint8_t getGPRRHIndex();
+    uint8_t getGPRLHIndex();
+
+    uint8_t getSPRIndex();
+    uint8_t getSPROutIndex();
 
 public:
     RegisterController(Bus& mainBus, Bus& leftHandBus, Bus& rightHandBus);

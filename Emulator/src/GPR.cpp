@@ -19,11 +19,15 @@ void GPR::performClockHigh() {
 }
 void GPR::performUpdateLines() {
     // If register is enabled assert
-    if (*ptrLHEnable) {
-        AssertToLeftHandBus();
-    } else {
-        UnAssertToLeftHandBus();
+    if (ptrLHEnable != nullptr)
+    {
+        if (*ptrLHEnable) {
+            AssertToLeftHandBus();
+        } else {
+            UnAssertToLeftHandBus();
+        }
     }
+
 
     if (*ptrRHEnable) {
         AssertToRightHandBus();
