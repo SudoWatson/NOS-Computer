@@ -1,5 +1,8 @@
 #pragma once
 
+#include <cstdint>
+#include <bits/stdc++.h>
+
 class IInstructionController {
 public:
     enum ControlLines {
@@ -16,6 +19,18 @@ public:
         EI  = 1 << 10,  // ALU Instruction In
         EO  = 1 << 11,  // ALU Out
     };
+
+    const uint16_t MAR = SRE;             // Memory Address Register Enable
+    const uint16_t PCE = SRE | SI1;       // Program Counter Enable
+    const uint16_t SPE = SRE | SI2;       // Stack Pointer Enable
+    const uint16_t IDKE= SRE | SI1 | SI2; // IDK yet Register Enable
+
+    const uint16_t PCO = SO1;             // Program Counter Enable
+    const uint16_t SPO = SO2;             // Stack Pointer Enable
+    const uint16_t IDKO= SO1 | SO2;       // IDK yet Register Enable
+
+    const uint16_t FETCH1 = PCO | MAR | RI;  // First step in fetch cycle
+    const uint16_t FETCH2 = /*RAMO |*/ IRI;  // Second step in fetch cycle
 
     /** Gets a pointer to the bool for the control line requested */
     virtual bool* GetControlLinePtr(ControlLines controlLine) = 0;

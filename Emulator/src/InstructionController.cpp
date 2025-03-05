@@ -81,6 +81,8 @@ void IC::addInstruction(uint16_t instruction, std::initializer_list<uint64_t> st
 void IC::addInstruction(uint16_t instructionLow, uint16_t instructionHigh, std::initializer_list<uint64_t> steps) {
     for (; instructionLow <= instructionHigh; instructionLow++) {
         int stepIndex = 0;
+        instructionSet[instructionLow][stepIndex++] = FETCH1;
+        instructionSet[instructionLow][stepIndex++] = FETCH2;
         for (auto& step : steps) {
             instructionSet[instructionLow][stepIndex++] = step;
         }
@@ -93,23 +95,21 @@ void IC::addInstruction(uint16_t instructionLow, uint16_t instructionHigh, std::
 
 void IC::setupInstructionSet() {
     // NOP in all spaces by default
-    addInstruction(0x0000, 0xFFFF, {/*RO|*/ IRI, 0, /*RO|*/ 0});
+    addInstruction(0x0000, 0xFFFF, {0});
 
 
     // Load SPR 00
     // 000   00XX
     //
 
-    addInstruction(0x0000, {/*RO|*/ IRI, SRE | RI, /*RO|*/0 });
-    addInstruction(0x0001, {/*RO|*/ IRI, SRE | SI1 | RI, /*RO|*/0 });
-    addInstruction(0x0002, {/*RO|*/ IRI, SRE | SI2 | RI, /*RO|*/0 });
-    addInstruction(0x0003, {/*RO|*/ IRI, SRE | SI1 | SI2 | RI, /*RO|*/0 });
-    
-     
-    addInstruction(0x0004, {/*RO|*/ IRI, SO1 | SRE | SI1 | SI2 | RI, /*RO|*/0 });
-    addInstruction(0x0005, {/*RO|*/ IRI, SO2 | SRE | SI1 | SI2 | RI, /*RO|*/0 });
-    addInstruction(0x0006, {/*RO|*/ IRI, SO1 | SO2 | SRE | SI1 | RI, /*RO|*/0 });
-    
+    addInstruction(0x0000, { SRE | RI  });
+    addInstruction(0x0001, { SRE | SI1 | RI  });
+    addInstruction(0x0002, { SRE | SI2 | RI  });
+    addInstruction(0x0003, { SRE | SI1 | SI2 | RI  });
+
+    addInstruction(0x0004, { SO1 | SRE | SI1 | SI2 | RI });
+    addInstruction(0x0005, { SO2 | SRE | SI1 | SI2 | RI });
+    addInstruction(0x0006, { SO1 | SO2 | SRE | SI1 | RI });
 
 
     // Move register to register

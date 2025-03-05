@@ -42,6 +42,7 @@ int main() {
 
     // Load into SPR
     inputValue.value = 0x0000;
+    mcc.FullCycle();
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
@@ -49,10 +50,10 @@ int main() {
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
-    mcc.FullCycle();
 
     // Load into SPR
     inputValue.value = 0x0001;
+    mcc.FullCycle();
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
@@ -60,10 +61,10 @@ int main() {
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
-    mcc.FullCycle();
 
     // Load into SPR
     inputValue.value = 0x0002;
+    mcc.FullCycle();
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
@@ -71,10 +72,10 @@ int main() {
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
-    mcc.FullCycle();
 
     // Load into SPR
     inputValue.value = 0x0003;
+    mcc.FullCycle();
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
@@ -82,31 +83,30 @@ int main() {
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
-    mcc.FullCycle();
 
 
     // Move SPR
     inputValue.value = 0x0004;
+    mcc.FullCycle();
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
-    mcc.FullCycle();
     mcc.FullCycle();
 
     // Move SPR
     inputValue.value = 0x0005;
+    mcc.FullCycle();
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
-    mcc.FullCycle();
     mcc.FullCycle();
 
     // Move SPR
     inputValue.value = 0x0006;
+    mcc.FullCycle();
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
     mainBus.UnAssert(&inputValue.value);
-    mcc.FullCycle();
     mcc.FullCycle();
 
     return 0;
