@@ -100,6 +100,11 @@ void RC::performUpdateLines() {
     for (GPR* spr : specialRegisters) {
         spr->UpdateLines();
     }
+    if (!*RegisterControllerSPREnable) {
+        *registerEnables[getGPRIndex()] = true;
+    } else {
+        *registerEnables[getGPRIndex()] = false;
+    }
 }
 
 uint8_t RC::getSPRIndex() {

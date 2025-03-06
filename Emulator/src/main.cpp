@@ -62,7 +62,7 @@ int main() {
 
     // This is loading 2 into the GPR for some reason. Also loading 0 before hand for some reason
     // Load into Register
-    inputValue.value = 0x0001;
+    inputValue.value = 0x0010;
     mcc.FullCycle();
     mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
