@@ -13,6 +13,8 @@ class GPR : public Module {
     bool* ptrRHEnable = nullptr;
 
     bool* RegisterIn = nullptr;
+    bool* Increment = nullptr;
+    bool* Decrement = nullptr;
 
     void performReset() override;
     void performClockHigh() override;

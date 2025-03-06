@@ -16,6 +16,8 @@ class RegisterController : public Module, public IRegisterController {
 
     // Register Control Lines
     bool* RegisterIn = nullptr;
+    bool* Increment = nullptr;
+    bool* Decrement = nullptr;
 
     uint16_t value;
     Bus* MainBus = nullptr;
@@ -55,4 +57,6 @@ public:
     void LoadFromMainBus();
 
     bool* GetRegisterInControlLinePtr() override;
+    bool* GetRegisterIncrementLinePtr() override;
+    bool* GetRegisterDecrementLinePtr() override;
 };

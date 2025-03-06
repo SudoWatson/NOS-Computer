@@ -87,7 +87,6 @@ void RC::performUpdateLines() {
         gpr->UpdateLines();
     }
 
-
     for (char i = 0; i < SPR_COUNT; i++) {
         *sprEnables[i] = false;
         *sprOutEnables[i] = i == 0;  // MAR Always outputs, everything else should stop outputting
@@ -118,6 +117,8 @@ uint8_t RC::getSPROutIndex() {
 void RC::performConnectControlLines(IInstructionController &ptrIC) {
     RegisterControllerIn = ptrIC.GetControlLinePtr(ptrIC.RCI);
     RegisterIn = ptrIC.GetControlLinePtr(ptrIC.RI);
+    Increment = ptrIC.GetControlLinePtr(ptrIC.INC);
+    Decrement = ptrIC.GetControlLinePtr(ptrIC.DEC);
 
     RegisterControllerSPREnable = ptrIC.GetControlLinePtr(ptrIC.SRE);
 
@@ -174,4 +175,12 @@ void RC::LoadFromMainBus() {
 
 bool* RC::GetRegisterInControlLinePtr() {
     return RegisterIn;
+}
+
+bool* RC::GetRegisterIncrementLinePtr() {
+    return Increment;
+}
+
+bool* RC::GetRegisterDecrementLinePtr() {
+    return Decrement;
 }

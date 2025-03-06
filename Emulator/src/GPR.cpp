@@ -16,6 +16,14 @@ void GPR::performClockHigh() {
     {
         LoadFromMainBus();
     }
+    if (*ptrEnable && *Increment)
+    {
+        value++;
+    }
+    if (*ptrEnable && *Decrement)
+    {
+        value--;
+    }
 }
 void GPR::performUpdateLines() {
     // If register is enabled assert
@@ -41,6 +49,8 @@ void GPR::performConnectControlLines(IInstructionController &ptrIC) {
 
 void GPR::performConnectControlLines(IInstructionController &ptrIC, IRegisterController &ptrRC) {
     RegisterIn = ptrRC.GetRegisterInControlLinePtr();
+    Increment = ptrRC.GetRegisterIncrementLinePtr();
+    Decrement = ptrRC.GetRegisterDecrementLinePtr();
 }
 
 void GPR::RegisterControlLines(IInstructionController &ptrIC, IRegisterController &ptrRC)

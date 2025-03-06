@@ -46,6 +46,15 @@ int main() {
     mcc.UpdateLines();
 
 
+    /*
+     * Figuring out the instructions
+     * For the immediate load, I need to increment the Program Counter a second time somewhere in the instruction set
+     * hopefully without making an entire step for it
+        *
+        */
+
+
+
     mcc.FullCycle();
     mcc.FullCycle();
     mcc.FullCycle();

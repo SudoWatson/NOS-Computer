@@ -20,6 +20,8 @@ public:
         EO  = 1 << 11,  // ALU Out
         RMI = 1 << 12,  // RAM In
         RMO = 1 << 13,  // RAM Out
+        INC = 1 << 14,  // Increment
+        DEC = 1 << 15,  // Decrement
     };
 
     const uint16_t MAR = SRE;             // Memory Address Register Enable
@@ -32,7 +34,7 @@ public:
     const uint16_t IDKO= SO1 | SO2;       // IDK yet Register Enable
 
     const uint16_t FETCH1 = PCO | MAR | RI;  // First step in fetch cycle
-    const uint16_t FETCH2 = RMO | IRI /*| PCE | INC */;       // Second step in fetch cycle
+    const uint16_t FETCH2 = RMO | IRI | PCE | INC;       // Second step in fetch cycle
 
     /** Gets a pointer to the bool for the control line requested */
     virtual bool* GetControlLinePtr(ControlLines controlLine) = 0;
