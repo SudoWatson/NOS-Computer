@@ -1,6 +1,7 @@
 #include "../headers/RAM.h"
 #include <cstdint>
 #include <exception>
+#include <sys/types.h>
 
 RAM::RAM(Bus& mainBus, Bus& marBus) {
     MainBus = &mainBus;
@@ -22,11 +23,15 @@ void RAM::performUpdateLines() {
         UnAssertToMainBus();
     }
 }
+
 void RAM::performConnectControlLines(IInstructionController &ptrIC) {
     RAMOut = ptrIC.GetControlLinePtr(ptrIC.RMO);
     RAMIn = ptrIC.GetControlLinePtr(ptrIC.RMI);
 }
 
+void RAM::performReset() {
+    setupRAM();
+}
 
 void RAM::AssertToMainBus() {
     if (currentlyAsserting != nullptr)  // This might not be necessarry, but it's a sanity check and I'm too tired to fully determine if it's 100% safe without
@@ -43,3 +48,27 @@ void RAM::UnAssertToMainBus() {
 void RAM::LoadFromMainBus() {
     values[*MARBus->GetValue()] = *MainBus->GetValue();
 }
+
+
+
+void RAM::addValue(uint16_t address, uint16_t value)
+{
+    addValue(address, address, value);
+}
+void RAM::addValue(uint16_t startAddress, uint16_t endAddress, uint16_t value)
+{
+    for (; startAddress <= endAddress; startAddress++) {
+        values[startAddress] = value;
+    }
+}
+
+void RAM::setupRAM()
+{
+    uint16_t adr = 0;
+    addValue(adr++, 0x2003);
+    addValue(adr++, 0xa6df);
+
+    addValue(adr++, 0x2006);
+    addValue(adr++, 0x0042);
+}
+

@@ -15,6 +15,11 @@ class RAM : public Module {
     virtual void performClockHigh() override;
     virtual void performUpdateLines() override;
     virtual void performConnectControlLines(IInstructionController &ptrIC) override;
+    virtual void performReset() override;
+
+    void addValue(uint16_t startAddress, uint16_t value);
+    void addValue(uint16_t startAddress, uint16_t endAddress, uint16_t value);
+    void setupRAM();
 
 public:
     RAM(Bus& mainBus, Bus& MARBus);

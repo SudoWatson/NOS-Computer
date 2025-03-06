@@ -46,45 +46,36 @@ int main() {
     mcc.UpdateLines();
 
 
-    // This one works
-    // Load into Register
-    inputValue.value = 0x2001;
     mcc.FullCycle();
-    mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
     mcc.FullCycle();
-    inputValue.value = 0xA675;
-    mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
     mcc.FullCycle();
-
-    // This is loading 2 into the GPR for some reason. Also loading 0 before hand for some reason
-    // Load into Register
-    inputValue.value = 0x0010;
     mcc.FullCycle();
-    mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
     mcc.FullCycle();
-    inputValue.value = 0x0002;
-    mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
     mcc.FullCycle();
-
-    // Load into Register
-    inputValue.value = 0x1002;
     mcc.FullCycle();
-    mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
     mcc.FullCycle();
-    inputValue.value = 0x0002;
-    mainBus.Assert(&inputValue.value);
     mcc.FullCycle();
-    mainBus.UnAssert(&inputValue.value);
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mcc.FullCycle();
+    mcc.FullCycle();
     mcc.FullCycle();
 
 
