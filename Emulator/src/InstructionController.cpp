@@ -95,17 +95,16 @@ void IC::addInstruction(uint16_t instructionLow, uint16_t instructionHigh, std::
 
 void IC::setupInstructionSet() {
     // NOP in all spaces by default
-    addInstruction(0x0000, 0xFFFF, {0});
-
+    addInstruction(0x0000, 0xFFFF, {0, 0, 0, 0});
 
     // Load SPR 00
     // 000   00XX
     //
 
     //                   Index register  MAR in     Register into ram
-    addInstruction(0x0000, 0x0FFF, { IRO | RCI, SO1 | SRE | RI, EO | BRO | RMI  });
-    addInstruction(0x1000, 0x1FFF, { IRO | RCI, SO1 | SRE | RI, RMO | RI });
-    addInstruction(0x2000, 0x2FFF, { IRO | RCI, SO1 | RI, 0});
+    addInstruction(0x0000, 0x0FFF, { IRO | RCI, SO1 | SRE | RI, EO | BRO | RMI | SI1 | SRE | INC, 0 });
+    addInstruction(0x1000, 0x1FFF, { IRO | RCI, SO1 | SRE | RI, RMO | RI, SI1 | SRE | INC });
+    addInstruction(0x2000, 0x2FFF, { IRO | RCI, SO1 | RI, 0, 0 });
 
 
     // Move register to register
