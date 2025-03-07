@@ -17,6 +17,8 @@ public:
     uint16_t value;
 };
 
+#define runInstruction() mcc.FullCycle();mcc.FullCycle();mcc.FullCycle();mcc.FullCycle();mcc.FullCycle();mcc.FullCycle();
+
 int main() {
     valueHolder inputValue;
 
@@ -55,38 +57,10 @@ int main() {
 
 
 
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
-    mcc.FullCycle();
 
+    runInstruction();
+    runInstruction();
+    runInstruction();
 
     return 0;
 }

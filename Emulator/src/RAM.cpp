@@ -65,10 +65,12 @@ void RAM::addValue(uint16_t startAddress, uint16_t endAddress, uint16_t value)
 void RAM::setupRAM()
 {
     uint16_t adr = 0;
-    addValue(adr++, 0x1003);
-    addValue(adr++, 0xa6df);
+    addValue(adr++, 0x9003);
+    addValue(adr++, 0x0002);
 
-    addValue(adr++, 0x1006);
-    addValue(adr++, 0x0042);
+    addValue(adr++, 0x9006);
+    addValue(adr++, 0x0003);
+
+    addValue(adr++, 0x0360);
 }
 
