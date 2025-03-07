@@ -1,6 +1,7 @@
 #include "../headers/RAM.h"
 #include <cstdint>
 #include <exception>
+#include <filesystem>
 #include <sys/types.h>
 
 RAM::RAM(Bus& mainBus, Bus& marBus) {
@@ -51,12 +52,19 @@ void RAM::LoadFromMainBus() {
 
 
 
+uint16_t adr = 0;
+void RAM::addValue(uint16_t value)
+{
+    addValue(adr++, value);
+}
 void RAM::addValue(uint16_t address, uint16_t value)
 {
+    adr = address + 1;
     addValue(address, address, value);
 }
 void RAM::addValue(uint16_t startAddress, uint16_t endAddress, uint16_t value)
 {
+    adr = endAddress + 1;
     for (; startAddress <= endAddress; startAddress++) {
         values[startAddress] = value;
     }
@@ -64,13 +72,24 @@ void RAM::addValue(uint16_t startAddress, uint16_t endAddress, uint16_t value)
 
 void RAM::setupRAM()
 {
-    uint16_t adr = 0;
-    addValue(adr++, 0x9003);
-    addValue(adr++, 0x0002);
+    addValue(0xC402); // Load 2 immediate
+    addValue(0xA4B2);
 
-    addValue(adr++, 0x9006);
-    addValue(adr++, 0x0003);
+    addValue(0xC414); // Load 4 addressed
+    addValue(0xD4F8);
 
-    addValue(adr++, 0x0360);
+    addValue(0x0248); // 2 + 4 > 8
+
+    addValue(0xC448); // Store 8
+    addValue(0x0F52);
+
+    addValue(0xC411); // Load 1 addressed
+    addValue(0x0F52);
+
+    addValue(0xD4F8, 0x0542);
+    // 1 = xA9F4 d43508
+    // 2 = xA4B2 d42162
+    // 4 = x0542 d01346
+    // 8 = xA9F4 d43508
 }
 

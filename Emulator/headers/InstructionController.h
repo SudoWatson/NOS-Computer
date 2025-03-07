@@ -5,7 +5,7 @@
 #include <cstdint>
 #include <initializer_list>
 #define INSTRUCTION_WORD_LENGTH 64
-#define STEP_SIZE 0b101+1  // Define the addressable bits and our count is plus 1 of the value of them all on // 5 steps
+#define STEP_SIZE 0b110+1  // Define the addressable bits and our count is plus 1 of the value of them all on // 7 steps
 
 class InstructionController : public Module, public IInstructionController {
 private:
@@ -22,6 +22,7 @@ private:
     void setupInstructionSet();
     void addInstruction(uint16_t instruction, std::initializer_list<uint64_t> steps);
     void addInstruction(uint16_t instructionLow, uint16_t instructionHigh, std::initializer_list<uint64_t> steps);
+    void addInstruction(uint16_t instructionLow, uint16_t instructionHigh, std::initializer_list<uint64_t> steps, bool verbose);
 
     void performReset() override;
     void performClockHigh() override;

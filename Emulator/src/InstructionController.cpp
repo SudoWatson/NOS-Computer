@@ -79,11 +79,18 @@ void IC::addInstruction(uint16_t instruction, std::initializer_list<uint64_t> st
     addInstruction(instruction, instruction, steps);
 }
 void IC::addInstruction(uint16_t instructionLow, uint16_t instructionHigh, std::initializer_list<uint64_t> steps) {
+    addInstruction(instructionLow, instructionHigh, steps, true);
+}
+void IC::addInstruction(uint16_t instructionLow, uint16_t instructionHigh, std::initializer_list<uint64_t> steps, bool verbose) {
     for (; instructionLow <= instructionHigh; instructionLow++) {
         int stepIndex = 0;
         instructionSet[instructionLow][stepIndex++] = FETCH1;
         instructionSet[instructionLow][stepIndex++] = FETCH2;
         for (auto& step : steps) {
+            if (verbose && (instructionSet[instructionLow][stepIndex] != 0ULL) && (stepIndex != 0) && (stepIndex != 1))
+            {
+                std::cout << "Overlapping instructions at address " << instructionLow << " step #" << stepIndex << ". Original instruction: " << instructionSet[instructionLow][stepIndex] << "  Overriding Instruction: " << step << std::endl;
+            }
             instructionSet[instructionLow][stepIndex++] = step;
         }
         if (instructionLow == 0xFFFF) // Will overflow and never get higher than max instructionHigh
@@ -95,16 +102,39 @@ void IC::addInstruction(uint16_t instructionLow, uint16_t instructionHigh, std::
 
 void IC::setupInstructionSet() {
     // NOP in all spaces by default
-    addInstruction(0x0000, 0xFFFF, {0, 0, 0, 0});
+    addInstruction(0x0000, 0xFFFF, {0, 0, 0, 0, 0}, false);
 
     // Load SPR 00
     // 000   00XX
     //
 
     //                   Index register  MAR in     Register into ram
-    addInstruction(0x0000, 0x7FFF, { IRO | RCI, EO | RI, 0, 0 });
+    addInstruction(0x0000, 0x88FF, { IRO | RCI, EO | RI, 0, 0, 0 }); // Arithmetic + Shift + Bitwise Passthrough
+    addInstruction(0x9000, 0xB888, { IRO | RCI, EO | RI, 0, 0, 0 }); // Bitwise pt 1
+    addInstruction(0xC000, 0xC0FF, { IRO | RCI, EO | BRO | RI, 0, 0, 0 }); // GPR to GPR
+    // addInstruction(0xC000, 0xC0FF, { IRO | RCI, EO | BRO | RI, 0, 0, 0 }); // GPR to SPR
+    // addInstruction(0xC400, 0xC40F, {  }); // SPR to GPR
+    // addInstruction(0xC000, 0xC888, {  }); // SPR to SPR
+    addInstruction(0xC400, 0xC40F, { IRO | RCI | MAR | INC, RMO | RI, PCE | INC, 0, 0 }); // GPR Immediate Load
+    addInstruction(0xC410, 0xC41F, { IRO | RCI | MAR | INC, RMO | MAR | RI, RMO | RI, PCE | INC, 0}); // GPR Addressed Load
+    // addInstruction(0xC000, 0xC00F, {  }); // SPR immediate load
+    // addInstruction(0xC000, 0xC00F, {  }); // SPR Addressed Load
+    addInstruction(0xC440, 0xC44F, { IRO | RCI | MAR | INC, RMO | MAR | RI, EO | BRO | RMI | PCE | INC, 0, 0 }); // Store GPR
+    // addInstruction(0xC000, 0xC00F, {  }); // Store SPR
+    addInstruction(0xC460, 0xC46F, { IRO | RCI, INC, 0, 0, 0 }); // Increment GPR
+    addInstruction(0xC470, 0xC47F, { IRO | RCI, DEC, 0, 0, 0 }); // Decrement GPR
+    // addInstruction(0x9000, 0xB888, {  }); // Pop into GPR
+    // addInstruction(0x9000, 0xB888, {  }); // Pop into SPR
+    // addInstruction(0x9000, 0xB888, {  }); // Push GPR
+    // addInstruction(0x9000, 0xB888, {  }); // Push SPR - Can't push SPR 00 (MAR)
+
+    addInstruction(0xC800, 0xC8FF, { IRO | RCI, EO | RI, 0, 0, 0 }); // Bitwise not
+    addInstruction(0xD000, 0xFFFF, { IRO | RCI, EO | RI, 0, 0, 0 }); // Bitwise pt 2
+    //
+    /*
     addInstruction(0x8000, 0x8FFF, { IRO | RCI, SO1 | SRE | RI, EO | BRO | RMI | SI1 | SRE | INC, 0 });
     addInstruction(0x9000, 0x9FFF, { IRO | RCI, SO1 | SRE | RI, RMO | RI, SI1 | SRE | INC });
+    */
 
 
     // Move register to register

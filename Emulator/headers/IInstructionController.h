@@ -24,17 +24,26 @@ public:
         DEC = 1 << 15,  // Decrement
     };
 
-    const uint16_t MAR = SRE;             // Memory Address Register Enable
-    const uint16_t PCE = SRE | SI1;       // Program Counter Enable
-    const uint16_t SPE = SRE | SI2;       // Stack Pointer Enable
-    const uint16_t IDKE= SRE | SI1 | SI2; // IDK yet Register Enable
+    /* TODO: Need to specialize Special Purpose Register
+     * I'm trying to generalize the SPRs but that's getting me into some annoying issues of not having full control over them
+     * I should just treat them as they are, special. They are SPECIAL Purpose Registers, not General
+     * I need to remove all of the current SPR relating Control Lines
+     * I instead need to have individual control lines for the actions of that specific SPR.
+     * Not every SPR has all the same actions. EX: MAR just loads. PC doesn't decrement. SP does it all.
+     * This will allow me to control multiple SPRs at once as well, such as loading the IR while INC the PC
+     * Or INC PC while doing a regular register operation to do instructions in time faster
+     */
+    const uint64_t MAR = SRE;             // Memory Address Register Enable
+    const uint64_t PCE = SRE | SI1;       // Program Counter Enable
+    const uint64_t SPE = SRE | SI2;       // Stack Pointer Enable
+    const uint64_t IDKE= SRE | SI1 | SI2; // IDK yet Register Enable
 
-    const uint16_t PCO = SO1;             // Program Counter Enable
-    const uint16_t SPO = SO2;             // Stack Pointer Enable
-    const uint16_t IDKO= SO1 | SO2;       // IDK yet Register Enable
+    const uint64_t PCO = SO1;             // Program Counter Enable
+    const uint64_t SPO = SO2;             // Stack Pointer Enable
+    const uint64_t IDKO= SO1 | SO2;       // IDK yet Register Enable
 
-    const uint16_t FETCH1 = PCO | MAR | RI;  // First step in fetch cycle
-    const uint16_t FETCH2 = RMO | IRI | PCE | INC;       // Second step in fetch cycle
+    const uint64_t FETCH1 = PCO | MAR | RI;  // First step in fetch cycle
+    const uint64_t FETCH2 = RMO | IRI | PCE | INC;       // Second step in fetch cycle
 
     /** Gets a pointer to the bool for the control line requested */
     virtual bool* GetControlLinePtr(ControlLines controlLine) = 0;
