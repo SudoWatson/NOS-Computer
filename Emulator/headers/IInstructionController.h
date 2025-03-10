@@ -15,7 +15,7 @@ public:
         SO1 = 1 << 6,  // Register Controller SPR Out Index 1
         SO2 = 1 << 7,  // Register Controller SPR Out Index 1
         RI  = 1 << 8,  // Register In
-        BRO = 1 << 9,  // Bypass Register Out - Needs EO at same time
+        BRO = 1 << 9,  // Bypass Register Out - Needs EO at same time  NOTE: Might become just a Register Out that won't go through ALU, if that's les bus controllers needed
         EI  = 1 << 10,  // ALU Instruction In
         EO  = 1 << 11,  // ALU Out
         RMI = 1 << 12,  // RAM In

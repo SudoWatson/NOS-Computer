@@ -82,6 +82,11 @@ void IC::addInstruction(uint16_t instructionLow, uint16_t instructionHigh, std::
     addInstruction(instructionLow, instructionHigh, steps, true);
 }
 void IC::addInstruction(uint16_t instructionLow, uint16_t instructionHigh, std::initializer_list<uint64_t> steps, bool verbose) {
+    if (instructionLow > instructionHigh)
+    {
+        std::cout << "Attempting to fill addresses " << instructionLow << " - " << instructionHigh << ", but the high address comes before the low address" << std::endl;
+        return;
+    }
     for (; instructionLow <= instructionHigh; instructionLow++) {
         int stepIndex = 0;
         instructionSet[instructionLow][stepIndex++] = FETCH1;
@@ -109,7 +114,15 @@ void IC::setupInstructionSet() {
     //
 
     //                   Index register  MAR in     Register into ram
-    addInstruction(0x0000, 0x88FF, { IRO | RCI, EO | RI, 0, 0, 0 }); // Arithmetic + Shift + Bitwise Passthrough
+    addInstruction(0x0000, 0x3FFF, { IRO | RCI, EO | RI, 0, 0, 0 }); // Arithmetic
+    //addInstruction(0x4000, 0x7FFF, { IRO | RCI, EO | RI, 0, 0, 0 }); // Free space!
+    // TODO: More stuff is needing for flag jumping
+    addInstruction(0x4000, 0x43FF, { IRO /* |FlagRegIn*/ | MAR | INC, RMO | RCI | PCE | INC, EO | RI, EO | BRO | PCE | RI /* Flag test */, 0 }); // JMP Indexed - Next memory location is register controller instruction of registers to add together for location -  NOTE: Will need the result (enabled) register to be the same as the Right Hand register, as it will be outputting it's result on the bus
+    addInstruction(0x4400, 0x47FF, { IRO /* |FlagRegIn*/ | MAR | INC, RMO | MAR | RI, RMO | PCE | RI /* Flag test */, 0, 0 }); // JMP Addressed - Next memory address is address of stored jump address location
+    addInstruction(0x4800, 0x4BFF, { IRO /* |FlagRegIn*/ | MAR | INC, RMO | RCI | PCE | INC, EO | BRO | PCE | RI /* Flag test */, 0, 0 }); // JMP Register - Next memory location is register controller instruction of register to output for stored address
+    addInstruction(0x4C00, 0x4FFF, { IRO /* |FlagRegIn*/ | MAR | INC, RMO | PCE | RI /* Flag test */, 0, 0, 0 }); // JMP Immediate -- 0100 00MM MMMF FFFF - MMMMM: Mask select which flags to test on FFFFF: Value those flags must match - PC Load
+    // 01xx xxMM MMMF FFFF
+    addInstruction(0x8000, 0x88FF, { IRO | RCI, EO | RI, 0, 0, 0 }); // Shift + Bitwise Passthrough
     addInstruction(0x9000, 0xB888, { IRO | RCI, EO | RI, 0, 0, 0 }); // Bitwise pt 1
     addInstruction(0xC000, 0xC0FF, { IRO | RCI, EO | BRO | RI, 0, 0, 0 }); // GPR to GPR
     // addInstruction(0xC000, 0xC0FF, { IRO | RCI, EO | BRO | RI, 0, 0, 0 }); // GPR to SPR
@@ -127,6 +140,14 @@ void IC::setupInstructionSet() {
     // addInstruction(0x9000, 0xB888, {  }); // Pop into SPR
     // addInstruction(0x9000, 0xB888, {  }); // Push GPR
     // addInstruction(0x9000, 0xB888, {  }); // Push SPR - Can't push SPR 00 (MAR)
+    addInstruction(0xC600, 0xC61F, {  }); // Program Counter Immediate Load if flags are set AkA JMP
+    addInstruction(0xC620, 0xC63F, {  }); // Program Counter Immediate Load if flags are not set AkA JMP
+    addInstruction(0xC620, 0xC63F, {  }); // Program Counter Addressed Load if flags are set AkA JMP
+    addInstruction(0xC620, 0xC63F, {  }); // Program Counter Addressed Load if flags are not set AkA JMP
+
+
+    addInstruction(0xC640, 0xC65F, {  }); // Set flags
+    addInstruction(0xC660, 0xC67F, {  }); // Clear flags
 
     addInstruction(0xC800, 0xC8FF, { IRO | RCI, EO | RI, 0, 0, 0 }); // Bitwise not
     addInstruction(0xD000, 0xFFFF, { IRO | RCI, EO | RI, 0, 0, 0 }); // Bitwise pt 2

@@ -55,17 +55,19 @@ int main() {
         *
         */
 
-
-    runInstruction();
-    runInstruction();
-    runInstruction();
+    // Setup
     runInstruction();
     runInstruction();
 
-    std::cout << "RAM @ 0000: " << ram.values[0x0000] << std::endl;
-    std::cout << "RAM @ 0010: " << ram.values[0x0010] << std::endl;
-    std::cout << "RAM @ 0F52: " << ram.values[0x0F52] << std::endl;
-    std::cout << "RAM @ D4F8: " << ram.values[0xD4F8] << std::endl;
+    for (int i = 0; i < 1000; i++)
+    {
+        // Adds
+        runInstruction();
+        runInstruction();
+
+        // Jump
+        runInstruction();
+    }
 
 
     return 0;

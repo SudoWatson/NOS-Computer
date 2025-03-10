@@ -53,43 +53,47 @@ void RAM::LoadFromMainBus() {
 
 
 uint16_t adr = 0;
-void RAM::addValue(uint16_t value)
+uint16_t RAM::addValue(uint16_t value)
 {
-    addValue(adr++, value);
+    return addValue(adr, value);
 }
-void RAM::addValue(uint16_t address, uint16_t value)
+uint16_t RAM::addValue(uint16_t address, uint16_t value)
 {
-    adr = address + 1;
-    addValue(address, address, value);
+    return addValue(address, address, value);
 }
-void RAM::addValue(uint16_t startAddress, uint16_t endAddress, uint16_t value)
+uint16_t RAM::addValue(uint16_t startAddress, uint16_t endAddress, uint16_t value)
 {
-    adr = endAddress + 1;
     for (; startAddress <= endAddress; startAddress++) {
         values[startAddress] = value;
     }
+    adr = endAddress + 1;
+    return endAddress;
 }
 
 void RAM::setupRAM()
 {
-    addValue(0xC402); // Load 2 immediate
-    addValue(0xA4B2);
+    // --== Fibonnaci Sequence ==-- \\
+    // Load 0 with 0
+    // Load 1 with 1
+    // Start Loop
+    // 0 + 1 > 0
+    // 0 + 1 > 1
+    // jmp to loop start
 
-    addValue(0xC414); // Load 4 addressed
-    addValue(0xD4F8);
 
-    addValue(0x0248); // 2 + 4 > 8
+    // Load r0 with 0
+    addValue(0xC400);
+    addValue(0x0000);
+    // Load r1 with 1
+    addValue(0xC401);
+    addValue(0x0001);
 
-    addValue(0xC448); // Store 8
-    addValue(0x0F52);
-
-    addValue(0xC411); // Load 1 addressed
-    addValue(0x0F52);
-
-    addValue(0xD4F8, 0x0542);
-    // 1 = xA9F4 d43508
-    // 2 = xA4B2 d42162
-    // 4 = x0542 d01346
-    // 8 = xA9F4 d43508
+    // 0 + 1 > 0
+    uint16_t startLoopAdr = addValue(0x0010);
+    // 0 + 1 > 1
+    addValue(0x0011);
+    // JMP to loop start
+    addValue(0x4C00);  // JMP immediate with 0 mask testing 0 flag
+    addValue(startLoopAdr);  // JMP location
 }
 

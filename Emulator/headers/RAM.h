@@ -16,9 +16,9 @@ class RAM : public Module {
     virtual void performConnectControlLines(IInstructionController &ptrIC) override;
     virtual void performReset() override;
 
-    void addValue(uint16_t value);
-    void addValue(uint16_t startAddress, uint16_t value);
-    void addValue(uint16_t startAddress, uint16_t endAddress, uint16_t value);
+    uint16_t addValue(uint16_t value);
+    uint16_t addValue(uint16_t startAddress, uint16_t value);
+    uint16_t addValue(uint16_t startAddress, uint16_t endAddress, uint16_t value);
     void setupRAM();
 
 public:
