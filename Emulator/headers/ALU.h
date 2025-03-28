@@ -31,4 +31,6 @@ public:
     void AssertToMainBus();
     void UnAssertToMainBus();
     void LoadFromMainBus();
+
+    uint16_t readValue();
 };

@@ -157,3 +157,8 @@ void ALU::UnAssertToMainBus() {
 void ALU::LoadFromMainBus() {
     instructionValue = *MainBus->GetValue() >> 8;  // Left 8 bits taken
 }
+
+uint16_t ALU::readValue()
+{
+    return value;
+}

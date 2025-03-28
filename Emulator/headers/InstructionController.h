@@ -40,4 +40,7 @@ public:
 
     /** Gets a pointer to the bool for the control line requested */
     virtual bool* GetControlLinePtr(ControlLines controlLine) override;
+
+    uint8_t readCurrentStep();
+    uint16_t readCurrentInstruction();
 };

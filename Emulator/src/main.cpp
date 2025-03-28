@@ -32,10 +32,24 @@ void updateBusWindow(WINDOW* win, CPU& cpu)
 {
     werase(win);
     box(win, 0, 0);
-    mvwprintw(win, 0, 1, "Buses");
+    mvwprintw(win, 0, 1, "Buses & Data");
     mvwprintw(win, 1, 2, "Main: 0x%04X", *cpu.MainBus->GetValue());
     mvwprintw(win, 2, 2, "Left: 0x%04X", *cpu.LhBus->GetValue());
     mvwprintw(win, 3, 2, "Rght: 0x%04X", *cpu.RhBus->GetValue());
+    mvwprintw(win, 4, 2, "ALU:  0x%04X", cpu.alu->readValue());
+    mvwprintw(win, 5, 2, "MAR:  0x%04X", cpu.rc->specialRegisters[0]->readValue());
+    wrefresh(win);
+}
+
+void updateExecutionWindow(WINDOW* win, CPU& cpu)
+{
+    werase(win);
+    box(win, 0, 0);
+    mvwprintw(win, 0, 1, "Execution View");
+    mvwprintw(win, 1, 2, "PC:   0x%04X", cpu.rc->specialRegisters[1]->readValue());
+    mvwprintw(win, 2, 2, "IR:   0x%04X", cpu.ic->readCurrentInstruction());
+    mvwprintw(win, 3, 2, "Instruction: UNKNOWN");
+    mvwprintw(win, 4, 2, "Step: 0x%01d", cpu.ic->readCurrentStep());
     wrefresh(win);
 }
 
@@ -48,23 +62,19 @@ int main() {
 
     WINDOW* registers = createWindow(0, 0, 15, 60, "Registers");
     WINDOW* bus = createWindow(15, 0, 15, 60, "Buses");
+    WINDOW* execution = createWindow(30, 0, 15, 60, "Exectuiton View");
 
 
-    runInstruction();
-    runInstruction();
 
-    for (int i = 0; i < 10; i++)
+    char ch;
+    do
     {
+        runInstruction();
         updateRegisterWindow(registers, cpu);
         updateBusWindow(bus, cpu);
-        getch();  // Get character, waits for input
-        // Adds
-        runInstruction();
-        runInstruction();
-
-        // Jump
-        runInstruction();
+        updateExecutionWindow(execution, cpu);
     }
+    while ((ch = getch()) != 'q');
 
     endwin();
     return 0;

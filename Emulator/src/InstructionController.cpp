@@ -75,6 +75,16 @@ void IC::performUpdateLines() {
     }
 }
 
+uint8_t IC::readCurrentStep()
+{
+    return currentStep;
+}
+
+uint16_t IC::readCurrentInstruction()
+{
+    return storedInstruction;
+}
+
 void IC::addInstruction(uint16_t instruction, std::initializer_list<uint64_t> steps) {
     addInstruction(instruction, instruction, steps);
 }
