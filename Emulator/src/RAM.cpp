@@ -72,6 +72,7 @@ uint16_t RAM::addValue(uint16_t startAddress, uint16_t endAddress, uint16_t valu
 
 void RAM::setupRAM()
 {
+    return;
     // --== Fibonnaci Sequence ==-- \\
     // Load 0 with 0
     // Load 1 with 1
