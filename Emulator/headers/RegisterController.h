@@ -60,4 +60,6 @@ public:
     bool* GetRegisterInControlLinePtr() override;
     bool* GetRegisterIncrementLinePtr() override;
     bool* GetRegisterDecrementLinePtr() override;
+
+    uint16_t readValue();
 };

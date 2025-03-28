@@ -1,9 +1,11 @@
 // src/main.cpp
 #include "CPU.h"
+#include <cstddef>
 #include <cstdint>
 #include <ncurses.h>
 #include <iostream>
 #include <ostream>
+#include <string>
 
 #define runInstruction() cpu.FullCycle();cpu.FullCycle();cpu.FullCycle();cpu.FullCycle();cpu.FullCycle();cpu.FullCycle();cpu.FullCycle();
 
@@ -33,9 +35,9 @@ void updateBusWindow(WINDOW* win, CPU& cpu)
     werase(win);
     box(win, 0, 0);
     mvwprintw(win, 0, 1, "Buses & Data");
-    mvwprintw(win, 1, 2, "Main: 0x%04X", *cpu.MainBus->GetValue());
-    mvwprintw(win, 2, 2, "Left: 0x%04X", *cpu.LhBus->GetValue());
-    mvwprintw(win, 3, 2, "Rght: 0x%04X", *cpu.RhBus->GetValue());
+    mvwprintw(win, 1, 2, "Main: %s", cpu.MainBus->GetValue() != nullptr ? std::format("0x{:04X}", *cpu.MainBus->GetValue()).c_str() : "0x____");
+    mvwprintw(win, 2, 2, "Left: %s", cpu.LhBus->GetValue() != nullptr ? std::format("0x{:04X}", *cpu.LhBus->GetValue()).c_str() : "0x____");
+    mvwprintw(win, 3, 2, "Rght: %s", cpu.RhBus->GetValue() != nullptr ? std::format("0x{:04X}", *cpu.RhBus->GetValue()).c_str() : "0x____");
     mvwprintw(win, 4, 2, "ALU:  0x%04X", cpu.alu->readValue());
     mvwprintw(win, 5, 2, "MAR:  0x%04X", cpu.rc->specialRegisters[0]->readValue());
     wrefresh(win);
@@ -47,9 +49,10 @@ void updateExecutionWindow(WINDOW* win, CPU& cpu)
     box(win, 0, 0);
     mvwprintw(win, 0, 1, "Execution View");
     mvwprintw(win, 1, 2, "PC:   0x%04X", cpu.rc->specialRegisters[1]->readValue());
-    mvwprintw(win, 2, 2, "IR:   0x%04X", cpu.ic->readCurrentInstruction());
-    mvwprintw(win, 3, 2, "Instruction: UNKNOWN");
-    mvwprintw(win, 4, 2, "Step: 0x%01d", cpu.ic->readCurrentStep());
+    mvwprintw(win, 2, 2, "RC:   0x%04X", cpu.rc->readValue());
+    mvwprintw(win, 3, 2, "IR:   0x%04X", cpu.ic->readCurrentInstruction());
+    mvwprintw(win, 4, 2, "Instruction: UNKNOWN");
+    mvwprintw(win, 5, 2, "Step: 0x%01d", cpu.ic->readCurrentStep());
     wrefresh(win);
 }
 
@@ -60,16 +63,26 @@ int main() {
     initscr();
     refresh();
 
-    WINDOW* registers = createWindow(0, 0, 15, 60, "Registers");
-    WINDOW* bus = createWindow(15, 0, 15, 60, "Buses");
-    WINDOW* execution = createWindow(30, 0, 15, 60, "Exectuiton View");
+    WINDOW* registers = createWindow(0, 0, 15, 40, "Registers");
+    WINDOW* bus = createWindow(15, 0, 15, 40, "Buses");
+    WINDOW* execution = createWindow(0, 40, 15, 40, "Exectuiton View");
 
 
 
-    char ch;
+    char ch = 0;
     do
     {
-        runInstruction();
+        switch (ch)
+        {
+            case 's':
+                cpu.FullCycle();
+                break;
+            case 'r':
+                runInstruction();
+                break;
+            default:
+                break;
+        }
         updateRegisterWindow(registers, cpu);
         updateBusWindow(bus, cpu);
         updateExecutionWindow(execution, cpu);
@@ -79,9 +92,6 @@ int main() {
     endwin();
     return 0;
 }
-
-
-
 
 
 

@@ -184,3 +184,8 @@ bool* RC::GetRegisterIncrementLinePtr() {
 bool* RC::GetRegisterDecrementLinePtr() {
     return Decrement;
 }
+
+uint16_t RC::readValue()
+{
+    return value;
+}

@@ -7,7 +7,7 @@ project(NOSComputer)
 # Set the C++ standard (optional but recommended)
 # set(CMAKE_BUILD_TYPE Debug)
 # set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")  # Disable optimizations for easier debugging
-set(CMAKE_CXX_STANDARD 17)   # You can also set 14 or 20 depending on your needs
+set(CMAKE_CXX_STANDARD 23)   # You can also set 14 or 20 depending on your needs
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)  # Generate a Compile Commands json for ClangD lsp
 
 # Library packages that are needed
