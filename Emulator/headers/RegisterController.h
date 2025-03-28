@@ -27,12 +27,10 @@ class RegisterController : public Module, public IRegisterController {
 
     const static char GPR_COUNT = 0b1111 + 1;
     const static char SPR_COUNT = 0b11 + 1;
-    GPR* generalRegisters[GPR_COUNT];
     bool* registerEnables[GPR_COUNT];
     bool* registerLHEnables[GPR_COUNT];
     bool* registerRHEnables[GPR_COUNT];
 
-    GPR* specialRegisters[SPR_COUNT];
     bool* sprEnables[SPR_COUNT];
     bool* sprOutEnables[SPR_COUNT];
 
@@ -51,6 +49,9 @@ class RegisterController : public Module, public IRegisterController {
 public:
     RegisterController(Bus& mainBus, Bus& leftHandBus, Bus& rightHandBus, Bus& marBus);
     ~RegisterController();
+
+    GPR* generalRegisters[GPR_COUNT];
+    GPR* specialRegisters[SPR_COUNT];
 
     void AssertToMainBus();
     void UnAssertToMainBus();

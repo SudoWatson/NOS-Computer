@@ -1,10 +1,5 @@
 // src/main.cpp
-#include "../headers/ALU.h"
-#include "../headers/Bus.h"
-#include "../headers/RAM.h"
-#include "../headers/RegisterController.h"
-#include "InstructionController.h"
-#include "ModuleCommonControl.h"
+#include "CPU.h"
 #include <cstdint>
 #include <iostream>
 #include <ostream>
@@ -17,37 +12,11 @@ public:
     uint16_t value;
 };
 
-#define runInstruction() mcc.FullCycle();mcc.FullCycle();mcc.FullCycle();mcc.FullCycle();mcc.FullCycle();mcc.FullCycle();mcc.FullCycle();
+#define runInstruction() cpu.FullCycle();cpu.FullCycle();cpu.FullCycle();cpu.FullCycle();cpu.FullCycle();cpu.FullCycle();cpu.FullCycle();
 
 int main() {
-    valueHolder inputValue;
 
-    Bus mainBus;
-    Bus lhBus;
-    Bus rhBus;
-    Bus marBus;
-
-
-    ModuleCommonControl mcc;
-
-    InstructionController ic(mainBus);
-    mcc.AddModule(&ic);
-
-    ALU alu(mainBus, lhBus, rhBus);
-    mcc.AddModule(&alu);
-
-    RegisterController rc(mainBus, lhBus, rhBus, marBus);
-    mcc.AddModule(&rc);
-
-    RAM ram(mainBus, marBus);
-    mcc.AddModule(&ram);
-
-    mcc.ConnectControlLines(ic);
-
-    mcc.Reset();
-    mcc.UpdateLines();
-
-
+    CPU cpu;
     /*
      * Figuring out the instructions
      * For the immediate load, I need to increment the Program Counter a second time somewhere in the instruction set
