@@ -3,29 +3,34 @@
 
 
 void CPU::performReset() {
-    for (auto module : modulePtrs) {
-        module->Reset();
-    }
+    rc->Reset();
+    ic->Reset();
+    alu->Reset();
+    ram->Reset();
 }
 void CPU::performClockHigh() {
-    for (auto module : modulePtrs) {
-        module->ClockHigh();
-    }
+    rc->ClockHigh();
+    ic->ClockHigh();
+    alu->ClockHigh();
+    ram->ClockHigh();
 }
 void CPU::performClockLow() {
-    for (auto module : modulePtrs) {
-        module->ClockLow();
-    }
+    rc->ClockLow();
+    ic->ClockLow();
+    alu->ClockLow();
+    ram->ClockLow();
 }
 void CPU::performUpdateLines() {
-    for (auto module : modulePtrs) {
-        module->UpdateLines();
-    }
+    rc->UpdateLines();
+    ic->UpdateLines();
+    alu->UpdateLines();
+    ram->UpdateLines();
 }
 void CPU::performConnectControlLines(IInstructionController &ptrIC) {
-    for (auto module : modulePtrs) {
-        module->ConnectControlLines(ptrIC);
-    }
+    rc->ConnectControlLines(ptrIC);
+    ic->ConnectControlLines(ptrIC);
+    alu->ConnectControlLines(ptrIC);
+    ram->ConnectControlLines(ptrIC);
 }
 
 void CPU::AddModule(Module* ptrModule) {
@@ -46,16 +51,12 @@ CPU::CPU()
     Bus marBus;
 
     rc = new RegisterController(*MainBus, *LhBus, *RhBus, marBus);
-    AddModule(rc);
 
     ic = new InstructionController(*MainBus);
-    AddModule(ic);
 
     alu = new ALU(*MainBus, *LhBus, *RhBus);
-    AddModule(alu);
 
     ram = new RAM(*MainBus, marBus);
-    AddModule(ram);
 
     ConnectControlLines(*ic);
 

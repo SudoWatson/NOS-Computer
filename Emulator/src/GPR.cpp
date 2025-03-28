@@ -1,4 +1,5 @@
 #include "../headers/GPR.h"
+#include <cstdint>
 #include <stdexcept>
 
 GPR::GPR(bool* _ptrEnable, bool* _ptrLHEnable, bool* _ptrRHEnable) {
@@ -78,3 +79,7 @@ void GPR::UnAssertToRightHandBus() {
     RightHandBus->UnAssert(&value);
 }
 
+uint16_t GPR::readValue()
+{
+    return value;
+}

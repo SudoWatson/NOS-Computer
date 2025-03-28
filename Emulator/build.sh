@@ -18,7 +18,6 @@ make
 if [ $? -eq 0 ]; then
     echo "Build succeeded!"
     # Run the executable
-    ./NOSComputerEmulator
 else
     echo "Build failed."
 fi

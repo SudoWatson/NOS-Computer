@@ -16,6 +16,10 @@ class CPU : public Module {
     virtual void performUpdateLines() override;
     virtual void performConnectControlLines(IInstructionController &ptrIC) override;
 
+public:
+    CPU();
+    ~CPU();
+
     RegisterController* rc = nullptr;
     InstructionController* ic = nullptr;
     RAM* ram = nullptr;
@@ -24,10 +28,6 @@ class CPU : public Module {
     Bus* MainBus = nullptr;
     Bus* LhBus = nullptr;
     Bus* RhBus = nullptr;
-
-public:
-    CPU();
-    ~CPU();
 
     void AddModule(Module* ptrModule);
     void FullCycle();

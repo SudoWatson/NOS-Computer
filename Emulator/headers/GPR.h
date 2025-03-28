@@ -37,5 +37,7 @@ public:
     void UnAssertToRightHandBus();
 
     void RegisterControlLines(IInstructionController &ptrIC, IRegisterController &ptrRC);
+
+    uint16_t readValue();
 };
 
