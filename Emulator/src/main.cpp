@@ -1,5 +1,6 @@
 // src/main.cpp
 #include "CPU.h"
+#include <cstdint>
 #include <ncurses.h>
 #include <string>
 
@@ -52,26 +53,69 @@ void updateExecutionWindow(WINDOW* win, CPU& cpu)
     wrefresh(win);
 }
 
+void updateRAMWindow(WINDOW* win, CPU& cpu)
+{
+    werase(win);
+    box(win, 0, 0);
+    mvwprintw(win, 0, 1, "RAM");
+    mvwprintw(win, 1, 1, " Addr    Data");
+    for (char line = 0; line <= 6; line++)
+    {
+        const char offset = 3;
+        uint16_t marValue = cpu.rc->specialRegisters[0]->readValue();
+        uint16_t address = marValue - offset + line;
+        if (address == marValue)
+        {
+            mvwprintw(win, line + 2, 2, "> 0x%04X  0x%04X", address, cpu.ram->values[address]);
+        }
+        else
+        {
+            mvwprintw(win, line + 2, 2, "  0x%04X  0x%04X", address, cpu.ram->values[address]);
+        }
+    }
+    wrefresh(win);
+}
+
+enum Modes
+{
+    NORMAL,
+    REGISTER,
+    COMMAND,
+};
+
 int main() {
     CPU cpu;
 
 
     initscr();
+    noecho();
+
     refresh();
 
     WINDOW* registers = createWindow(0, 0, 15, 40, "Registers");
     WINDOW* bus = createWindow(15, 0, 15, 40, "Buses");
     WINDOW* execution = createWindow(0, 40, 15, 40, "Exectuiton View");
+    WINDOW* ram = createWindow(15, 40, 15, 40, "RAM");
+
+    updateRegisterWindow(registers, cpu);
+    updateBusWindow(bus, cpu);
+    updateExecutionWindow(execution, cpu);
+    updateRAMWindow(ram, cpu);
 
 
 
     char ch = 0;
+    Modes mode = NORMAL;
     do
     {
         switch (ch)
         {
             case 's':
                 cpu.FullCycle();
+                updateRegisterWindow(registers, cpu);
+                updateBusWindow(bus, cpu);
+                updateExecutionWindow(execution, cpu);
+                updateRAMWindow(ram, cpu);
                 break;
             case 'r':
                 runInstruction();
@@ -79,9 +123,6 @@ int main() {
             default:
                 break;
         }
-        updateRegisterWindow(registers, cpu);
-        updateBusWindow(bus, cpu);
-        updateExecutionWindow(execution, cpu);
     }
     while ((ch = getch()) != 'q');
 
