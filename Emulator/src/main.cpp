@@ -1,10 +1,6 @@
 // src/main.cpp
 #include "CPU.h"
-#include <cstddef>
-#include <cstdint>
 #include <ncurses.h>
-#include <iostream>
-#include <ostream>
 #include <string>
 
 #define runInstruction() cpu.FullCycle();cpu.FullCycle();cpu.FullCycle();cpu.FullCycle();cpu.FullCycle();cpu.FullCycle();cpu.FullCycle();
@@ -13,7 +9,7 @@ WINDOW* createWindow(int x, int y, int width, int height, const char* title)
 {
     WINDOW* win = newwin(width, height, x, y);
     box(win, 0, 0);
-    mvwprintw(win, 0, 1, title);
+    mvwprintw(win, 0, 1, "%s", title);  // TODO: I get a warning if I don't format this, same with the strings below. Not sure why, look into it
     wrefresh(win);
     return win;
 }

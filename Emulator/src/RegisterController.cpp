@@ -138,7 +138,6 @@ void RC::performConnectControlLines(IInstructionController &ptrIC) {
 
 // Methods for getting the various register indexes
 // NOTE: Would be nice if these could be like getters
-// WARN: Probably needs to be rethinked to get the SPRs working as well
 uint8_t RC::getGPRIndex() {
     return value & 0b1111;
 }
